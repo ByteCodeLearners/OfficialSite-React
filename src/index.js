@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import "./styles/display.css";
+import "./styles/aboutus.css";
+import "./styles/icons.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById("root"));
+const createSpan = () => {
+  for (let i = 0; i < 2050; i++) {
+    let span = document.createElement("span");
+    document.querySelector(".container").appendChild(span);
+  }
+};
+function shadow3d() {
+  var text = document.getElementById("text");
+  var shadow = "";
+  var shadow1 = "";
+  for (let i = 0; i < 20; i++) {
+    shadow += (shadow ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #aaa69d";
+  }
+  text.style.textShadow = shadow;
+  var icons = document.getElementsByClassName("fab");
+  for (let i = 0; i < 8; i++) {
+    shadow1 += (shadow1 ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #aaa69d";
+  }
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].style.textShadow = shadow1;
+  }
+}
+shadow3d();
+// createSpan();

@@ -1,0 +1,54 @@
+.display {
+  /* margin: 20px; */
+  padding: 60px;
+  padding-left: 100px;
+  padding-top: 160px;
+  min-height: 80vh;
+  color: #ffffff;
+  display: flex;
+  background: linear-gradient(40deg, #05c46b, #bcf5d3);
+  /* justify-content: center; */
+  /* box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.3); */
+}
+#text {
+  /* background: url(../byte-code-learners.svg); */
+  /* background-size: cover; */
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-weight: 800;
+  font-size: 9em;
+  text-align: center;
+  line-height: 0.9em;
+  transform: rotate(-3deg) skew(18deg);
+  font-family: "Courier New", Courier, monospace;
+}
+#text::before {
+  content: "Bytecode Learners";
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.3);
+  left: -80px;
+  text-shadow: none;
+  filter: blur(7px);
+}
+.imglogo {
+  width: 28%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  font-size: 25px;
+  text-shadow: -5px 3px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.display img {
+  width: 100%;
+  /* transform: rotate(-3deg) skew(18deg); */
+  /* margin-left: 120px; */
+  /* margin-top: -40px; */
+}
