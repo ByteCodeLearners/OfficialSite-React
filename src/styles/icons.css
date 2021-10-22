@@ -8,9 +8,9 @@
   gap: 40px;
   font-size: 35px;
   /* transform: rotate(-12deg) skew(22deg); */
-  transform: rotate(-3deg) skew(18deg);
+  transform: rotate(0deg) skew(0deg);
   position: relative;
-  left: 200px;
+  left: 100px;
   top: 30px;
 }
 .icons ul li {
@@ -45,18 +45,18 @@
   padding-bottom: 7px;
 }
 .icons ul li:hover span:nth-child(5) {
-  transform: translate(40px, -40px);
+  transform: translate(25px, -25px);
   /* background-color: black; */
   opacity: 0.8;
 }
 .icons ul li:hover span:nth-child(4) {
-  transform: translate(30px, -30px);
+  transform: translate(20px, -20px);
   /* background-color: black; */
   opacity: 0.6;
 }
 .icons ul li:hover span:nth-child(3) {
   /* background-color: black; */
-  transform: translate(20px, -20px);
+  transform: translate(15px, -15px);
   opacity: 0.4;
 }
 .icons ul li:hover span:nth-child(2) {
@@ -65,7 +65,7 @@
   opacity: 0.2;
 }
 .icons ul li:hover span:nth-child(1) {
-  transform: translate(50px, -50px);
+  transform: translate(30px, -30px);
   /* background-color: black; */
   opacity: 1;
   z-index: 100;

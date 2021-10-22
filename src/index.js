@@ -17,12 +17,12 @@ function shadow3d() {
   var text = document.getElementById("text");
   var shadow = "";
   var shadow1 = "";
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 15; i++) {
     shadow += (shadow ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #aaa69d";
   }
   text.style.textShadow = shadow;
   var icons = document.getElementsByClassName("fab");
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 6; i++) {
     shadow1 += (shadow1 ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #aaa69d";
   }
   for (let i = 0; i < icons.length; i++) {
