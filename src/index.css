@@ -60,6 +60,7 @@ body {
   transform: rotateY(180deg);
 }
 .footer {
+  margin-top: 150px;
   align-self: flex-end;
   justify-self: flex-end;
   background-color: #18ac56;

@@ -5,6 +5,8 @@ import App from "./App";
 import "./styles/display.css";
 import "./styles/aboutus.css";
 import "./styles/icons.css";
+import "./styles/upevents.css";
+import "./styles/section2.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 const createSpan = () => {
