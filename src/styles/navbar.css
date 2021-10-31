@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  padding: 0.3rem 0.6rem;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -10,7 +10,7 @@
   transition: all 0.6s;
   z-index: 100;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.2rem;
 }
 .navbar ul li a {
   text-decoration: none;
@@ -18,9 +18,9 @@
   text-shadow: -2px -2px 10px rgba(0, 0, 0, 0.3);
 }
 .sticky {
-  padding: 10px 50px;
+  padding: 0.1rem 0.5rem;
   background: linear-gradient(90deg, white, 1%, #27ae60);
-  font-size: 18px;
+  font-size: 0.18rem;
 }
 .sticky ul li a {
   color: whitesmoke;
@@ -31,15 +31,15 @@
 }
 .navbar .logo {
   position: relative;
-  font-size: 40px;
+  font-size: 0.4rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.02rem;
   transition: 0.6s;
 }
 .navbar ul {
   display: flex;
   justify-content: space-around;
-  gap: 40px;
+  gap: 0.4rem;
 }
 .navbar ul li {
   list-style: none;
@@ -48,14 +48,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.1rem;
 }
 .navbar .logo img {
-  width: 70px;
+  width: 0.7rem;
   filter: hue-rotate(-20deg);
 }
 #club {
   display: none;
-  font-size: 22px;
+  font-size: 0.22rem;
   color: white;
 }

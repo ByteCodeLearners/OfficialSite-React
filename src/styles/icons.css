@@ -5,17 +5,21 @@
 .icons ul {
   display: flex;
   list-style: none;
-  gap: 40px;
-  font-size: 35px;
-  /* transform: rotate(-12deg) skew(22deg); */
+  gap: 0.4rem;
+  font-size: 0.35rem;
   transform: rotate(0deg) skew(0deg);
   position: relative;
-  left: 100px;
-  top: 30px;
+  left: 0.8rem;
+  top: 0.3rem;
+}
+.icons ul li span .fab {
+  text-shadow: rgb(170, 166, 157) 0px 0px 0px, rgb(170, 166, 157) -1px 1px 0px,
+    rgb(170, 166, 157) -2px 2px 0px, rgb(170, 166, 157) -3px 3px 0px,
+    rgb(170, 166, 157) -4px 4px 0px;
 }
 .icons ul li {
-  width: 70px;
-  height: 70px;
+  width: 0.7rem;
+  height: 0.7rem;
   position: relative;
   /* background-color: #ccc; */
 }

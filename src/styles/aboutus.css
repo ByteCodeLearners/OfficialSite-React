@@ -17,11 +17,7 @@
   left: 0px;
   width: 90%;
   height: 100%;
-  /* background: url(../byte-code-learners.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; */
-  filter: opacity(0.4);
+  filter: opacity(0.2);
   z-index: -10;
 }
 .bg-logo img {
@@ -29,11 +25,11 @@
   height: 120%;
 }
 .about h1 {
-  padding: 5px;
-  font-size: 35px;
+  padding: 0.05rem;
+  font-size: 0.35rem;
 }
 .about p {
-  font-size: 17px;
+  font-size: 0.17rem;
   font-weight: 700;
   font-family: cursive;
   text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.5);

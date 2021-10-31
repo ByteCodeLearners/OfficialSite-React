@@ -1,6 +1,5 @@
 .up-events {
   width: 40%;
-  font-size: 1.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -8,6 +7,7 @@
   height: 270px;
   position: relative;
   overflow: hidden;
+  font-size: 0.21rem;
 }
 .up-events-content {
   width: 100%;
@@ -23,11 +23,11 @@
   border-bottom: 2px solid rgb(211, 206, 206);
   width: 80%;
   text-align: center;
-  padding: 15px 0px;
+  padding: 0.15rem 0px;
 }
 .events-list {
   overflow: hidden;
-  padding: 0px 10px;
+  padding: 0px 0.1rem;
 }
 .up-events ul {
   position: relative;
@@ -50,10 +50,10 @@
   position: relative;
   list-style: none;
   /*  Adjust these   */
-  padding-left: 40px;
-  padding-right: 5px;
-  padding-top: 3px;
-  margin: 10px 0px;
+  padding-left: 0.4rem;
+  padding-right: 0.05rem;
+  padding-top: 0.03rem;
+  margin: 0.1rem 0rem;
   color: white;
   z-index: 5;
   cursor: pointer;
@@ -63,8 +63,8 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 30px;
-  height: 30px;
+  width: 0.3rem;
+  height: 0.3rem;
   border-radius: 30px;
   background-color: transparent;
   border: 2px solid white;
@@ -74,10 +74,10 @@
 .up-events li::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 8px;
-  width: 10px;
-  height: 10px;
+  top: 0.11rem;
+  left: 0.09rem;
+  width: 0.1rem;
+  height: 0.1rem;
   transform: rotate(45deg);
   border-top: 2px solid white;
   border-right: 2px solid white;
@@ -91,8 +91,8 @@
   z-index: -5;
 }
 .up-events ul li:hover::after {
-  top: 11px;
-  left: 13px;
+  top: 0.11rem;
+  left: 0.13rem;
   transform: scale(1.3) rotate(45deg);
 }
 .up-events .blur {
@@ -108,12 +108,12 @@
   top: 0px;
   left: 0px;
   /* Adjust these  */
-  margin: 30px 50px;
-  padding: 15px 25px;
+  margin: 0.3rem 0.4rem;
+  padding: 0.15rem 0.25rem;
   background-color: antiquewhite;
   width: 80%;
   height: 80%;
-  font-size: 20px;
+  font-size: 0.2rem;
   z-index: 10;
   visibility: hidden;
   transform: translateY(-40px);
@@ -125,7 +125,6 @@
   justify-content: space-evenly;
 }
 .event-details a {
-  /* text-decoration: none; */
   color: rgb(56, 42, 42);
 }
 .details-active {
@@ -139,7 +138,7 @@
   color: red;
   transition: transform 0.4s;
   position: absolute;
-  font-size: 20px;
+  font-size: 0.25rem;
   top: 7px;
   right: 10px;
 }
@@ -147,7 +146,7 @@
   transform: scale(1.3);
 }
 .event-details h3 {
-  font-size: 26px;
+  font-size: 0.26rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   align-self: center;

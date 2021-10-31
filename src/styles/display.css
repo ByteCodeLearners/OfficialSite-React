@@ -1,28 +1,27 @@
 .display {
-  /* margin: 20px; */
-  padding: 60px;
-  padding-left: 100px;
-  padding-top: 160px;
+  padding: 0.6rem;
+  padding-left: 1rem;
+  padding-top: 1.6rem;
   min-height: 80vh;
   color: #ffffff;
   display: flex;
-  gap: 50px;
+  gap: 0.5rem;
   background: linear-gradient(40deg, #05c46b, #bcf5d3);
-  /* justify-content: center; */
-  /* box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.3); */
 }
 #text {
-  /* background: url(../byte-code-learners.svg); */
-  /* background-size: cover; */
   position: relative;
-  top: 10px;
-  left: 10px;
+  top: 0.1rem;
+  left: 0.1rem;
   font-weight: 800;
-  font-size: 8em;
+  font-size: 1.35rem;
   text-align: center;
-  line-height: 0.9em;
+  line-height: 1.25rem;
   transform: rotate(0deg) skew(0deg);
   font-family: "Courier New", Courier, monospace;
+  text-shadow: rgb(170, 166, 157) 0px 0px 0px, rgb(170, 166, 157) -1px 1px 0px,
+    rgb(170, 166, 157) -2px 2px 0px, rgb(170, 166, 157) -3px 3px 0px,
+    rgb(170, 166, 157) -4px 4px 0px, rgb(170, 166, 157) -5px 5px 0px,
+    rgb(170, 166, 157) -6px 6px 0px, rgb(170, 166, 157) -7px 7px 0px;
 }
 #text::before {
   content: "Bytecode Learners";
@@ -41,15 +40,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
-  font-size: 25px;
+  margin-left: 1rem;
+  font-size: 0.25rem;
   text-shadow: -5px 3px 4px rgba(0, 0, 0, 0.3);
   font-weight: 500;
 }
 
 .display img {
   width: 100%;
-  /* transform: rotate(-3deg) skew(18deg); */
-  /* margin-left: 120px; */
-  /* margin-top: -40px; */
 }
+
+/*      Media Queries      */
+/* @media screen and (max-width: 1200px) {
+  :root {
+    font-size: 90px;
+  }
+  #text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    font-size: 85px;
+  }
+  #text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 80px;
+  }
+  #text {
+    font-size: 1rem;
+  }
+} */

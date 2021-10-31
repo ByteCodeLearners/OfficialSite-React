@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from "../byte-code-learners.svg";
 
 export default function Navbar(){
@@ -13,6 +14,7 @@ export default function Navbar(){
     }
   }
   window.addEventListener("scroll",sticky);
+  useEffect(sticky,[]);
   return(
     <div className="navbar">
       <div className="logo">
@@ -23,12 +25,12 @@ export default function Navbar(){
           </div>
       </div>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Event Gallery</a></li>
-        <li><a href="#">Batches</a></li>
-        <li><a href="#">Registration</a></li>
-        <li><a href="#">Intiator</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/events-gallery">Event Gallery</NavLink></li>
+        <li><NavLink to="/batches">Batches</NavLink></li>
+        <li><NavLink to="/registration">Registration</NavLink></li>
+        <li><NavLink to="/inititor">Intiator</NavLink></li>
+        <li><NavLink to="/contact-us">Contact Us</NavLink></li>
       </ul>
     </div>
   );
