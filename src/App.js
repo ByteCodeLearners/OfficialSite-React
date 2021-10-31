@@ -5,7 +5,6 @@ import Home from "./routes/Home";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar";
 import "./styles/navbar.css";
-import ImageEffect from "./components/ImageEffect";
 import ContactUs from "./routes/ContactUs";
 
 export default function App() {
@@ -18,7 +17,16 @@ export default function App() {
             <Home />
           </Route>
           <Route exact path="/events-gallery">
-            <ImageEffect />
+            <div style={{ marginTop: "150px" }}>Events Gallery</div>
+          </Route>
+          <Route exact path="/batches">
+            <div style={{ marginTop: "150px" }}>Event batches</div>
+          </Route>
+          <Route exact path="/registration">
+            <div style={{ marginTop: "150px" }}>Registration Page</div>
+          </Route>
+          <Route exact path="/initiator">
+            <div style={{ marginTop: "150px" }}>Initiators Page</div>
           </Route>
           <Route exact path="/contact-us">
             <ContactUs />

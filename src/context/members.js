@@ -17,7 +17,7 @@ const members = [
     insta: "https://www.instagram.com",
   },
   {
-    name: "Sushmita sagar",
+    name: "Susmita sagar",
     img: "https://www.bytecodelearners.club/bytecode-server/storage/app/public/members-image/susmitasagar038@gmail.com.jpg",
     fb: "https://www.facebook.com",
     twitter: "https://www.twitter.com",

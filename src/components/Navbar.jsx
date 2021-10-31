@@ -29,7 +29,7 @@ export default function Navbar(){
         <li><NavLink to="/events-gallery">Event Gallery</NavLink></li>
         <li><NavLink to="/batches">Batches</NavLink></li>
         <li><NavLink to="/registration">Registration</NavLink></li>
-        <li><NavLink to="/inititor">Intiator</NavLink></li>
+        <li><NavLink to="/initiator">Intiator</NavLink></li>
         <li><NavLink to="/contact-us">Contact Us</NavLink></li>
       </ul>
     </div>
