@@ -3,8 +3,8 @@ import React from 'react';
 const SocialMediaCard = (props) => {
     return ( 
         <div className="social-media-card">
-           {props.fbsrc?<iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=310&height=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+           {props.fbsrc?<iframe title="facebook-feed"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=290&height=420&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                 scrolling="no"
                 frameborder="0"
                 allowfullscreen="true"

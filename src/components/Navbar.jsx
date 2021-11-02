@@ -25,12 +25,12 @@ export default function Navbar(){
           </div>
       </div>
       <ul>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/events-gallery">Event Gallery</NavLink></li>
-        <li><NavLink to="/batches">Batches</NavLink></li>
-        <li><NavLink to="/registration">Registration</NavLink></li>
-        <li><NavLink to="/initiator">Intiator</NavLink></li>
-        <li><NavLink to="/contact-us">Contact Us</NavLink></li>
+        <li><NavLink to="/react_bcl">Home</NavLink></li>
+        <li><NavLink to="/react_bcl/events-gallery">Event Gallery</NavLink></li>
+        <li><NavLink to="/react_bcl/batches">Batches</NavLink></li>
+        <li><NavLink to="/react_bcl/registration">Registration</NavLink></li>
+        <li><NavLink to="/react_bcl/initiator">Intiator</NavLink></li>
+        <li><NavLink to="/react_bcl/contact-us">Contact Us</NavLink></li>
       </ul>
     </div>
   );

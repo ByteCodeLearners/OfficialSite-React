@@ -29,7 +29,7 @@ export default function UpEvents(){
         <i className="fas fa-times" onClick={toggle}></i>
         <h3>Event details</h3>
         <p> <b>Topic:</b> {event_topic}</p>
-        <p> <b>Link:</b> <a target="_blank" href={`https://meet.google.com/${event_link}` }>Click here to join.</a> </p>
+        <p> <b>Link:</b> <a target="_blank" rel="noreferrer" href={`https://meet.google.com/${event_link}` }>Click here to join.</a> </p>
         <p> <b>Time:</b> {event_time}</p>
       </div>
     </div>

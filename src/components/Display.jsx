@@ -10,7 +10,7 @@ const Display = () => {
                 <div className="icons">
                     <ul>
                     <li>
-                        <a href="https://www.facebook.com/groups/bytecodelearners/" target="_blank">
+                        <a href="https://www.facebook.com/groups/bytecodelearners/" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-facebook-f"></i></span>
                         <span></span>
                         <span></span>
@@ -19,7 +19,7 @@ const Display = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/BytecodeL" target="_blank">
+                        <a href="https://twitter.com/BytecodeL" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-twitter"></i></span>
                         <span></span>
                         <span></span>
@@ -28,7 +28,7 @@ const Display = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/bytecode_learners/" target="_blank">
+                        <a href="https://www.instagram.com/bytecode_learners/" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-instagram"></i></span>
                         <span></span>
                         <span></span>
@@ -37,7 +37,7 @@ const Display = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/ByteCodeLearners/" target="_blank">
+                        <a href="https://github.com/ByteCodeLearners/" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-github"></i></span>
                         <span></span>
                         <span></span>
@@ -49,7 +49,7 @@ const Display = () => {
                 </div>
             </div>
             <div className="imglogo">
-                <img src={logo}/>
+                <img src={logo} alt="bytecode-learners-logo"/>
                 <p>Coding Community </p>
                 <p>Create Something Ctrl+N</p>
             </div>

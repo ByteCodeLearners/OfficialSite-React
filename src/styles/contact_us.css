@@ -1,11 +1,11 @@
 .contact-us {
   padding-top: 150px;
+  padding-bottom: 150px;
   font-size: 0.6rem;
   text-align: center;
-  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.15rem;
   background: linear-gradient(0deg, white, #aefdbf, white);
 }
 .social-media-cards {
