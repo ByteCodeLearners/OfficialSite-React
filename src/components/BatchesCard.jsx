@@ -9,6 +9,7 @@ import {
 const BatchesCard = ({ batchData }) => {
     const [isMore,setIsMore] = useState(true);
     const handleReadMore =(ths)=>{
+      ths.target.innerHTML = isMore?"Read Less":"Read More";
       setIsMore(isMore?false:true);
       ths.target.previousSibling.classList.toggle('subtle');
     }
@@ -70,7 +71,7 @@ const BatchesCard = ({ batchData }) => {
                       {description}
                     </p>
                     <div onClick={(ths)=>{handleReadMore(ths)}} className="card-read">
-                      Read {isMore?"More":"Less"}
+                      Read More
                     </div>
                   </div>
                   <span>
