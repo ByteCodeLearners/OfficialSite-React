@@ -1,0 +1,300 @@
+.batches {
+  text-align: center;
+  background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0.5rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  margin-bottom: -1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.14rem;
+}
+.heading {
+  text-align: center;
+  /* margin-top: 1.5rem; */
+  font-size: 0.4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(11, 20, 46);
+}
+.b-members {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  color: #e75050;
+}
+.main-card--cointainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-gap: 50px;
+  justify-content: space-around;
+}
+.batches .card-container {
+  color: rgb(73, 100, 131);
+  margin: 25px auto 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.batches .card-container img {
+  display: inline-block;
+  max-width: 100%;
+  height: 300px;
+  padding-left: 20%;
+}
+
+.batches .card-container .card {
+  background-color: rgb(223, 247, 216);
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(250, 11, 103, 0.07);
+  z-index: 1;
+  transition: 0.6s;
+  box-shadow: 0px 0px 5px 2px rgba(233, 250, 3, 0.4);
+  transform-style: flat;
+}
+
+.card-container .card:hover {
+  border: 10px solid #bb0fd1;
+  animation: colorchg 1s infinite;
+  /* box-shadow: 0px 0px 35px 3px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0px 0px 50px 20px rgba(13, 252, 5, 0.4);
+  transform-style: preserve-3d;
+}
+@keyframes colorchg {
+  0% {
+    border: 5px solid green;
+  }
+  25% {
+    border: 5px solid yellow;
+  }
+  50% {
+    border: 5px solid cyan;
+  }
+  75% {
+    border: 5px solid magenta;
+  }
+  100% {
+    border: 5px solid blue;
+  }
+}
+
+.card-circle {
+  border-radius: 50%;
+}
+.batches .card-container ul li {
+  list-style: none;
+  float: left;
+}
+.card-container .icons {
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.card-container .icon {
+  transition: 1s;
+  transform: scale(1);
+  font-size: 0.5rem;
+}
+
+.card-container .icon:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.2) translateY(-7px);
+  box-shadow: #e75050;
+}
+
+.card-author {
+  color: rgb(176, 128, 240);
+  display: block;
+  font-size: 2px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  font-size: 0.32rem;
+  font-weight: 300;
+  line-height: 55px;
+  margin: 0.15rem 0;
+  color: yellowgreen;
+  text-transform: capitalize;
+}
+
+.card-description {
+  font-size: 0.14rem;
+  font-weight: 300;
+  line-height: 0.2rem;
+  margin: 0.1rem 0;
+  color: rgb(231, 116, 50);
+  transition: 0.6s;
+  overflow: hidden;
+  height: 100px;
+}
+.subtle {
+  height: fit-content !important;
+  overflow: visible;
+}
+/* .card-description:hover {
+  overflow: visible;
+  height: fit-content;
+} */
+.card-read {
+  cursor: pointer;
+  font-size: 0.13rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0.05rem 0 0.2rem;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card-read:after {
+  background-color: #b8bddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 70%;
+}
+
+.card-tag {
+  float: right;
+  margin: 5px 0 0;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.card-tag:hover {
+  background: #aaa;
+  color: black;
+}
+
+.card-media {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-shadow {
+  background-color: rgb(16, 17, 16);
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
+    0 0 100px 3px rgba(0, 0, 0, 0.25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -100;
+}
+
+/* Navbar */
+.batches-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.batches-navbar .nav-bar {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.batches-navbar .nav-bar h1 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.btn-group {
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+.btn-group__item {
+  border: none;
+  /* min-width: 6rem; */
+  padding: 0.2rem 0.4rem;
+  background-color: rgb(121, 235, 93);
+  cursor: pointer;
+  margin: 0;
+  font-size: 17px;
+  box-shadow: inset 0px 0px 0px -15px rgb(51, 153, 76);
+  transition: all 300ms ease-out;
+  text-transform: capitalize;
+}
+.btn-group__item:first-child {
+  border-top-left-radius: 0.15rem;
+  border-bottom-left-radius: 0.15rem;
+}
+.btn-group__item:last-child {
+  border-top-right-radius: 0.15rem;
+  border-bottom-right-radius: 0.15rem;
+}
+.btn-group__item:hover,
+.btn-group__item:focus {
+  color: rgb(245, 8, 8);
+  box-shadow: inset 0px -20px 0px -15px rgb(245, 131, 0);
+}
+.btn-group__item:focus {
+  outline: none;
+}
+.btn-group__item:after {
+  content: "✔️";
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: rgb(15, 97, 15);
+  position: absolute;
+  transform: translatey(10px);
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+.btn-group__item--active:after {
+  opacity: 1;
+  transform: translatey(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 998px) {
+  .main-card--cointainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 500px));
+    grid-gap: 50px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 825px) {
+  .batches {
+    font-size: 0.2rem;
+    margin-bottom: -3rem;
+    padding-bottom: 2rem;
+  }
+  .batches-navbar {
+    margin-top: 1rem;
+  }
+  .card-description {
+    font-size: 0.22rem;
+  }
+  .card-title {
+    font-size: 0.6rem;
+  }
+  .card-container .icon {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 800px) {
+  .batches {
+    margin-bottom: -4rem;
+    padding-bottom: 3rem;
+  }
+}
