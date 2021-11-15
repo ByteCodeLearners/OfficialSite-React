@@ -21,7 +21,7 @@ const Batches = () => {
         club.style.display = "block";
         },[]);
     const [menuData, setMenuData] = useState(BatchesApi);
-    const [menuList, setMenuList] = useState(uniqueList);
+    const [menuList, setMenuList] = useState(uniqueList.sort());
 
     const filterItem = (category) => {
         if (category === "All") {

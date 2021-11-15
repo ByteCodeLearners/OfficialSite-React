@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
   margin-bottom: -1.6rem;
@@ -29,13 +29,14 @@
 }
 .main-card--cointainer {
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 500px));
-  grid-gap: 50px;
-  justify-content: space-around;
+  grid-template-columns: repeat(3, 30%);
+  gap: 20px;
+  justify-content: space-evenly;
+  /* margin: 0 0.5rem; */
 }
 .batches .card-container {
   color: rgb(73, 100, 131);
-  margin: 25px auto 0;
+  /* margin: 25px auto 0; */
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -135,7 +136,7 @@
   font-weight: 300;
   line-height: 55px;
   margin: 0.15rem 0;
-  color: yellowgreen;
+  color: rgb(108, 146, 31);
   text-transform: capitalize;
 }
 
@@ -278,9 +279,11 @@
 @media (max-width: 998px) {
   .main-card--cointainer {
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 500px));
+    grid-template-columns: repeat(2, 40%);
     grid-gap: 50px;
-    justify-content: space-around;
+  }
+  .card-description {
+    height: 50px;
   }
 }
 

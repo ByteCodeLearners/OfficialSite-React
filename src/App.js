@@ -19,7 +19,9 @@ export default function App() {
             <Home />
           </Route>
           <Route exact path="/react_bcl/events-gallery">
-            <div style={{ marginTop: "150px" }}>Events Gallery</div>
+            <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
+              Events Gallery
+            </div>
           </Route>
           <Route exact path="/react_bcl/batches">
             {/* <div style={{ marginTop: "150px" }}>Batches</div> */}
@@ -29,7 +31,9 @@ export default function App() {
             <Registration />
           </Route>
           <Route exact path="/react_bcl/initiator">
-            <div style={{ marginTop: "150px" }}>Initiators Page</div>
+            <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
+              Initiators Page
+            </div>
           </Route>
           <Route exact path="/react_bcl/contact-us">
             <ContactUs />

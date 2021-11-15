@@ -5,6 +5,8 @@
   min-height: 80vh;
   color: #ffffff;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   gap: 0.5rem;
   background: linear-gradient(40deg, #05c46b, #bcf5d3);
 }

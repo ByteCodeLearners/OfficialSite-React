@@ -32,11 +32,11 @@ footer {
   margin-top: 150px;
   align-self: flex-end;
   justify-self: flex-end;
-  height: 30vh;
+  /* height: 30vh; */
   color: white;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 30px 30px;
   position: relative;
   width: 100%;
 }
@@ -138,6 +138,7 @@ footer {
   position: relative;
   left: 28px;
   top: 15px;
+  margin-bottom: 0.5rem;
 }
 #initiator::before {
   content: "";
@@ -165,16 +166,17 @@ footer {
   background-color: #18ac56;
   color: white;
   padding: 0px 0.3rem;
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
 .copy-right .footer-icons {
   font-size: 0.25rem;
+  justify-self: flex-end;
+  width: fit-content;
   display: flex;
-  width: 20%;
-  justify-content: space-evenly;
+  gap: 0.3rem;
 }
 .footer-icons .fab {
   background-color: rgb(135, 180, 44);

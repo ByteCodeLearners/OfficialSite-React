@@ -1,6 +1,6 @@
 .about {
   width: 50%;
-  height: 250px;
+  /* height: 250px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,13 +24,15 @@
   width: 100%;
   height: 120%;
 }
+.about .content {
+  align-self: center;
+}
 .about h1 {
   padding: 0.05rem;
   font-size: 0.35rem;
 }
 .about p {
-  font-size: 0.17rem;
-  font-weight: 700;
+  font-size: 0.18rem;
   font-family: cursive;
   text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.5);
 }
