@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BatchesCard from '../components/BatchesCard';
 import BatchesNavbar from '../components/BatchesNavbar';
 import BatchesApi from '../context/batchesApi';
+import { sticky } from '../components/Navbar';
 import '../styles/batches.css';
 
 const uniqueList = [
@@ -15,10 +16,7 @@ const uniqueList = [
 
 const Batches = () => {
     useEffect(()=>{
-        var nav = document.querySelector(".navbar");
-        var club = document.getElementById("club");
-        nav.classList.add("sticky");
-        club.style.display = "block";
+        sticky();
         },[]);
     const [menuData, setMenuData] = useState(BatchesApi);
     const [menuList, setMenuList] = useState(uniqueList.sort());

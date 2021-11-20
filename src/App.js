@@ -8,6 +8,7 @@ import "./styles/navbar.css";
 import ContactUs from "./routes/ContactUs";
 import Registration from "./routes/Registration";
 import Batches from "./routes/Batches";
+import EventsGallery from "./routes/EventsGallery";
 
 export default function App() {
   return (
@@ -19,9 +20,7 @@ export default function App() {
             <Home />
           </Route>
           <Route exact path="/react_bcl/events-gallery">
-            <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
-              Events Gallery
-            </div>
+            <EventsGallery />
           </Route>
           <Route exact path="/react_bcl/batches">
             {/* <div style={{ marginTop: "150px" }}>Batches</div> */}

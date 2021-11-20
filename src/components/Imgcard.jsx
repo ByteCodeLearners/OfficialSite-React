@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default function Imgcard(props){
+export default function Imgcard({member}){
   return(
     <div className="imgcard">
       <div className="img-container">
-        <img src={props.member.img} alt={props.member.name} />
+        <img src={"https://www.bytecodelearners.club/bytecode-server/storage/app/public/"+member.user_details.image} alt={member.user_name} />
       </div>
       <div className="content-container">
-        <p>{props.member.name}</p>
+        <p>{member.user_details.first_name +" "+ member.user_details.last_name}</p>
         <div className="social-icon">
-          {props.member.fb?<a href={props.member.fb}><span><i className="fab fa-facebook-f"></i></span></a>:null}
-          {props.member.twitter?<a href={props.member.twitter}><span><i className="fab fa-twitter"></i></span></a>:null}
-          {props.member.insta?<a href={props.member.insta}><span><i className="fab fa-instagram"></i></span></a>:null}
-          {props.member.github?<a href={props.member.github}><span><i className="fab fa-github"></i></span></a>:null}
+          {member.fb?<a href={member.fb}><span><i className="fab fa-facebook-f"></i></span></a>:null}
+          {member.twitter?<a href={member.twitter}><span><i className="fab fa-twitter"></i></span></a>:null}
+          {member.insta?<a href={member.insta}><span><i className="fab fa-instagram"></i></span></a>:null}
+          {member.github?<a href={member.github}><span><i className="fab fa-github"></i></span></a>:null}
         </div>
       </div>
     </div>

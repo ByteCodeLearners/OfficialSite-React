@@ -6,7 +6,7 @@ const BatchesNavbar = ({ filterItem, menuList, category }) => {
             <h1 className="b-members"> Members </h1>
             <nav className="nav-bar">
                 <div className="btn-group">
-                {menuList.map((curElem,index) => {
+                {menuList?menuList.map((curElem,index) => {
                     return (
                     <button key={index}
                         className="btn-group__item"
@@ -15,7 +15,7 @@ const BatchesNavbar = ({ filterItem, menuList, category }) => {
                         {curElem}
                     </button>
                     );
-                })}
+                }):null}
                 </div>
             </nav>
         </div>

@@ -89,7 +89,7 @@ const BatchesCard = ({ batchData }) => {
     return ( 
         <div className="batches-card">
             <section className="main-card--cointainer">
-        {batchData.map((curElem,index) => {
+        {batchData?batchData.map((curElem,index) => {
           const { id, name, category, image, description } = curElem;
           return (
             <MemberCard key={index} id={id} name={name} index={index} image={image} description={description}/>
@@ -155,7 +155,7 @@ const BatchesCard = ({ batchData }) => {
             //   </div>
             // </>
           );
-        })}
+        }):null}
       </section>
         </div>
      );

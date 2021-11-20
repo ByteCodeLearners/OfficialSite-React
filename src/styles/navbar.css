@@ -18,9 +18,10 @@
   text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
 }
 .navbar ul li:hover {
-  transform: scale(1.08);
   transition: 0.6s;
   text-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  /* background-color: whitesmoke; */
+  color: black;
 }
 .sticky {
   padding: 0.1rem 0.5rem;
@@ -34,6 +35,9 @@
   transform: rotate(120deg);
   transition: 1s;
 }
+.fa-bars {
+  display: none;
+}
 .navbar .logo {
   position: relative;
   font-size: 0.4rem;
@@ -41,7 +45,7 @@
   letter-spacing: 0.02rem;
   transition: 0.6s;
 }
-.navbar ul {
+.nav-btns {
   display: flex;
   justify-content: space-around;
   gap: 0.4rem;
@@ -59,8 +63,11 @@
   width: 0.7rem;
   filter: hue-rotate(-20deg);
 }
-#club {
+.club {
   display: none;
   font-size: 0.22rem;
   color: white;
+}
+.showClub {
+  display: block;
 }

@@ -1,0 +1,148 @@
+.events-gallery {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding-top: 120px;
+  padding-bottom: 250px;
+  margin-bottom: -250px;
+  background: linear-gradient(40deg, #0cac61, #a9dabd);
+}
+.events-gallery * {
+  margin: 10px;
+  background: linear-gradient(40deg, #0cac61, #a9dabd);
+  padding: unset;
+  box-sizing: content-box;
+  transition: 0.4s;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.events-gallery .title {
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-shadow: 2px 2px #fff;
+  border: 1px solid white;
+}
+.events-gallery .subtitle {
+  text-align: center;
+  border: 1px solid white;
+  font-size: 18px;
+}
+.gallery {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.portion1 {
+  background-color: rgb(192, 216, 157);
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+  padding: 50px;
+  border: 1px solid white;
+  justify-content: center;
+}
+#event1 {
+  width: 200px;
+  height: 150px;
+  border: 4px solid white;
+  transform: rotate(20deg);
+  background-color: white;
+}
+
+#event2 {
+  width: 190px;
+  height: 200px;
+  border: 4px solid white;
+  transform: rotate(-20deg);
+  background-color: white;
+}
+
+#event3 {
+  width: 200px;
+  height: 150px;
+  border: 4px solid white;
+  transform: rotate(5deg);
+  background-color: white;
+}
+
+#event4 {
+  width: 190px;
+  height: 190px;
+  border: 4px solid white;
+  transform: rotate(-10deg);
+  background-color: white;
+}
+.portion2 {
+  background-color: rgb(192, 216, 157);
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+  padding: 50px;
+  border: 1px solid white;
+  justify-content: center;
+}
+
+#event5 {
+  width: 200px;
+  height: 190px;
+  border: 4px solid white;
+  transform: rotate(10deg);
+  background-color: white;
+}
+
+#event6 {
+  width: 190px;
+  height: 240px;
+  border: 4px solid white;
+  background-color: white;
+}
+
+#event7 {
+  width: 150px;
+  height: 200px;
+  border: 4px solid white;
+  background-color: white;
+  transform: rotate(-10deg);
+}
+
+#event8 {
+  width: 220px;
+  height: 180px;
+  border: 4px solid white;
+  background-color: white;
+  transform: rotate(20deg);
+}
+
+@media screen and (max-width: 600px) {
+  .portion1 {
+    background-color: palevioletred;
+    width: 100%;
+  }
+  #event1,
+  #event2,
+  #event3,
+  #event4 {
+    width: 100%;
+    transform: rotate(0deg);
+  }
+  .portion2 {
+    background-color: palevioletred;
+    width: 100%;
+  }
+  #event5,
+  #event6,
+  #event7,
+  #event8 {
+    width: 100%;
+    transform: rotate(0deg);
+  }
+}
