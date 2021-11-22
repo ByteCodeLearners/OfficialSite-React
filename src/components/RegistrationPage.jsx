@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import "./App.css";
-import "../styles/registration_page.css";
+// import "../styles/registration_page.css";
 import { useSpring, animated } from "react-spring";
 
 function RegistrationPage() {

@@ -4,6 +4,7 @@ import BatchesNavbar from '../components/BatchesNavbar';
 import BatchesApi from '../context/batchesApi';
 import { sticky } from '../components/Navbar';
 import '../styles/batches.css';
+import api from '../backend.js';
 
 const uniqueList = [
     ...new Set(

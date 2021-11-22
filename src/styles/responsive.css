@@ -1,7 +1,7 @@
 /*      Media Queries      */
 @media screen and (max-width: 1200px) {
   :root {
-    font-size: 95px;
+    font-size: 82px;
   }
   #text {
     font-size: 1.12rem;
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 1000px) {
   :root {
-    font-size: 85px;
+    font-size: 80px;
   }
   #text {
     font-size: 1.05rem;
@@ -34,7 +34,7 @@
 }
 @media screen and (max-width: 900px) {
   :root {
-    font-size: 80px;
+    font-size: 77px;
     --img-height: 300px;
     --img-width: 230px;
   }
@@ -85,8 +85,16 @@
     box-shadow: none;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     margin: 0.05rem;
+  }
+  .abt-event {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .event-img {
+    width: 100%;
   }
   /*    About Us     */
   .about {
@@ -230,6 +238,22 @@
     font-size: 60px;
     --img-height: 270px;
     --img-width: 200px;
+    --img-width1: 240px;
+  }
+  .batches .card-container img {
+    width: var(--img-width1) !important;
+  }
+  .registration .inputs {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .registration .inputs label {
+    font-size: 25px;
+  }
+  .registration .input:focus-within label,
+  .registration input:not(:placeholder-shown) + label {
+    transform: translate(-12px, -30px) scale(0.9);
+    color: rgb(83, 80, 80);
   }
 }
 @media screen and (max-width: 650px) {
@@ -244,6 +268,16 @@
   /* Registration page */
   .login-register-wrapper {
     width: 90%;
+  }
+  .registration h1 {
+    font-size: 40px;
+  }
+  .registration form {
+    padding: 50px 20px;
+    margin: 5px;
+  }
+  .registration .inputs label {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -274,11 +308,18 @@
   .nav-btn li {
     padding: 5px;
     background-color: rgb(8, 110, 47);
-    width: 100%;
+    width: 50%;
     text-align: center;
+    transition: 0.2s;
   }
   .navbar ul li a {
     color: whitesmoke;
+  }
+  .navbar ul li:hover a {
+    background-color: transparent;
+  }
+  .navbar li:hover {
+    background-color: rgb(38, 141, 78);
   }
   .fa-bars {
     display: block;
