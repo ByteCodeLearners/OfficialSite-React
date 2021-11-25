@@ -75,10 +75,27 @@
     font-size: 0.5rem;
     left: -0.1rem;
   }
+
   .display .imglogo {
     width: 50%;
     margin-left: 0;
     font-size: 0.3rem;
+  }
+  .icons ul li:hover span:nth-child(5) {
+    transform: translate(10px, -10px);
+  }
+  .icons ul li:hover span:nth-child(4) {
+    transform: translate(5px, -5px);
+  }
+  .icons ul li:hover span:nth-child(3) {
+    display: none;
+  }
+  .icons ul li:hover span:nth-child(2) {
+    display: none;
+  }
+  .icons ul li:hover span:nth-child(1) {
+    transform: translate(15px, -15px);
+    z-index: 100;
   }
   /*        Sencond Section in Home Page */
   .section2 {
@@ -127,6 +144,10 @@
     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 0.37rem;
+  }
+  .up-events-content p {
+    margin: 0.2rem 0.25rem;
+    font-size: 0.3rem;
   }
   .imgcard .content-container {
     font-size: 0.35rem;
@@ -260,6 +281,18 @@
   :root {
     font-size: 55px;
   }
+  .navbar .logo img {
+    width: 0.55rem;
+  }
+  .club {
+    font-size: 0.19rem;
+  }
+  .navbar {
+    padding: 0.3rem 0.2rem;
+  }
+  .sticky {
+    padding: 0.1rem 0.2rem;
+  }
 }
 @media screen and (max-width: 580px) {
   :root {
@@ -308,18 +341,24 @@
   .nav-btn li {
     padding: 5px;
     background-color: rgb(8, 110, 47);
-    width: 50%;
+    width: 60%;
     text-align: center;
     transition: 0.2s;
+    margin-bottom: 5px;
+    border-radius: 3px;
   }
   .navbar ul li a {
     color: whitesmoke;
+    gap: 7px;
   }
   .navbar ul li:hover a {
     background-color: transparent;
   }
   .navbar li:hover {
     background-color: rgb(38, 141, 78);
+  }
+  .navbar .fas {
+    cursor: pointer;
   }
   .fa-bars {
     display: block;
@@ -328,6 +367,24 @@
     position: absolute;
     top: 15px;
     right: 20px;
+  }
+  .fa-times {
+    display: block;
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  .navbar ul li a i {
+    font-size: 0.33rem;
+    /* display: none; */
+  }
+  .navbar .logo img {
+    width: 0.8rem;
+  }
+  .club {
+    font-size: 0.3rem;
   }
   #text {
     font-size: 1.2rem;
@@ -351,6 +408,7 @@
     /* margin: 4px; */
     padding: 8px;
   }
+
   .members-section {
     padding: 0px 7px;
   }

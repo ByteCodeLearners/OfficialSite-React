@@ -4,7 +4,7 @@ import logo from "../byte-code-learners.svg";
 export const navBtn = ()=>{
   var navBtn = document.getElementsByClassName("nav-btns")[0];
   navBtn.classList.toggle('nav-btn');
-
+  
   if(window.screen.width<=550){
     window.scrollTo(0,10);
   }
@@ -22,6 +22,15 @@ export const sticky=()=>{
       }else{
       club.classList.add('showClub');
     }
+}
+const handleMenuBtn = ()=>{
+  var navBtn = document.getElementsByClassName("nav-btns")[0];
+  var bars = document.getElementsByClassName("menu-btn")[0];
+  if(navBtn.classList.contains('nav-btn') && bars.classList.contains('fa-bars')){
+    bars.classList.replace('fa-bars','fa-times');
+  }else{
+    bars.classList.replace('fa-times','fa-bars');
+  }
 }
 export default function Navbar(){
   window.addEventListener("load",()=>{
@@ -47,14 +56,14 @@ export default function Navbar(){
                 <p>Learners</p>
             </div>
       </div>
-      <i class="fas fa-bars" onClick={navBtn}></i>
-      <ul className="nav-btns" onClick={navBtn}>
-        <li><NavLink to="/react_bcl">Home</NavLink></li>
-        <li><NavLink to="/react_bcl/events-gallery">Event Gallery</NavLink></li>
-        <li><NavLink to="/react_bcl/batches">Batches</NavLink></li>
-        <li><NavLink to="/react_bcl/registration">Registration</NavLink></li>
-        <li><NavLink to="/react_bcl/initiator">Intiator</NavLink></li>
-        <li><NavLink to="/react_bcl/contact-us">Contact Us</NavLink></li>
+      <i class="fas menu-btn fa-bars" onClick={()=>{navBtn(); handleMenuBtn();}}></i>
+      <ul className="nav-btns" onClick={navBtn} >
+        <li><NavLink to="/react_bcl"><i className="fas fa-home"></i>Home</NavLink></li>
+        <li><NavLink to="/react_bcl/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li>
+        <li><NavLink to="/react_bcl/batches"><i className="fas fa-users"></i>Batches</NavLink></li>
+        <li><NavLink to="/react_bcl/registration"><i className="fas fa-file-signature"></i>Registration</NavLink></li>
+        <li><NavLink to="/react_bcl/initiator"><i className="fas fa-fist-raised"></i>Intiator</NavLink></li>
+        <li><NavLink to="/react_bcl/contact-us"><i className="fas fa-comments"></i>Contact Us</NavLink></li>
       </ul>
     </div>
   );

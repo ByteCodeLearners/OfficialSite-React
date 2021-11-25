@@ -1,4 +1,5 @@
 import { useState } from "react";
+import swal from 'sweetalert';
 
 const RegistrationForm = () => {
     const [f_name,setFname] = useState("");
@@ -36,20 +37,39 @@ const RegistrationForm = () => {
     const handleSubmit = ()=>{
         const file = document.querySelector('#file');
         if(f_name == '' || l_name == '' || email == '' || mobile == '' || pass1 == '' || pass2 == ''||file.value == ''){
-            alert("Input fields can't be empty...");
+            swal("Empty Fields","Please enter all required input fields.","info");
         }else if(pass1 !== pass2){
-            alert("Passwords didn't match...");
+            swal("Error","Passwords didn't match.","error");
             document.querySelector('#pass2').focus();
             return;
         }else if(!(/[A-Za-z0-9_\.]+@\w+\.[a-z]+/).test(email)){
-            alert("Please enter a valid mail id");
+            swal("E-Mail","Enter a valid mail id.","error");
             return;
-        }else if(mobile.length > 12 || !((/[0-9]{10}/).test(mobile))){
-            alert("Enter a valid mobile number...");
+        }else if(mobile.length > 12 || !((/[0-9]{10}/).test(mobile)) || (/\D+/).test(mobile)){
+            swal("Mobile Number","Enter a valid mobile number.","error");
             return;
         }else if(pass1.length<6 || !(pass1.search(/[A-Z]/)>-1) || !(pass1.search(/[0-9]/)>-1) || !(pass1.search(/[$&+,!:;=?@#]/) > -1)){
-            alert("Enter a strong password...");
+            swal("Password","Enter a strong password...","info")
             document.querySelector('#pass1').focus();
+            return;
+        }else{
+            swal("Success","Your response is submitted successfully...","success");
+            setEmail('');
+            setFb('');
+            setFname('');
+            setGh('');
+            setInsta('');
+            setLinked('');
+            setLname('');
+            setMname('');
+            setMobile('');
+            setPass1('');
+            setPass2('');
+            setTwit('');
+            setYt('');
+            document.querySelector('#file').value = null;
+            document.querySelector('#retype').style.color = 'white';
+
             return;
         }
     }
@@ -59,7 +79,7 @@ const RegistrationForm = () => {
             <div className="inputs">
                 <div className="input">
                     <input value={f_name} placeholder=" " onChange={(e)=>{setFname(e.target.value)}} type="text" name="f_name" id="f_name" required/>
-                    <label className="label" htmlFor="f_name">First Name</label>
+                    <label className="label" htmlFor="f_name">First Name<span>*</span></label>
                 </div>
                 <div className="input">
                     <input value={m_name} placeholder=" " onChange={(e)=>{setMname(e.target.value)}} type="text" name="m_name" id="m_name" />
@@ -67,18 +87,19 @@ const RegistrationForm = () => {
                 </div>
                 <div className="input">
                     <input value={l_name} placeholder=" " onChange={(e)=>{setLname(e.target.value)}} type="text" name="l_name" id="l_name" required/>
-                    <label htmlFor="l_name">Last Name</label>
+                    <label htmlFor="l_name">Last Name<span>*</span></label>
                 </div>
                 <div className="input">
                     <input accept=".jpg,.jpeg,.png" placeholder=" "  type="file" name="file" id="file" required />
+                    <i className="fas fa-camera"></i>
                 </div>
                 <div className="input">
                     <input value={email} placeholder=" " placeholder=" " onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email" id="email" required/>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email<span>*</span></label>
                 </div>
                 <div className="input">
                     <input value={mobile} placeholder=" " onChange={(e)=>{setMobile(e.target.value)}} type="phone" name="mobile" id="mobile" required/>
-                    <label htmlFor="mobile">Mobile Number</label>
+                    <label htmlFor="mobile">Mobile Number<span>*</span></label>
                 </div>
                 <div className="input">
                     <input value={linked} placeholder=" " onChange={(e)=>{setLinked(e.target.value)}} type="text" name="linked" id="linked" />
@@ -114,19 +135,20 @@ const RegistrationForm = () => {
                         </ul>
                     </div>
                     <input value={pass1} placeholder=" " onChange={(e)=>{setPass1(e.target.value)}} type="password" name="pass1" id="pass1" required/>
-                    <label htmlFor="pass1">Password</label>
+                    <label htmlFor="pass1">Password<span>*</span></label>
                 </div>
                 <div className="input">
                     <div className="validate">
                         <span>Password{pass1==pass2&&pass1!=''?' matched ✔️': ' didn\'t match ❌'}</span>
                     </div>
                     <input value={pass2} placeholder=" " onChange={(e)=>{setPass2(e.target.value);checkPassword(e);}} type="password" name="pass2" id="pass2" required />
-                    <label htmlFor="pass2" id="retype">Re-type Password</label>
+                    <label htmlFor="pass2" id="retype">Re-type Password<span>*</span></label>
                     <i onClick={handleShowPass} className="fas pass2 fa-eye"></i>
                 </div>
             </div>
             <div className="submit">
                 <input onClick={handleSubmit} type="submit" value="Submit" />
+                <p>(<span>*</span>) are required fields</p>
             </div>
         </form>
     </div> );

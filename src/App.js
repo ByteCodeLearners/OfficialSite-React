@@ -9,6 +9,7 @@ import ContactUs from "./routes/ContactUs";
 import Registration from "./routes/Registration";
 import Batches from "./routes/Batches";
 import EventsGallery from "./routes/EventsGallery";
+import Initiator from "./routes/Initiator";
 
 export default function App() {
   return (
@@ -23,16 +24,16 @@ export default function App() {
             <EventsGallery />
           </Route>
           <Route exact path="/react_bcl/batches">
-            {/* <div style={{ marginTop: "150px" }}>Batches</div> */}
             <Batches />
           </Route>
           <Route exact path="/react_bcl/registration">
             <Registration />
           </Route>
           <Route exact path="/react_bcl/initiator">
-            <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
+            {/* <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
               Initiators Page
-            </div>
+            </div> */}
+            <Initiator />
           </Route>
           <Route exact path="/react_bcl/contact-us">
             <ContactUs />

@@ -17,8 +17,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   background-color: #20bf6b;
+  padding: 0.1rem 0.2rem;
 }
 .up-events-content h2 {
   color: #364457;
@@ -26,12 +27,15 @@
   width: 80%;
   text-align: center;
   padding: 0.15rem 0px;
+  align-self: center;
 }
 .up-events-content p {
   font-size: 0.25rem;
-  margin: 0.15rem 0.25rem;
+  margin: 0.05rem 0.2rem;
   color: white;
-  text-align: center;
+}
+.up-events-content p b {
+  color: rgb(79, 80, 79);
 }
 .events-list {
   overflow: hidden;
