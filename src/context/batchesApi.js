@@ -1,5 +1,5 @@
 import shailender from "../shailender.jpeg";
-import samosa from "../samosa.jpg";
+import upcoming from "../images/upcoming.png";
 const BatchesApi = [
   {
     image:
@@ -194,43 +194,43 @@ const BatchesApi = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
   },
   {
-    image: samosa,
-    name: "samosa",
+    image: upcoming,
+    name: "user",
     category: "upcoming",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, at consectetur totam voluptatibus quibusdam iusto. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
