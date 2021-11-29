@@ -6,7 +6,7 @@ const Section2 = () => {
     const [eventDetails, setEventDetails] = useState();
     const getEvent = async()=>{
         const event = await api.get('/api/getevents');
-        console.log(event.data);
+        // console.log(event.data);
         setEventDetails(event.data);
     }
     useEffect(()=>{

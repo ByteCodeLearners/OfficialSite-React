@@ -444,6 +444,9 @@
     margin-left: 0.5rem;
     gap: 0.2rem;
   }
+  .input .fa-camera {
+    display: none;
+  }
 }
 @media screen and (max-width: 350px) {
   :root {

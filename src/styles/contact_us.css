@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 70px;
+  gap: 150px;
 }
 .box-icons {
   font-size: 50px;
@@ -58,7 +58,7 @@
   overflow: hidden;
 }
 .rectangle {
-  width: 380px;
+  width: 340px;
   height: 540px;
   display: flexbox;
   justify-content: space-between;
@@ -72,7 +72,7 @@
 }
 .rectangle1 {
   height: 540px;
-  width: 380px;
+  width: 340px;
   display: flexbox;
   justify-content: space-between;
   align-items: center;
@@ -85,9 +85,9 @@
 }
 .rectangle2 {
   height: 540px;
-  width: 380px;
+  width: 340px;
   display: flexbox;
-  justify-content: -space-between;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   z-index: 50;
@@ -131,7 +131,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 .ions {
   background: rgb(184, 238, 233);

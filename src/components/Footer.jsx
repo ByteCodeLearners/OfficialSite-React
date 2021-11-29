@@ -27,10 +27,10 @@ export default function Footer(){
       <div className="copy-right">
         <p>Copyright © 2020 | Created by ByteCodeLearners.</p>
         <div className="footer-icons">
-        <span><i className="fab fa-facebook-f"></i></span>
-        <span><i className="fab fa-twitter"></i></span>
-        <span><i className="fab fa-instagram"></i></span>
-        <span><i className="fab fa-github"></i></span>
+        <span><a href="https://www.facebook.com/groups/bytecodelearners/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f" ></i></a></span>
+        <span><a href="https://twitter.com/BytecodeL" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a></span>
+        <span><a href="https://www.instagram.com/bytecode_learners/" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a></span>
+        <span><a href="https://github.com/ByteCodeLearners/" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a></span>
 
         </div>
       </div>

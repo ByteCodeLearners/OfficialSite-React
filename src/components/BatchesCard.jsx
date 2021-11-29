@@ -24,7 +24,7 @@ const MemberCard = ({ id, name, image, description }) => {
                           <a href="#">
                             <FaTwitterSquare
                               className="icon"
-                              color="CMYK"
+                              color="#3498db"
                             //   size="0.55rem"
                             />
                           </a>

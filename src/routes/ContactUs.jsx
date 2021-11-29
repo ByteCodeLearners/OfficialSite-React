@@ -25,7 +25,7 @@ const ContactUs = () => {
                     ==
                     <div className="container">
                         <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=380&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=340&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
                         scrolling="no"
                         frameborder="0"
                         allowfullscreen="true"
@@ -68,13 +68,12 @@ const ContactUs = () => {
                 <div className="rectangle2">
                 <div className=" twit">
                     <div className="ions">
-                    <a
-                        href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
-                        className="twitter social"
-                    >
-                        {/* <FontAwesomeIcon icon={faTwitter} size="3x" /> */}
-                        <i className="fab fa-twitter box-icons"></i>
-                    </a>
+                        <a
+                            href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
+                            className="twitter social" target="_blank">
+                            {/* <FontAwesomeIcon icon={faTwitter} size="3x" /> */}
+                            <i className="fab fa-twitter box-icons"></i>
+                        </a>
                     </div>
 
                     <h2>TWITTER FEEDS</h2>

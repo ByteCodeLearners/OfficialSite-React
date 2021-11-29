@@ -4,7 +4,7 @@ import BatchesNavbar from '../components/BatchesNavbar';
 import BatchesApi from '../context/batchesApi';
 import { sticky } from '../components/Navbar';
 import '../styles/batches.css';
-import api from '../backend.js';
+import axios from 'axios';
 
 const uniqueList = [
     ...new Set(
@@ -21,7 +21,8 @@ const Batches = () => {
         },[]);
     const [menuData, setMenuData] = useState(BatchesApi);
     const [menuList, setMenuList] = useState(uniqueList.sort());
-
+    const [members,setMembers] = useState([]);
+ 
     const filterItem = (category) => {
         if (category === "All") {
           setMenuData(BatchesApi);

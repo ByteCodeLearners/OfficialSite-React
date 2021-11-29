@@ -36,22 +36,27 @@ const RegistrationForm = () => {
     }
     const handleSubmit = ()=>{
         const file = document.querySelector('#file');
+        console.log(file.value);
         if(f_name == '' || l_name == '' || email == '' || mobile == '' || pass1 == '' || pass2 == ''||file.value == ''){
             swal("Empty Fields","Please enter all required input fields.","info");
         }else if(pass1 !== pass2){
             swal("Error","Passwords didn't match.","error");
             document.querySelector('#pass2').focus();
             return;
-        }else if(!(/[A-Za-z0-9_\.]+@\w+\.[a-z]+/).test(email)){
+        }else if(!(/[A-Za-z0-9_\.]+@[A-z]+\.[a-z]+/).test(email)){
             swal("E-Mail","Enter a valid mail id.","error");
             return;
-        }else if(mobile.length > 12 || !((/[0-9]{10}/).test(mobile)) || (/\D+/).test(mobile)){
+        }else if(mobile.length > 10 || !((/[0-9]{10}/).test(mobile)) || (/\D+/).test(mobile)){
             swal("Mobile Number","Enter a valid mobile number.","error");
             return;
         }else if(pass1.length<6 || !(pass1.search(/[A-Z]/)>-1) || !(pass1.search(/[0-9]/)>-1) || !(pass1.search(/[$&+,!:;=?@#]/) > -1)){
             swal("Password","Enter a strong password...","info")
             document.querySelector('#pass1').focus();
             return;
+        }else if(!(/.png$/).test(file.value)&&!(/.jpg$/).test(file.value)&&!(/.jpeg$/).test(file.value)){
+            swal("Profile Picture","file must be of type *.jpg,*.jpeg,*.png","error");
+        }else if((/\d+/).test(f_name) || (/\d+/).test(l_name) || (/\d+/).test(m_name) ){
+            swal("Error", "Use only letters to describe these fields\ni.e First Name, Middle Name and Last name","info");
         }else{
             swal("Success","Your response is submitted successfully...","success");
             setEmail('');

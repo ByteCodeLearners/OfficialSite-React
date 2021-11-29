@@ -57,7 +57,7 @@ export default function Navbar(){
             </div>
       </div>
       <i class="fas menu-btn fa-bars" onClick={()=>{navBtn(); handleMenuBtn();}}></i>
-      <ul className="nav-btns" onClick={navBtn} >
+      <ul className="nav-btns" onClick={()=>{navBtn(); handleMenuBtn();}} >
         <li><NavLink to="/react_bcl"><i className="fas fa-home"></i>Home</NavLink></li>
         <li><NavLink to="/react_bcl/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li>
         <li><NavLink to="/react_bcl/batches"><i className="fas fa-users"></i>Batches</NavLink></li>

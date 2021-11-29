@@ -11,17 +11,19 @@
 }
 
 #Initlogo {
+  display: none;
   height: 100px;
   width: 100px;
 }
 
 .main h1 {
+  width: 100%;
   text-align: center;
   font-size: 45px;
   font-weight: bold;
   color: black;
   margin-bottom: 25px;
-  padding-left: 250px;
+  /* padding-left: 250px; */
 }
 
 .main .intro {
@@ -70,6 +72,7 @@
 .main button {
   margin: 9px;
   font-size: 80%;
+  padding: 1px 6px;
 }
 
 .main .box2 {

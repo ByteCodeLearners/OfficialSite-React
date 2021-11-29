@@ -156,6 +156,9 @@ footer {
   display: flex;
   gap: 0.3rem;
 }
+.copy-right a {
+  text-decoration: none;
+}
 .footer-icons .fab {
   background-color: rgb(135, 180, 44);
   border-radius: 50%;

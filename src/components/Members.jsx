@@ -8,7 +8,9 @@ const Members = () => {
         const response = await api.get("/api/users/all");
         setMem(response.data);
     }
-    useEffect(getMembers,[]);
+    useEffect(()=>{
+        getMembers();
+    },[]);
     return ( 
         <div className="members-section">
             <h1>Members</h1>

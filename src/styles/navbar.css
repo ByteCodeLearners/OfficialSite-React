@@ -48,6 +48,9 @@
 .fa-bars {
   display: none;
 }
+.fa-times {
+  display: none;
+}
 .navbar .logo {
   position: relative;
   font-size: 0.4rem;
