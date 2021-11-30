@@ -1,3 +1,7 @@
+:root {
+  --img-width1: 220px;
+  --img-height1: 250px;
+}
 .batches {
   text-align: center;
   background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg);
@@ -30,7 +34,7 @@
 }
 .main-card--cointainer {
   display: grid;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(4, 20%);
   gap: 20px;
   justify-content: space-evenly;
   /* margin: 0 0.5rem; */
@@ -48,7 +52,7 @@
   box-shadow: none;
   position: relative;
   width: 250px;
-  height: 300px;
+  height: 200px;
   margin: auto;
 }
 .batches .card-container img {
@@ -56,28 +60,30 @@
   /* width: 100%; */
   /* transform: translateY(100px); */
   object-fit: fill !important;
+  width: var(--img-width1) !important;
+  height: var(--img-height1) !important;
   /* padding-left: 20%; */
 }
 
 .batches .card-container .card {
-  background-color: rgb(223, 247, 216);
-  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 10px;
   position: relative;
-  box-shadow: 0 0 50px rgba(250, 11, 103, 0.07);
   z-index: 1;
-  transition: 0.6s;
-  box-shadow: 0px 0px 5px 2px rgba(233, 250, 3, 0.4);
+  transition: 1s;
+  box-shadow: 0px 0px 5px 2px rgba(75, 75, 73, 0.479);
   transform-style: flat;
+  border-radius: 7px;
 }
-
+.batches .icon-insta {
+  background: linear-gradient(130deg, #365adb 20%, #fd2b93, #ff5819, #ffffff);
+  color: #fff;
+  border-radius: 5px;
+}
 .card-container .card:hover {
-  border: 10px solid #bb0fd1;
-  animation: colorchg 1s infinite;
-  /* box-shadow: 0px 0px 35px 3px rgba(0, 0, 0, 0.4); */
-  box-shadow: 0px 0px 50px 20px rgba(13, 252, 5, 0.4);
-  transform-style: preserve-3d;
+  box-shadow: 0px 0px 30px 2px rgba(75, 75, 73, 0.753);
 }
-@keyframes colorchg {
+/* @keyframes colorchg {
   0% {
     border: 5px solid green;
   }
@@ -93,7 +99,7 @@
   100% {
     border: 5px solid blue;
   }
-}
+} */
 
 .card-circle {
   border-radius: 50%;
@@ -115,8 +121,8 @@
 }
 
 .card-container .icon:hover {
-  transition: 0.3s ease-in-out;
-  transform: scale(1.2) translateY(-7px);
+  transition: 0.5s ease-in-out;
+  transform: scale(1.1) translateY(-4px);
   box-shadow: #e75050;
 }
 
@@ -136,11 +142,12 @@
   font-weight: 300;
   line-height: 55px;
   margin: 0.15rem 0;
-  color: rgb(108, 146, 31);
+  color: #34495e;
   text-transform: capitalize;
 }
 
 .card-description {
+  display: none;
   font-size: 0.14rem;
   font-weight: 300;
   line-height: 0.2rem;
@@ -160,6 +167,7 @@
 } */
 .card-read {
   cursor: pointer;
+  display: none;
   font-size: 0.13rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -277,17 +285,17 @@
 /* Responsive */
 
 @media (max-width: 998px) {
-  .main-card--cointainer {
-    display: grid;
-    grid-template-columns: repeat(2, 40%);
-    grid-gap: 50px;
-  }
   .card-description {
     height: 50px;
   }
 }
 
 @media (max-width: 825px) {
+  .main-card--cointainer {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-gap: 50px;
+  }
   .batches {
     font-size: 0.2rem;
     margin-bottom: -3rem;

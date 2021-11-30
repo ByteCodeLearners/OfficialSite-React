@@ -6,10 +6,16 @@ const Members = () => {
     const [mem,setMem] = useState(null);
     const getMembers = async()=>{
         const response = await api.get("/api/users/all");
-        setMem(response.data);
+        console.log(response.data);
+        // setMem(response.data);
+    }
+    const getBatch2020 = async ()=>{
+        const res = await api.get("/api/batch/2020");
+        setMem(res.data);
     }
     useEffect(()=>{
-        getMembers();
+        // getMembers();
+        getBatch2020();
     },[]);
     return ( 
         <div className="members-section">

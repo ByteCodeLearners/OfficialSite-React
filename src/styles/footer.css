@@ -1,6 +1,6 @@
 footer {
   background-color: #18ac56;
-  font-size: 0.15rem;
+  font-size: 0.175rem;
 }
 .footer {
   margin-top: 150px;
@@ -14,6 +14,110 @@ footer {
   position: relative;
   width: 100%;
 }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-size: 0.18rem;
+}
+.footer-content p {
+  font-size: 0.2rem;
+}
+.footer .details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#initiator {
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* background-color: black; */
+  width: fit-content;
+  padding: 1px 2px;
+  position: relative;
+  left: 28px;
+  top: 15px;
+  margin-bottom: 0.5rem;
+}
+#initiator a {
+  color: whitesmoke;
+  cursor: pointer;
+}
+#initiator::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: rgb(46, 44, 44);
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  border-radius: 5px;
+}
+#initiator::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -20.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+.copy-right {
+  background-color: #18ac56;
+  color: white;
+  padding: 0px 0.3rem;
+  /* width: 100%; */
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.copy-right .footer-icons {
+  font-size: 0.25rem;
+  justify-self: flex-end;
+  width: fit-content;
+  display: flex;
+  gap: 0.3rem;
+}
+.copy-right a {
+  text-decoration: none;
+}
+.footer-icons .fab {
+  background-color: rgb(135, 180, 44);
+  border-radius: 50%;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.footer-icons .fa-facebook-f:hover {
+  background-color: rgb(39, 137, 250);
+  cursor: pointer;
+}
+.footer-icons .fa-twitter:hover {
+  background-color: rgb(30, 140, 243);
+  cursor: pointer;
+}
+.footer-icons .fa-instagram:hover {
+  background-color: rgb(240, 146, 201);
+  cursor: pointer;
+}
+.footer-icons .fa-github:hover {
+  background-color: black;
+  cursor: pointer;
+}
+/* Waves Animation */
 .footer .waves {
   position: absolute;
   top: -80px;
@@ -95,93 +199,4 @@ footer {
   100% {
     background-position-x: 1000px;
   }
-}
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-bottom: 2px solid rgb(255, 255, 255);
-}
-
-#initiator {
-  font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  /* background-color: black; */
-  width: fit-content;
-  padding: 1px 2px;
-  position: relative;
-  left: 28px;
-  top: 15px;
-  margin-bottom: 0.5rem;
-}
-#initiator a {
-  color: whitesmoke;
-  cursor: pointer;
-}
-#initiator::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background-color: rgb(46, 44, 44);
-  position: absolute;
-  top: 0px;
-  left: -28px;
-  border-radius: 5px;
-}
-#initiator::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: -24px;
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  border-top: 3px solid white;
-  border-right: 3px solid white;
-}
-.copy-right {
-  background-color: #18ac56;
-  color: white;
-  padding: 0px 0.3rem;
-  /* width: 100%; */
-  padding-bottom: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-.copy-right .footer-icons {
-  font-size: 0.25rem;
-  justify-self: flex-end;
-  width: fit-content;
-  display: flex;
-  gap: 0.3rem;
-}
-.copy-right a {
-  text-decoration: none;
-}
-.footer-icons .fab {
-  background-color: rgb(135, 180, 44);
-  border-radius: 50%;
-  width: 0.4rem;
-  height: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-}
-.footer-icons .fa-facebook-f:hover {
-  background-color: rgb(39, 137, 250);
-  cursor: pointer;
-}
-.footer-icons .fa-twitter:hover {
-  background-color: rgb(30, 140, 243);
-  cursor: pointer;
-}
-.footer-icons .fa-instagram:hover {
-  background-color: rgb(240, 146, 201);
-  cursor: pointer;
-}
-.footer-icons .fa-github:hover {
-  background-color: black;
-  cursor: pointer;
 }

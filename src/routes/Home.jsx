@@ -3,6 +3,7 @@ import Section2 from "../components/Section2";
 import Members from "../components/Members";
 import Display from "../components/Display";
 import {  sticky } from '../components/Navbar';
+import Gallery from '../components/Gallery';
 
 const Home = () => {
     useEffect(()=>{
@@ -13,6 +14,7 @@ const Home = () => {
             <Display />
             <Section2 />
             <Members />
+            <Gallery/>
         </div>
      );
 }

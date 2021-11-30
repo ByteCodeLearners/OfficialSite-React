@@ -3,7 +3,7 @@ import {
     FaGithub,
     FaTwitterSquare,
     FaLinkedin,
-    FaInstagramSquare,
+    FaInstagram,
   } from "react-icons/fa";
 
 const MemberCard = ({ id, name, image, description }) => {
@@ -24,7 +24,7 @@ const MemberCard = ({ id, name, image, description }) => {
                           <a href="https://www.twitter.com">
                             <FaTwitterSquare
                               className="icon"
-                              color="#3498db"
+                              color="#55adee"
                             //   size="0.55rem"
                             />
                           </a>
@@ -44,12 +44,13 @@ const MemberCard = ({ id, name, image, description }) => {
                           <a href="https://www.linkedin.com">
                             <FaLinkedin
                               className="icon"
-                              color="#0e76a8"
+                              color="#0077b5"
                             //   size="0.55rem"
                             />
                           </a>
                         </li>
                         <li>
+
                           <a href="https://www.instagram.com">
                             <FaInstagramSquare
                               className="icon"

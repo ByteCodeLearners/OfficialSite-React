@@ -4,15 +4,16 @@ export default function Imgcard({member}){
   return(
     <div className="imgcard">
       <div className="img-container">
-        <img src={"https://www.bytecodelearners.club/bytecode-server/storage/app/public/"+member.user_details.image} alt={member.user_name} />
+        <img src={"https://www.bytecodelearners.club/bytecode-server/storage/app/public/"+member.image} alt={member.first_name} />
       </div>
       <div className="content-container">
-        <p>{member.user_details.first_name +" "+ member.user_details.last_name}</p>
+        <p>{member.first_name +" "+ member.last_name}</p>
         <div className="social-icon">
-          {member.fb?<a href={member.fb}><span><i className="fab fa-facebook-f"></i></span></a>:null}
-          {member.twitter?<a href={member.twitter}><span><i className="fab fa-twitter"></i></span></a>:null}
-          {member.insta?<a href={member.insta}><span><i className="fab fa-instagram"></i></span></a>:null}
-          {member.github?<a href={member.github}><span><i className="fab fa-github"></i></span></a>:null}
+          {member.social_media_links?member.social_media_links.facebook?<a href={member.social_media_links.facebook} target="_blank"><span><i className="fab fa-facebook-f"></i></span></a>:null:null}
+          {member.social_media_links?member.social_media_links.twitter?<a href={member.social_media_links.twitter} target="_blank"><span><i className="fab fa-twitter"></i></span></a>:null:null}
+          {member.social_media_links?member.social_media_links.instagram?<a href={member.social_media_links.instagram} target="_blank"><span><i className="fab fa-instagram"></i></span></a>:null:null}
+          {member.social_media_links?member.social_media_links.github?<a href={member.social_media_links.github} target="_blank"><span><i className="fab fa-github"></i></span></a>:null:null}
+          {member.social_media_links?member.social_media_links.youtube?<a href={member.social_media_links.youtube} target="_blank"><span><i className="fab fa-youtube"></i></span></a>:null:null}
         </div>
       </div>
     </div>
