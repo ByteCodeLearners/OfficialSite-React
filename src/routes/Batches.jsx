@@ -1,49 +1,71 @@
-import React, { useEffect, useState } from 'react';
-import BatchesCard from '../components/BatchesCard';
-import BatchesNavbar from '../components/BatchesNavbar';
-import BatchesApi from '../context/batchesApi';
-import { sticky } from '../components/Navbar';
-import '../styles/batches.css';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import BatchesCard from "../components/BatchesCard";
+import BatchesNavbar from "../components/BatchesNavbar";
+import BatchesApi from "../context/batchesApi";
+import { sticky } from "../components/Navbar";
+import "../styles/batches.css";
+import axios from "axios";
+
+const userUrl =
+  "https://www.bytecodelearners.club/bytecode-server/api/users/all";
+
+const memberUrl =
+  "https://www.bytecodelearners.club/bytecode-server/api/members/all";  
 
 const uniqueList = [
-    ...new Set(
-      BatchesApi.map((curElem) => {
-        return curElem.category;
-      })
-    ),
-    "All",
-  ];
+  ...new Set(
+    BatchesApi.map((curElem) => {
+      return curElem.category;
+    })
+  ),
+  "All",
+];
 
 const Batches = () => {
-    useEffect(()=>{
-        sticky();
-        },[]);
-    const [menuData, setMenuData] = useState(BatchesApi);
-    const [menuList, setMenuList] = useState(uniqueList.sort());
-    const [members,setMembers] = useState([]);
- 
-    const filterItem = (category) => {
-        if (category === "All") {
-          setMenuData(BatchesApi);
-          return;
-        }
-        //}
-    
-        const updatedList = BatchesApi.filter((curElem) => {
-          return curElem.category === category;
-        });
-    
-        setMenuData(updatedList);
-        setMenuList(uniqueList);
-      };
+  const [userData, setUserData] = useState({});
 
-    return ( 
-        <div className="batches">
-            <BatchesNavbar filterItem={filterItem} menuList={menuList}/>
-            <BatchesCard batchData={menuData}/>
-        </div>
-     );
-}
- 
+  useEffect(() => {
+    sticky();
+  }, []);
+
+  useEffect(() => {
+    batchesApi();
+  }, []);
+
+  const batchesApi = async () => {
+    const response = await axios.get(userUrl);
+    // console.log(response.data);
+    setUserData(response.data);
+  };
+
+  console.log(userData);
+
+  const [menuData, setMenuData] = useState(BatchesApi);
+  const [menuList, setMenuList] = useState(uniqueList.sort());
+  // const [members,setMembers] = useState([]);
+  console.log(menuData)
+
+  const filterItem = (category) => {
+    if (category === "All") {
+      setMenuData(BatchesApi);
+      return;
+    }
+    //}
+
+    const updatedList = BatchesApi.filter((curElem) => {
+      return curElem.category === category;
+    });
+
+    setMenuData(updatedList);
+    setMenuList(uniqueList);
+  };
+
+  return (
+    <div className="batches">
+      <BatchesNavbar filterItem={filterItem} menuList={menuList} />
+      <BatchesCard batchData={userData} />
+    </div>
+  );
+};
+
 export default Batches;

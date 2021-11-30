@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 export default function UpEvents({eventDetails}){
   // let [event_topic,setTopic] = useState("");
   // let [event_link,setLink] = useState("");

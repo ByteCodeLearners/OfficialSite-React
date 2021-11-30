@@ -18,7 +18,7 @@ const RegistrationForm = () => {
     const handleShowPass = ()=>{
         const pass2 = document.querySelector('#pass2');
         const eye = document.querySelector('.pass2');
-        if(pass2.type == 'password'){
+        if(pass2.type === 'password'){
             eye.classList.replace('fa-eye','fa-eye-slash');
             pass2.type = 'text';
         }else{
@@ -28,7 +28,7 @@ const RegistrationForm = () => {
     }
     const checkPassword = (e)=>{
         const reType = document.querySelector('#retype');
-        if(pass1 == e.target.value && pass1 != ''){
+        if(pass1 === e.target.value && pass1 !== ''){
             reType.style.color = 'green';
         }else{
             reType.style.color= "#fc5c65";
@@ -37,13 +37,13 @@ const RegistrationForm = () => {
     const handleSubmit = ()=>{
         const file = document.querySelector('#file');
         console.log(file.value);
-        if(f_name == '' || l_name == '' || email == '' || mobile == '' || pass1 == '' || pass2 == ''||file.value == ''){
+        if(f_name === '' || l_name === '' || email === '' || mobile === '' || pass1 === '' || pass2 === ''||file.value === ''){
             swal("Empty Fields","Please enter all required input fields.","info");
         }else if(pass1 !== pass2){
             swal("Error","Passwords didn't match.","error");
             document.querySelector('#pass2').focus();
             return;
-        }else if(!(/[A-Za-z0-9_\.]+@[A-z]+\.[a-z]+/).test(email)){
+        }else if(!(/[A-Za-z0-9_.]+@[A-z]+\.[a-z]+/).test(email)){
             swal("E-Mail","Enter a valid mail id.","error");
             return;
         }else if(mobile.length > 10 || !((/[0-9]{10}/).test(mobile)) || (/\D+/).test(mobile)){
@@ -99,7 +99,7 @@ const RegistrationForm = () => {
                     <i className="fas fa-camera"></i>
                 </div>
                 <div className="input">
-                    <input value={email} placeholder=" " placeholder=" " onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email" id="email" required/>
+                    <input value={email} placeholder=" "  onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email" id="email" required/>
                     <label htmlFor="email">Email<span>*</span></label>
                 </div>
                 <div className="input">
@@ -144,7 +144,7 @@ const RegistrationForm = () => {
                 </div>
                 <div className="input">
                     <div className="validate">
-                        <span>Password{pass1==pass2&&pass1!=''?' matched ✔️': ' didn\'t match ❌'}</span>
+                        <span>Password{pass1===pass2&&pass1!==''?' matched ✔️': ' didn\'t match ❌'}</span>
                     </div>
                     <input value={pass2} placeholder=" " onChange={(e)=>{setPass2(e.target.value);checkPassword(e);}} type="password" name="pass2" id="pass2" required />
                     <label htmlFor="pass2" id="retype">Re-type Password<span>*</span></label>
