@@ -41,10 +41,13 @@
   flex-wrap: wrap;
   font-size: 13px;
 }
+.main .intro div {
+  display: flex;
+}
 
 .main #post {
   height: 150px;
-  width: 130px;
+  width: 190px;
 }
 
 .main b {
