@@ -13,7 +13,7 @@ export const sticky=()=>{
   var nav = document.getElementsByClassName('navbar')[0];
   var club = document.getElementsByClassName("club")[0];
     if(window.screen.width>550){
-      nav.classList.toggle("sticky",window.scrollY>0);
+       nav.classList.toggle("sticky",window.scrollY>0);
       if(window.scrollY>0){
           club.classList.add('showClub');
       }else{

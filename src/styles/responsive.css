@@ -1,15 +1,18 @@
 /*      Media Queries      */
 @media screen and (max-width: 1200px) {
   :root {
-    font-size: 82px;
+    font-size: 75px;
   }
   #text {
     font-size: 1.12rem;
   }
+  .main-card--cointainer {
+    grid-template-columns: repeat(3, 30%);
+  }
 }
 @media screen and (max-width: 1000px) {
   :root {
-    font-size: 80px;
+    font-size: 72px;
   }
   #text {
     font-size: 1.05rem;
@@ -34,7 +37,7 @@
 }
 @media screen and (max-width: 900px) {
   :root {
-    font-size: 77px;
+    font-size: 70px;
     --img-height: 300px;
     --img-width: 230px;
   }
@@ -45,11 +48,14 @@
     position: relative;
     left: 0.4rem;
   }
+  .main-card--cointainer {
+    grid-template-columns: repeat(2, 30%);
+  }
 }
 
 @media screen and (max-width: 845px) {
   :root {
-    font-size: 70px;
+    font-size: 55px;
   }
   #text {
     font-size: 1.7rem;
@@ -154,7 +160,7 @@
   }
   /* Batches card */
   .main-card--cointainer {
-    grid-template-columns: repeat(1, 80%);
+    grid-template-columns: repeat(2, 35%);
   }
   .card-description {
     height: fit-content;
@@ -256,7 +262,7 @@
 }
 @media screen and (max-width: 750px) {
   :root {
-    font-size: 60px;
+    font-size: 50px;
     --img-height: 270px;
     --img-width: 200px;
     --img-width1: 240px;
@@ -279,7 +285,7 @@
 }
 @media screen and (max-width: 650px) {
   :root {
-    font-size: 55px;
+    font-size: 48px;
   }
   .navbar .logo img {
     width: 0.55rem;
@@ -293,10 +299,13 @@
   .sticky {
     padding: 0.1rem 0.2rem;
   }
+  .main-card--cointainer {
+    grid-template-columns: repeat(1, 50%);
+  }
 }
 @media screen and (max-width: 580px) {
   :root {
-    font-size: 52px;
+    font-size: 45px;
   }
   /* Registration page */
   .login-register-wrapper {
@@ -315,7 +324,7 @@
 }
 @media screen and (max-width: 550px) {
   :root {
-    font-size: 50px;
+    font-size: 48px;
   }
   .navbar {
     background: linear-gradient(90deg, white, 1%, #27ae60);
@@ -415,6 +424,12 @@
   .members-section h1 {
     margin: 20px 10px;
   }
+  .gallery .images {
+    column-count: 2 !important;
+  }
+  .light-box::before {
+    top: 1rem !important;
+  }
   .footer-content {
     gap: 0.4rem;
   }
@@ -446,6 +461,12 @@
   }
   .input .fa-camera {
     display: none;
+  }
+  .gallery .images {
+    column-count: 1 !important;
+  }
+  .active-light-box img {
+    width: 90%;
   }
 }
 @media screen and (max-width: 350px) {

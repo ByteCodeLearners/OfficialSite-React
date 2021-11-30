@@ -1,6 +1,6 @@
 :root {
-  --img-height: 350px;
-  --img-width: 270px;
+  --img-height: 320px;
+  --img-width: 250px;
 }
 .imgcard {
   position: relative;
@@ -61,6 +61,7 @@
   transition: 0.6s;
   transition-delay: 0.3s;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  font-size: 0.27rem;
 }
 .imgcard:hover .content-container p {
   transform: translateY(0px);
@@ -79,9 +80,10 @@
 }
 .social-icon a .fab {
   transition: 0.4s;
+  font-size: 0.35rem;
 }
 .social-icon a:hover .fab {
-  transform: scale(1.5);
+  transform: scale(1.3);
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
 }
 .social-icon a:nth-child(1) {
@@ -95,6 +97,9 @@
 }
 .social-icon a:nth-child(4) {
   transition-delay: 0.65s;
+}
+.social-icon a:nth-child(5) {
+  transition-delay: 0.7s;
 }
 .imgcard:hover .social-icon a {
   opacity: 1;

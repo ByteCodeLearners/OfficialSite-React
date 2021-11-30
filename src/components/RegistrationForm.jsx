@@ -53,10 +53,13 @@ const RegistrationForm = () => {
             swal("Password","Enter a strong password...","info")
             document.querySelector('#pass1').focus();
             return;
-        }else if(!(/.png$/).test(file.value)&&!(/.jpg$/).test(file.value)&&!(/.jpeg$/).test(file.value)){
+        }else if(!(/.png$/).test((file.value.toLowerCase()))&&!(/.jpg$/).test((file.value.toLowerCase()))&&!(/.jpeg$/).test((file.value.toLowerCase()))){
             swal("Profile Picture","file must be of type *.jpg,*.jpeg,*.png","error");
-        }else if((/\d+/).test(f_name) || (/\d+/).test(l_name) || (/\d+/).test(m_name) ){
+    
+        }else if((/\d+/).test(f_name) || (/\d+/).test(l_name) || (/\d+/).test(m_name) || f_name.search(/[$&+,!:;=?@#]/) > -1 || l_name.search(/[$&+,!:;=?@#]/) > -1 || m_name.search(/[$&+,!:;=?@#]/) > -1){
             swal("Error", "Use only letters to describe these fields\ni.e First Name, Middle Name and Last name","info");
+        }else if(f_name.length < 3 || l_name.length < 3){
+            swal("Error", "There should be minimum of 3 letters for below fields\ni.e First Name and Last name","info");
         }else{
             swal("Success","Your response is submitted successfully...","success");
             setEmail('');

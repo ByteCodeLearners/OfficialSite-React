@@ -2,7 +2,7 @@
   padding: 0.6rem;
   padding-left: 1rem;
   padding-top: 1.6rem;
-  min-height: 80vh;
+  min-height: 99vh;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
@@ -10,12 +10,18 @@
   gap: 0.5rem;
   background: linear-gradient(40deg, #05c46b, #bcf5d3);
 }
+.text-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
 #text {
   position: relative;
   top: 0.1rem;
   left: 0.1rem;
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   text-align: center;
   line-height: 1.25rem;
   transform: rotate(0deg) skew(0deg);
@@ -49,7 +55,7 @@
 }
 
 .display img {
-  width: 100%;
+  width: 70%;
 }
 
 /*      Media Queries      */
