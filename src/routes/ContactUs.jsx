@@ -12,7 +12,7 @@ const ContactUs = () => {
             <div className="boxes">
                 <div className="rectangle">
                 <div className="ions">
-                    <a href="#" className="facebook social">
+                    <a href="https://www.facebooke.com" className="facebook social">
                     {/* <FontAwesomeIcon icon={faFacebook} size="3x" /> */}
                     <i className="fab fa-facebook box-icons"></i>
                     </a>
@@ -30,6 +30,7 @@ const ContactUs = () => {
                         frameborder="0"
                         allowfullscreen="true"
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        title="contact-us"
                         ></iframe>
                     </div>
                     </div>
@@ -39,7 +40,7 @@ const ContactUs = () => {
                 <div className="rectangle1">
                 <div className=" inst">
                     <div className="ions">
-                        <a href="#" className="instagram social">
+                        <a href="https://www.instagram.com" className="instagram social">
                             {/* <FontAwesomeIcon icon={faInstagram} size="3x" /> */}
                             <i className="fab fa-instagram box-icons"></i>
                         </a>
@@ -70,7 +71,7 @@ const ContactUs = () => {
                     <div className="ions">
                         <a
                             href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
-                            className="twitter social" target="_blank">
+                            className="twitter social" target="_blank" rel="noopener noreferrer">
                             {/* <FontAwesomeIcon icon={faTwitter} size="3x" /> */}
                             <i className="fab fa-twitter box-icons"></i>
                         </a>

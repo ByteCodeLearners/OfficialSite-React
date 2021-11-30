@@ -21,7 +21,7 @@ const MemberCard = ({ id, name, image, description }) => {
                     <div className="card-circle">
                       <ul className="icons">
                         <li>
-                          <a href="#">
+                          <a href="https://www.twitter.com">
                             <FaTwitterSquare
                               className="icon"
                               color="#55adee"
@@ -31,7 +31,7 @@ const MemberCard = ({ id, name, image, description }) => {
                         </li>
 
                         <li className="github">
-                          <a href="#">
+                          <a href="https://www.github.com">
                             <FaGithub
                               className="icon"
                               color="black"
@@ -41,7 +41,7 @@ const MemberCard = ({ id, name, image, description }) => {
                         </li>
 
                         <li>
-                          <a href="#">
+                          <a href="https://www.linkedin.com">
                             <FaLinkedin
                               className="icon"
                               color="#0077b5"
@@ -50,10 +50,11 @@ const MemberCard = ({ id, name, image, description }) => {
                           </a>
                         </li>
                         <li>
-                          <a href="#">
-                            <FaInstagram
-                              className="icon icon-insta"
-                              // color="#8a3ab9"
+
+                          <a href="https://www.instagram.com">
+                            <FaInstagramSquare
+                              className="icon"
+                              color="#8a3ab9"
                             //   size="0.55rem"
                             />
                           </a>
@@ -85,14 +86,24 @@ const MemberCard = ({ id, name, image, description }) => {
 
 
 const BatchesCard = ({ batchData }) => {
-    
+    // console.log(batchData)
     return ( 
         <div className="batches-card">
             <section className="main-card--cointainer">
-        {batchData?batchData.map((curElem,index) => {
-          const { id, name, category, image, description } = curElem;
+        {batchData.length>0?batchData.map((curElem,index) => {
+
+          // const { id, name, category, image, description } = curElem; 
+          
+          //const { id, first_name, image, description } = curElem;
+
           return (
-            <MemberCard key={index} id={id} name={name} index={index} image={image} description={description}/>
+            <MemberCard 
+            key={curElem.user_details.mobile_number} 
+            id={curElem.user_details.id} 
+            name={curElem.user_details.first_name+" "+curElem.user_details.middle_name+" "+curElem.user_details.last_name} 
+            index={index} 
+            image={`https://www.bytecodelearners.club/bytecode-server/storage/app/public/${curElem.user_details.image}`} 
+            description={curElem.user_details.description}/>
             // <>
             //   <div className="card-container" key={id}>
             //     <div className="card">
@@ -162,3 +173,5 @@ const BatchesCard = ({ batchData }) => {
 }
  
 export default BatchesCard;
+
+
