@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from "../byte-code-learners.svg";
 export const navBtn = ()=>{
+  
   var navBtn = document.getElementsByClassName("nav-btns")[0];
   navBtn.classList.toggle('nav-btn');
   
@@ -59,7 +60,7 @@ export default function Navbar(){
       <i class="fas menu-btn fa-bars" onClick={()=>{navBtn(); handleMenuBtn();}}></i>
       <ul className="nav-btns" onClick={()=>{navBtn(); handleMenuBtn();}} >
         <li><NavLink to="/react_bcl"><i className="fas fa-home"></i>Home</NavLink></li>
-        <li><NavLink to="/react_bcl/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li>
+        {/* <li><NavLink to="/react_bcl/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li> */}
         <li><NavLink to="/react_bcl/batches"><i className="fas fa-users"></i>Batches</NavLink></li>
         <li><NavLink to="/react_bcl/registration"><i className="fas fa-file-signature"></i>Registration</NavLink></li>
         <li><NavLink to="/react_bcl/initiator"><i className="fas fa-fist-raised"></i>Intiator</NavLink></li>

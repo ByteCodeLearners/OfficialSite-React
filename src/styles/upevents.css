@@ -1,42 +1,78 @@
 .up-events {
-  display: flex;
   width: 100%;
-  height: 45%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  /* height: 270px; */
   position: relative;
-  overflow: hidden;
   font-size: 0.21rem;
-  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.up-events h1 {
+  width: 100%;
+  padding: 0.2rem;
+  text-align: center;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.4);
+}
+.both-events {
+  display: flex;
+  gap: 10px;
 }
 .up-events-content {
-  width: 100%;
-  height: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: #20bf6b;
-  padding: 0.1rem 0.2rem;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.4);
 }
-.up-events-content h2 {
+.up-events-content h2,
+.pre-events h2 {
   color: #364457;
-  border-bottom: 2px solid rgb(211, 206, 206);
-  width: 80%;
-  text-align: center;
   padding: 0.15rem 0px;
-  align-self: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.4rem;
+}
+.up-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0.4rem;
+  background-color: #6081a3;
 }
 .up-events-content p {
+  color: whitesmoke;
   font-size: 0.25rem;
-  margin: 0.05rem 0.2rem;
-  color: white;
+  margin: 0.1rem;
+}
+.up-events-content p a {
+  color: whitesmoke;
 }
 .up-events-content p b {
-  color: rgb(79, 80, 79);
+  color: #31353b;
+  /* color: rgb(79, 80, 79); */
 }
+.event-img {
+  width: 100%;
+}
+.event-img img {
+  width: 100%;
+}
+.pre-events {
+  padding: 15px;
+  width: 50%;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.4);
+}
+.pre-event-imgs {
+  padding: 20px 50px;
+  column-count: 1;
+}
+.pre-img1 {
+  column-count: 2;
+}
+.pre-event-imgs img {
+  width: 100%;
+}
+/* Ignore */
 .events-list {
   overflow: hidden;
   padding: 0px 0.1rem;
@@ -49,6 +85,7 @@
   animation-play-state: paused;
   transform: translateY(0%);
 }
+
 /*      Marquee  Animation       */
 @keyframes scrollup {
   0% {

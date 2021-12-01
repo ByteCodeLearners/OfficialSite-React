@@ -26,9 +26,6 @@ const Gallery = () => {
         lightBox();
     },[])
     const images = [
-    // 'https://www.bytecodelearners.club/statics/prevEvent3.jpg',
-    // 'https://www.bytecodelearners.club/statics/prevEvent5.jpg',
-    // 'https://www.bytecodelearners.club/statics/prevEvent4.jpg',
     'https://www.bytecodelearners.club/statics/g8.jpg',
     'https://www.bytecodelearners.club/statics/g6.jpg',
     'https://www.bytecodelearners.club/statics/g5.jpg',
@@ -40,7 +37,7 @@ const Gallery = () => {
     
 ];
     return ( 
-        <div className="gallery">
+        <div className="gallery" id="Gallery">
             <h1>Event Gallery</h1>
             <div className="images">
                 {images.map((img,index)=>{return <img className='gallery-img' key={index} src={img} alt=""/>})}

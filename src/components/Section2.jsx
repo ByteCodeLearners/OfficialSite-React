@@ -14,13 +14,8 @@ const Section2 = () => {
     },[])
     return ( 
         <div className="section2">
-            <div className='abt-event'>
                 <AboutUs/>
                 <UpEvents eventDetails={eventDetails}/>
-            </div>
-            <div className="event-img">
-            <img src={eventDetails?`https://www.bytecodelearners.club/bytecode-server/storage/app/${eventDetails.image}`:null} alt="Event Poster"/>  
-            </div>
         </div>
      );
 }

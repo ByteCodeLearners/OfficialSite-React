@@ -23,7 +23,7 @@
 }
 .members .mem-list1 {
   display: flex;
-  animation: scroll_left1 15s linear infinite;
+  animation: scroll_left1 25s linear infinite;
 }
 @keyframes scroll_left1 {
   0% {

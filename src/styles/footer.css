@@ -27,12 +27,12 @@ footer {
 .footer .details {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 .footer .contact {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 
 #initiator {
@@ -93,6 +93,7 @@ footer {
 }
 .footer-icons .fab {
   background-color: rgb(135, 180, 44);
+  color: whitesmoke;
   border-radius: 50%;
   width: 0.4rem;
   height: 0.4rem;

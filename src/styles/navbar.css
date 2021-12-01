@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  gap: 3px;
+  gap: 5px;
 }
 .navbar ul li:hover a {
   transition: 0.4s;
@@ -34,7 +34,7 @@
   /* display: none; */
 }
 .sticky {
-  padding: 0.1rem 0.2rem;
+  padding: 0.15rem 0.2rem;
   background: linear-gradient(90deg, white, 1%, #27ae60);
   font-size: 0.18rem;
 }

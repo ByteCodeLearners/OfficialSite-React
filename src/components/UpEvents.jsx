@@ -1,4 +1,6 @@
 import React from 'react';
+const preEventImgs = ['https://www.bytecodelearners.club/statics/prevEvent3.jpg','https://www.bytecodelearners.club/statics/prevEvent4.jpg','https://www.bytecodelearners.club/statics/prevEvent5.jpg','https://www.bytecodelearners.club/statics/g3.jpg'];
+const preEventImgs1 = ['https://www.bytecodelearners.club/statics/prevEvent1.jpg','https://www.bytecodelearners.club/statics/prevEvent2.jpg'];
 export default function UpEvents({eventDetails}){
   // let [event_topic,setTopic] = useState("");
   // let [event_link,setLink] = useState("");
@@ -16,24 +18,29 @@ export default function UpEvents({eventDetails}){
   // }
   return(
     <div className="up-events">
-      <div className="up-events-content">
-        <h2>UpComing Event</h2>
-        <p><b>Topic: </b>{eventDetails?eventDetails.topic:null}</p>
-        <p><b>Link: </b><a href={eventDetails?eventDetails.link_details:null}>{eventDetails?eventDetails.link_details:null}</a></p>
-        <p><b>Details: </b>{eventDetails?eventDetails.note:null}</p>
-        {/* <div className="events-list">
-            <ul>
-                {upComingEvents.map((event,index)=>{return <li onClick={()=>{asignDetails(event);toggle();}}  key={index}>{event.title}</li>})}
-            </ul>
-        </div> */}
+      <h1>Events</h1>
+      <div className="both-events">
+        <div className="up-events-content">
+          <h2>UpComing Event</h2>
+          <div className="event-img">
+              <img src={eventDetails?`https://www.bytecodelearners.club/bytecode-server/storage/app/${eventDetails.image}`:null} alt="Event Poster"/>  
+          </div>
+          <div className="up-details">
+            <p><b>Topic: </b>{eventDetails?eventDetails.topic:null}</p>
+            <p><b>Link: </b><a href={eventDetails?eventDetails.link_details:null}>{eventDetails?eventDetails.link_details:null}</a></p>
+            <p><b>Details: </b>{eventDetails?eventDetails.note:null}</p>
+          </div>
+        </div>
+        <div className="pre-events">
+          <h2>Previous Events</h2>
+          <div className="pre-event-imgs">
+              {preEventImgs1.map((img,idx)=>{return <img key={idx} src={img} alt={img}/>})}
+              <div className="pre-img1">
+                {preEventImgs.map((img,idx)=>{return <img key={idx} src={img} alt={img}/>})}
+              </div>
+          </div>
+        </div>
       </div>
-      {/* <div className="event-details">
-        <i className="fas fa-times" onClick={toggle}></i>
-        <h3>Event details</h3>
-        <p> <b>Topic:</b> {event_topic}</p>
-        <p> <b>Link:</b> <a target="_blank" rel="noreferrer" href={`https://meet.google.com/${event_link}` }>Click here to join.</a> </p>
-        <p> <b>Time:</b> {event_time}</p>
-      </div> */}
     </div>
   );
 }

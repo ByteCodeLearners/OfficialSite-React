@@ -4,17 +4,12 @@ import api from '../backend.js';
 
 const Members = () => {
     const [mem,setMem] = useState(null);
-    const getMembers = async()=>{
-        const response = await api.get("/api/users/all");
-        console.log(response.data);
-        // setMem(response.data);
-    }
+
     const getBatch2020 = async ()=>{
         const res = await api.get("/api/batch/2020");
         setMem(res.data);
     }
     useEffect(()=>{
-        // getMembers();
         getBatch2020();
     },[]);
     return ( 

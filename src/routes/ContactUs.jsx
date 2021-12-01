@@ -7,7 +7,7 @@ const ContactUs = () => {
     return ( 
         <div className="contact-us">
             <div className="heading">
-                <h3>Socail Media Feeds</h3>
+                <h3>Social Media Feeds</h3>
             </div>
             <div className="boxes">
                 <div className="rectangle">
@@ -39,7 +39,7 @@ const ContactUs = () => {
 
                 <div className="rectangle1">
                 <div className=" inst">
-                    <div className="ions">
+                    <div className="ions1">
                         <a href="https://www.instagram.com" className="instagram social">
                             {/* <FontAwesomeIcon icon={faInstagram} size="3x" /> */}
                             <i className="fab fa-instagram box-icons"></i>
@@ -68,7 +68,7 @@ const ContactUs = () => {
 
                 <div className="rectangle2">
                 <div className=" twit">
-                    <div className="ions">
+                    <div className="ions2">
                         <a
                             href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
                             className="twitter social" target="_blank" rel="noopener noreferrer">
@@ -81,17 +81,8 @@ const ContactUs = () => {
                     <div className="container">
                     <div className="scroller">
                         <ul>
-                        <a
-                            class="twitter-timeline"
-                            href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
-                        >
-                            Tweets by ByteCodeLearner
-                        </a>
-                        <script
-                            async
-                            src="https://platform.twitter.com/widgets.js"
-                            charset="utf-8"
-                        ></script>
+                        <a class="twitter-timeline" href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw">Tweets by ByteCodeLearner</a> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </ul>
                     </div>
                     </div>
