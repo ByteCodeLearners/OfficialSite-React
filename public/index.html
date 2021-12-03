@@ -12,12 +12,18 @@
     />
     <!-- Social Media Scripts -->
     <script src="https://apps.elfsight.com/p/platform.js" async defer></script>
-    <script
-      async
-      defer
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
+    <script>
+      export default {
+        created() {
+          let ckeditor = document.createElement("script");
+          ckeditor.setAttribute(
+            "src",
+            "https://platform.twitter.com/widgets.js"
+          );
+          document.head.appendChild(ckeditor);
+        },
+      };
+    </script>
     <script
       async
       defer

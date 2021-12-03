@@ -4,6 +4,12 @@ const ContactUs = () => {
     useEffect(()=>{
         sticky();
         },[]);
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://platform.twitter.com/widgets.js";
+        document.getElementsByClassName("twitter-embed")[0].appendChild(script);
+    }, []);
+
     return ( 
         <div className="contact-us">
             <div className="heading">
@@ -55,7 +61,6 @@ const ContactUs = () => {
                             <ul>
                             <script
                                 src="https://apps.elfsight.com/p/platform.js"
-                                defer
                             ></script>
                             <div class="elfsight-app-374005f4-2ae5-4d39-a083-d8f560628e8c"></div>
                             </ul>
@@ -81,8 +86,8 @@ const ContactUs = () => {
                     <div className="container">
                     <div className="scroller">
                         <ul>
-                        <a class="twitter-timeline" href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw">Tweets by ByteCodeLearner</a> 
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline twitter-embed" href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw" data-show-count="false">Tweets by ByteCodeLearner</a> 
+                
                         </ul>
                     </div>
                     </div>

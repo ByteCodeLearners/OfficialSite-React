@@ -161,3 +161,7 @@ a.twitter {
 a.instagram {
   color: whitesmoke;
 }
+.scroller a {
+  color: black;
+  font-size: 20px;
+}

@@ -123,7 +123,7 @@
 
 .card-container .icon:hover {
   transition: 0.5s ease-in-out;
-  transform: scale(1.1) translateY(-4px);
+  transform: scale(1.1) translateY(-2px);
   box-shadow: #e75050;
 }
 

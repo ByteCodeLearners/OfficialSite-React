@@ -26,14 +26,14 @@ const Gallery = () => {
         lightBox();
     },[])
     const images = [
-    'https://www.bytecodelearners.club/statics/g8.jpg',
-    'https://www.bytecodelearners.club/statics/g6.jpg',
-    'https://www.bytecodelearners.club/statics/g5.jpg',
-    'https://www.bytecodelearners.club/statics/prevEvent1.jpg',
-    'https://www.bytecodelearners.club/statics/g4.jpg',
-    'https://www.bytecodelearners.club/statics/g1.jpg',
-    'https://www.bytecodelearners.club/statics/g2.jpg',
-    'https://www.bytecodelearners.club/statics/g3.jpg'
+    'https://www.bytecodelearners.tech/statics/g8.jpg',
+    'https://www.bytecodelearners.tech/statics/g6.jpg',
+    'https://www.bytecodelearners.tech/statics/g5.jpg',
+    'https://www.bytecodelearners.tech/statics/prevEvent1.jpg',
+    'https://www.bytecodelearners.tech/statics/g4.jpg',
+    'https://www.bytecodelearners.tech/statics/g1.jpg',
+    'https://www.bytecodelearners.tech/statics/g2.jpg',
+    'https://www.bytecodelearners.tech/statics/g3.jpg'
     
 ];
     return ( 

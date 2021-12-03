@@ -4,27 +4,21 @@ import BatchesNavbar from "../components/BatchesNavbar";
 import BatchesApi from "../context/batchesApi";
 import { sticky } from "../components/Navbar";
 import "../styles/batches.css";
-import axios from "axios";
+import api from '../backend.js';
+
 
 const userUrl =
-  "https://www.bytecodelearners.club/bytecode-server/api/batch/2020";
+  "/api/batch/2020";
 
 const memberUrl =
-  "https://www.bytecodelearners.club/bytecode-server/api/batch/2019";  
+  "/api/batch/2019";  
 
 
 
 const Batches = () => {
   const [userData, setUserData] = useState([]);
   const [user2019, set2019Data] = useState([]);
-  // const uniqueList = [
-  //   ...new Set(
-  //     userData.map((curElem) => {
-  //       return curElem.user_details.batch;
-  //     })
-  //   ),
-  //   "All",
-  // ];
+
   const uniqueList = [2018,2019,2020,'ALL']
   useEffect(() => {
     sticky();
@@ -36,12 +30,12 @@ const Batches = () => {
   }, []);
 
   const getBatch2019 = async () => {
-    const response = await axios.get(userUrl);
+    const response = await api.get(userUrl);
     set2019Data(response.data);
     console.log(response.data)
   };
   const batchesApi = async()=>{
-    const res = await axios.get(memberUrl);
+    const res = await api.get(memberUrl);
     setUserData(res.data);
   }
 

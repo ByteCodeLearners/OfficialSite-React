@@ -1,6 +1,10 @@
 import React from 'react';
-const preEventImgs = ['https://www.bytecodelearners.club/statics/prevEvent3.jpg','https://www.bytecodelearners.club/statics/prevEvent4.jpg','https://www.bytecodelearners.club/statics/prevEvent5.jpg','https://www.bytecodelearners.club/statics/g3.jpg'];
-const preEventImgs1 = ['https://www.bytecodelearners.club/statics/prevEvent1.jpg','https://www.bytecodelearners.club/statics/prevEvent2.jpg'];
+const preEventImgs = ['https://www.bytecodelearners.tech/statics/prevEvent3.jpg',
+                      'https://www.bytecodelearners.tech/statics/prevEvent4.jpg',
+                      'https://www.bytecodelearners.tech/statics/prevEvent5.jpg',
+                      'https://www.bytecodelearners.tech/statics/g3.jpg'];
+const preEventImgs1 = ['https://www.bytecodelearners.tech/statics/prevEvent1.jpg',
+                        'https://www.bytecodelearners.tech/statics/prevEvent2.jpg'];
 export default function UpEvents({eventDetails}){
   // let [event_topic,setTopic] = useState("");
   // let [event_link,setLink] = useState("");

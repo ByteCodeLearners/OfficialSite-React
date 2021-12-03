@@ -21,7 +21,7 @@ const MemberCard = ({ id, name, image, social }) => {
                     <div className="card-circle">
                       <ul className="icons">
                         
-                          {social?social.twitter?<li><a target="_blank" rel="noreferrer" href="https://www.twitter.com">
+                          {social?social.twitter?<li><a target="_blank" rel="noreferrer" href={social.twitter}>
                             <FaTwitterSquare
                               className="icon"
                               color="#55adee"
@@ -30,7 +30,7 @@ const MemberCard = ({ id, name, image, social }) => {
                         
 
                         
-                          {social?social.github?<li className="github"><a target="_blank" rel="noreferrer" href="https://www.github.com">
+                          {social?social.github?<li className="github"><a target="_blank" rel="noreferrer" href={social.github}>
                             <FaGithub
                               className="icon"
                               color="black"
@@ -39,7 +39,7 @@ const MemberCard = ({ id, name, image, social }) => {
                        
 
                        
-                          {social?social.linkedin? <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com">
+                          {social?social.linkedin? <li><a target="_blank" rel="noreferrer" href={social.linkedin}>
                             <FaLinkedin
                               className="icon"
                               color="#0077b5"
@@ -48,7 +48,7 @@ const MemberCard = ({ id, name, image, social }) => {
                        
                         
 
-                          {social?social.instagram?<li><a target="_blank" rel="noreferrer" href="https://www.instagram.com">
+                          {social?social.instagram?<li><a target="_blank" rel="noreferrer" href={social.instagram}>
                             <FaInstagram
                               className="icon"
                               color="#8a3ab9"
