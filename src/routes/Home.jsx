@@ -8,6 +8,31 @@ import Gallery from '../components/Gallery';
 const Home = () => {
     useEffect(()=>{
         sticky();
+        var container = document.getElementsByClassName("display")[0];
+        const createBubble = () => {
+          var bub = document.createElement("span");
+          bub.classList.add("bubble");
+          var size = Math.random() * 90;
+          bub.style.width = size + "px";
+          bub.style.height = size + "px";
+          if(window.screen.width>650){
+            bub.style.left = Math.random() * 90 + "vw";
+          }else{
+            bub.style.left = Math.random() * 50 + 'vw';
+          }
+          if (container) {
+            container.appendChild(bub);
+            setTimeout(() => {
+              bub.remove();
+            }, 4000);
+          }
+        };
+        if(window.screen.width>650){
+          setInterval(createBubble, 350);
+        }else{
+          setInterval(createBubble,1000);
+        }
+
     },[])
     return ( 
         <div className="home">

@@ -36,7 +36,9 @@
   display: none;
 }
 .light-box::before {
-  content: "❌";
+  content: "X";
+  color: red;
+  font-weight: 900;
   position: fixed;
   top: 0.2rem;
   right: 0.3rem;

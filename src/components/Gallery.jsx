@@ -42,7 +42,7 @@ const Gallery = () => {
             <div className="images">
                 {images.map((img,index)=>{return <img className='gallery-img' key={index} src={img} alt=""/>})}
             </div>
-            <div class="light-box">.</div>
+            <div className="light-box">.</div>
         </div>
      );
 }

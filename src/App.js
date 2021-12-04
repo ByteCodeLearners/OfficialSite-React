@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import "./index.css";
 import Home from "./routes/Home";
 import Footer from "./components/Footer.jsx";
@@ -17,26 +22,41 @@ export default function App() {
       <div className="app">
         <Navbar />
         <Switch>
-          <Route exact path="/react_bcl">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/react_bcl/events-gallery">
+          <Route exact path="/events-gallery">
             <EventsGallery />
           </Route>
-          <Route exact path="/react_bcl/batches">
+          <Route exact path="/batches">
             <Batches />
           </Route>
-          <Route exact path="/react_bcl/registration">
+          <Route exact path="/registration">
             <Registration />
           </Route>
-          <Route exact path="/react_bcl/initiator">
+          <Route exact path="/initiator">
             {/* <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
               Initiators Page
             </div> */}
             <Initiator />
           </Route>
-          <Route exact path="/react_bcl/contact-us">
+          <Route exact path="/contact-us">
             <ContactUs />
+          </Route>
+          <Route path="*">
+            <div
+              style={{
+                marginTop: "150px",
+                marginBottom: "50vh",
+                fontSize: "0.2em",
+                textAlign: "center",
+              }}
+            >
+              <h1>
+                Error 404 <p> Page not found</p>
+              </h1>
+              <p>{<NavLink to="/">Go to Home</NavLink>}</p>
+            </div>
           </Route>
         </Switch>
         <Footer />

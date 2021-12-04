@@ -4,7 +4,7 @@ export default function Imgcard({member}){
   return(
     <div className="imgcard">
       <div className="img-container">
-        <img src={"https://www.bytecodelearners.club/bytecode-server/storage/app/public/"+member.image} alt={member.first_name} />
+        <img src={"https://www.bytecodelearners.tech/bytecode_server/storage/app/public/"+member.image} alt={member.first_name} />
       </div>
       <div className="content-container">
         <p>{member.first_name +" "+ member.last_name}</p>

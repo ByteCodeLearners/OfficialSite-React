@@ -31,7 +31,7 @@ const ContactUs = () => {
                     ==
                     <div className="container">
                         <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=340&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=320&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
                         scrolling="no"
                         frameborder="0"
                         allowfullscreen="true"
@@ -55,14 +55,11 @@ const ContactUs = () => {
                     <h2>INSTAGRAM FEEDS</h2>
                     <scrollbar>
                     <div className="event-container">
-                        ==
+                    
                         <div className="container">
                         <div className="scroller">
                             <ul>
-                            <script
-                                src="https://apps.elfsight.com/p/platform.js"
-                            ></script>
-                            <div class="elfsight-app-374005f4-2ae5-4d39-a083-d8f560628e8c"></div>
+                                <div class="elfsight-app-41f24f40-af42-4831-abdf-d8732bba57e8"></div>
                             </ul>
                         </div>
                         </div>

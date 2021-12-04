@@ -10,7 +10,7 @@
 }
 .contact-us h2 {
   display: block;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
   margin: 20px 40px;
 }
@@ -57,7 +57,7 @@
   overflow: hidden;
 }
 .rectangle {
-  width: 340px;
+  width: 320px;
   height: 540px;
   display: flexbox;
   justify-content: space-between;
@@ -71,7 +71,7 @@
 }
 .rectangle1 {
   height: 540px;
-  width: 340px;
+  width: 320px;
   display: flexbox;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +84,7 @@
 }
 .rectangle2 {
   height: 540px;
-  width: 340px;
+  width: 320px;
   display: flexbox;
   justify-content: space-between;
   align-items: center;
@@ -134,15 +134,21 @@
 }
 .ions {
   background-color: #4968ad;
-  padding: 20px 150px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 .ions1 {
+  display: flex;
+  justify-content: center;
   background: linear-gradient(130deg, #6e7691 20%, #fd2b93, #ff5819, #ffffff);
-  padding: 20px 150px;
+  padding: 20px;
 }
 .ions2 {
+  display: flex;
+  justify-content: center;
   background-color: #49a1eb;
-  padding: 20px 150px;
+  padding: 20px;
   height: 90px;
 }
 .ions2 a {

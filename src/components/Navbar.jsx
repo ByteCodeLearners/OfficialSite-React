@@ -57,14 +57,14 @@ export default function Navbar(){
                 <p>Learners</p>
             </div>
       </div>
-      <i class="fas menu-btn fa-bars" onClick={()=>{navBtn(); handleMenuBtn();}}></i>
+      <i className="fas menu-btn fa-bars" onClick={()=>{navBtn(); handleMenuBtn();}}></i>
       <ul className="nav-btns" onClick={()=>{navBtn(); handleMenuBtn();}} >
-        <li><NavLink to="/react_bcl"><i className="fas fa-home"></i>Home</NavLink></li>
-        {/* <li><NavLink to="/react_bcl/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li> */}
-        <li><NavLink to="/react_bcl/batches"><i className="fas fa-users"></i>Batches</NavLink></li>
-        <li><NavLink to="/react_bcl/registration"><i className="fas fa-file-signature"></i>Registration</NavLink></li>
-        <li><NavLink to="/react_bcl/initiator"><i className="fas fa-fist-raised"></i>Intiator</NavLink></li>
-        <li><NavLink to="/react_bcl/contact-us"><i className="fas fa-comments"></i>Contact Us</NavLink></li>
+        <li><NavLink to="/"><i className="fas fa-home"></i>Home</NavLink></li>
+        {/* <li><NavLink to="/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li> */}
+        <li><NavLink to="/batches"><i className="fas fa-users"></i>Batches</NavLink></li>
+        <li><NavLink to="/registration"><i className="fas fa-file-signature"></i>Registration</NavLink></li>
+        <li><NavLink to="/initiator"><i className="fas fa-fist-raised"></i>Intiator</NavLink></li>
+        <li><NavLink to="/contact-us"><i className="fas fa-comments"></i>Contact Us</NavLink></li>
       </ul>
     </div>
   );

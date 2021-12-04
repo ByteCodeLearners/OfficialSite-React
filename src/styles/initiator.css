@@ -152,12 +152,15 @@
   }
   .main .box {
     height: 100%;
+    padding: 10px;
+    justify-content: center;
+    gap: 20px;
   }
   .main .box1,
   .main .box2,
   .main .box3,
   .main .box4 {
-    width: 100%;
+    width: 50%;
     height: 25%;
   }
   .main .box {
@@ -187,5 +190,13 @@
   .main img {
     width: 95%;
     height: 300px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main .box1,
+  .main .box2,
+  .main .box3,
+  .main .box4 {
+    width: 80%;
   }
 }

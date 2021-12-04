@@ -230,9 +230,7 @@
     flex-direction: column;
     justify-content: space-around;
     font-size: 0.23rem;
-    gap: 0.3rem;
     padding-bottom: 0.2rem;
-    margin-bottom: 0px;
     height: fit-content;
   }
   .copy-right {
@@ -356,6 +354,12 @@
   :root {
     font-size: 48px;
   }
+  .display {
+    gap: 60px;
+  }
+  .display img {
+    width: 100%;
+  }
   .navbar {
     background: linear-gradient(90deg, white, 1%, #27ae60);
     flex-direction: column;
@@ -463,9 +467,7 @@
   .light-box::before {
     top: 1rem !important;
   }
-  .footer-content {
-    gap: 0.4rem;
-  }
+
   .footer-icons {
     display: flex;
     margin-left: 0.5rem;

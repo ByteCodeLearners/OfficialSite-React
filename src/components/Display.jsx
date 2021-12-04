@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../byte-code-learners.svg"
 const Display = () => {
+    
     return ( 
         <div className="display">
             <div className="text-icon">

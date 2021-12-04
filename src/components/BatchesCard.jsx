@@ -92,7 +92,7 @@ const BatchesCard = ({ batchData }) => {
             social = {curElem.social_media_links}
             name={curElem.first_name+" "+curElem.last_name} 
             index={index} 
-            image={curElem.batch!==2018?`https://www.bytecodelearners.club/bytecode-server/storage/app/public/${curElem.image}`:curElem.image} 
+            image={curElem.batch!==2018?`https://www.bytecodelearners.tech/bytecode_server/storage/app/public/${curElem.image}`:curElem.image} 
            />
            
           );

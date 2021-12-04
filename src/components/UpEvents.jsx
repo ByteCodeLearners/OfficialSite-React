@@ -27,7 +27,7 @@ export default function UpEvents({eventDetails}){
         <div className="up-events-content">
           <h2>UpComing Event</h2>
           <div className="event-img">
-              <img src={eventDetails?`https://www.bytecodelearners.club/bytecode-server/storage/app/${eventDetails.image}`:null} alt="Event Poster"/>  
+              <img src={eventDetails?`https://www.bytecodelearners.tech/bytecode_server/storage/app/${eventDetails.image}`:null} alt="Event Poster"/>  
           </div>
           <div className="up-details">
             <p><b>Topic: </b>{eventDetails?eventDetails.topic:null}</p>
