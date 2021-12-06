@@ -15,6 +15,7 @@ import Registration from "./routes/Registration";
 import Batches from "./routes/Batches";
 import EventsGallery from "./routes/EventsGallery";
 import Initiator from "./routes/Initiator";
+import UpdateEventDetails from "./routes/UpdateEventDetails";
 
 export default function App() {
   return (
@@ -35,13 +36,13 @@ export default function App() {
             <Registration />
           </Route>
           <Route exact path="/initiator">
-            {/* <div style={{ marginTop: "150px", marginBottom: "50vh" }}>
-              Initiators Page
-            </div> */}
             <Initiator />
           </Route>
           <Route exact path="/contact-us">
             <ContactUs />
+          </Route>
+          <Route exact path="/add/upcoming/events">
+            <UpdateEventDetails />
           </Route>
           <Route path="*">
             <div

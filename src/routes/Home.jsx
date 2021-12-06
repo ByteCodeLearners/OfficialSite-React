@@ -19,6 +19,7 @@ const Home = () => {
             bub.style.left = Math.random() * 90 + "vw";
           }else{
             bub.style.left = Math.random() * 50 + 'vw';
+            bub.style.transformOrigin = "0px";
           }
           if (container) {
             container.appendChild(bub);
@@ -30,7 +31,7 @@ const Home = () => {
         if(window.screen.width>650){
           setInterval(createBubble, 350);
         }else{
-          setInterval(createBubble,1000);
+          setInterval(createBubble,2000);
         }
 
     },[])
