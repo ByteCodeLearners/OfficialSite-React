@@ -1,5 +1,6 @@
 import { useState } from "react";
 import swal from 'sweetalert';
+import api from '../backend.js';
 
 const RegistrationForm = () => {
     const [f_name,setFname] = useState("");
@@ -34,9 +35,9 @@ const RegistrationForm = () => {
             reType.style.color= "#fc5c65";
         }
     }
-    const handleSubmit = ()=>{
+    const handleSubmit = async ()=>{
         const file = document.querySelector('#file');
-        console.log(file.value);
+        // console.log(file.value);
         if(f_name === '' || l_name === '' || email === '' || mobile === '' || pass1 === '' || pass2 === ''||file.value === ''){
             swal("Empty Fields","Please enter all required input fields.","info");
         }else if(pass1 !== pass2){
@@ -61,6 +62,23 @@ const RegistrationForm = () => {
         }else if(f_name.length < 3 || l_name.length < 3){
             swal("Error", "There should be minimum of 3 letters for below fields\ni.e First Name and Last name","info");
         }else{
+            let form = new FormData();
+            form.append('first_name',f_name);
+            form.append('middle_name',m_name);
+            form.append('last_name',l_name);
+            form.append('image',document.querySelector('#file').files[0]);
+            form.append('email',email);
+            form.append('mobile_number',mobile);
+            form.append('batch',2022);
+            form.append('password',pass1);
+            form.append('facebook',fb);
+            form.append('likendin',linked);
+            form.append('instagram',insta);
+            form.append('twitter',twit);
+            form.append('github',gh);
+            form.append('youtube',yt);
+            await api.post('/api/members/new',form);
+            // console.log(res.data);
             swal("Success","Your response is submitted successfully...","success");
             setEmail('');
             setFb('');

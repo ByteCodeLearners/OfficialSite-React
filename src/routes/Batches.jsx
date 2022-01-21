@@ -32,7 +32,7 @@ const Batches = () => {
   const getBatch2019 = async () => {
     const response = await api.get(userUrl);
     set2019Data(response.data);
-    console.log(response.data)
+    // console.log(response.data)
   };
   const batchesApi = async()=>{
     const res = await api.get(memberUrl);

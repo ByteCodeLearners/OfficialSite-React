@@ -4,6 +4,8 @@ import {
     FaTwitterSquare,
     FaLinkedin,
     FaInstagram,
+    FaYoutube,
+    FaFacebookSquare
   } from "react-icons/fa";
 
 const MemberCard = ({ id, name, image, social }) => {
@@ -20,6 +22,13 @@ const MemberCard = ({ id, name, image, social }) => {
                   <div className="card-body">
                     <div className="card-circle">
                       <ul className="icons">
+
+                          {social?social.facebook?<li><a target="_blank" rel="noreferrer" href={social.facebook}>
+                            <FaFacebookSquare
+                              className="icon"
+                              color="#395591"
+                            />
+                          </a></li>:null:null}
                         
                           {social?social.twitter?<li><a target="_blank" rel="noreferrer" href={social.twitter}>
                             <FaTwitterSquare
@@ -52,6 +61,12 @@ const MemberCard = ({ id, name, image, social }) => {
                             <FaInstagram
                               className="icon"
                               color="#8a3ab9"
+                            />
+                          </a> </li>:null:null}
+                          {social?social.youtube?<li><a target="_blank" rel="noreferrer" href={social.youtube}>
+                            <FaYoutube
+                              className="icon"
+                              color="#f10002"
                             />
                           </a> </li>:null:null}
                        
@@ -88,7 +103,7 @@ const BatchesCard = ({ batchData }) => {
 
           return (
             <MemberCard 
-            key={curElem.mobile_number} 
+            key={index} 
             social = {curElem.social_media_links}
             name={curElem.first_name+" "+curElem.last_name} 
             index={index} 
