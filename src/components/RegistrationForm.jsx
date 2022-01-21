@@ -69,7 +69,7 @@ const RegistrationForm = () => {
             form.append('image',document.querySelector('#file').files[0]);
             form.append('email',email);
             form.append('mobile_number',mobile);
-            form.append('batch',2022);
+            form.append('batch',2021);
             form.append('password',pass1);
             form.append('facebook',fb);
             form.append('likendin',linked);
