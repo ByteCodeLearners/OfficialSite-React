@@ -7,8 +7,9 @@ import {
     FaYoutube,
     FaFacebookSquare
   } from "react-icons/fa";
+import {SiGmail} from "react-icons/si";
 
-const MemberCard = ({ id, name, image, social }) => {
+const MemberCard = ({ id,email, name, image, social }) => {
   const [isMore,setIsMore] = useState(true);
     const handleReadMore =(ths)=>{
       ths.target.innerHTML = isMore?"Read Less ⏫":"Read More ⏬";
@@ -69,6 +70,12 @@ const MemberCard = ({ id, name, image, social }) => {
                               color="#f10002"
                             />
                           </a> </li>:null:null}
+                          {email?<li><a target="_blank" rel="noreferrer" href={`mailto:${email}`}>
+                            <SiGmail
+                              className="icon"
+                              color="#e74c3c"
+                            />
+                          </a> </li>:null}
                        
                       </ul>
                     </div>
@@ -104,6 +111,7 @@ const BatchesCard = ({ batchData }) => {
           return (
             <MemberCard 
             key={index} 
+            email={curElem.email}
             social = {curElem.social_media_links}
             name={curElem.first_name+" "+curElem.last_name} 
             index={index} 

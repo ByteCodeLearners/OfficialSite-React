@@ -36,6 +36,7 @@ const Batches = () => {
   };
   const batchesApi = async()=>{
     const res = await api.get(memberUrl);
+    // console.log(res.data);
     setUserData(res.data);
   }
 

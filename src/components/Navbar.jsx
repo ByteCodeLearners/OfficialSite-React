@@ -49,7 +49,7 @@ export default function Navbar(){
   return(
     <div className="navbar">
       <div className="logo">
-          <NavLink to="/react_bcl">
+          <NavLink to="/">
             <img src={logo} alt="Logo" />
           </NavLink>
             <div className="club">

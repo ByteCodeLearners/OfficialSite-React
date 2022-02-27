@@ -4,6 +4,7 @@ const BatchesApi = [
     first_name: "Dipu Kumar Sah",
     batch: 2018,
     last_name: "",
+    email: "dipuxah7@gmail.com",
     social_media_links: {
       facebook: "",
       twitter: "",
@@ -18,6 +19,7 @@ const BatchesApi = [
     first_name: "Yash Raj",
     last_name: "",
     batch: 2018,
+    email: "yash180905@gmail.com",
     social_media_links: {
       facebook: "",
       twitter: "",
@@ -32,6 +34,7 @@ const BatchesApi = [
     first_name: "Raj Patel",
     last_name: "",
     batch: 2018,
+    email: "kakhilesh79@gmail.com",
     social_media_links: {
       facebook: "",
       twitter: "",
@@ -45,6 +48,7 @@ const BatchesApi = [
     first_name: "Shantanu Pratap",
     last_name: "",
     batch: 2018,
+    email: "shantanupratap180896@gmail.com",
     social_media_links: {
       facebook: "",
       twitter: "",
