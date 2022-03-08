@@ -1,31 +1,35 @@
 import React, { useEffect } from 'react';
 import { sticky } from '../components/Navbar';
 import "../styles/events-gallery.css"
+
+
+// Core modules imports are same as usual
+import { Navigation } from 'swiper';
+// Direct React component imports
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+// Import Swiper styles
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+import "swiper/modules/navigation/navigation.min.css";
+
+
 const EventsGallery = () => {
     useEffect(()=>{
         sticky();
     },[])
     return ( 
         <div className="events-gallery">
-            <div className="title">EVENTS GALLERY</div>
-            <div className="subtitle">
-                SOME OF THE MOMENTS WE <br />
-                CAPTURE....
-            </div>
-            <div className="gallery">
-                <div className="portion1">
-                    <img id="event1" src={require("../images/cod.jpg").default} alt="events" />
-                    <img id="event2" src={require("../images/learn.jpg").default} alt="events" />
-                    <img id="event3" src={require("../images/code.jpg").default} alt="events" />
-                    <img id="event4" src={require("../images/com.jpg").default} alt="events" />
-                </div>
-                <div className="portion2">
-                    <img id="event5" src={require("../images/learn.jpg").default} alt="events" />
-                    <img id="event6" src={require("../images/code.jpg").default} alt="events" />
-                    <img id="event7" src={require("../images/cod.jpg").default} alt="events" />
-                    <img id="event8" src={require("../images/com.jpg").default} alt="events" />
-                </div>
-            </div>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
         </div>
      );
 }

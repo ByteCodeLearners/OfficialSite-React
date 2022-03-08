@@ -1,6 +1,16 @@
-import { useEffect, useState  } from 'react';
+import { useEffect  } from 'react';
 import '../styles/gallery.css'
 // import plus_sign from '../images/plus.jpg'
+
+// Core modules imports are same as usual
+import { Navigation } from 'swiper';
+// Direct React component imports
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+// Import Swiper styles
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+import "swiper/modules/navigation/navigation.min.css";
+
 const Gallery = () => {
     const lightBox = ()=>{
         var lb = document.querySelector('.light-box');
@@ -46,31 +56,27 @@ const Gallery = () => {
         'https://www.bytecodelearners.tech/statics/g1.jpg',
         'https://www.bytecodelearners.tech/statics/g5.jpg',
         'https://www.bytecodelearners.tech/statics/g6.jpg',
+        'https://www.bytecodelearners.tech/statics/g2.jpg',
+        'https://www.bytecodelearners.tech/statics/g4.jpg',
+        'https://www.bytecodelearners.tech/statics/prevEvent1.jpg',
+        'https://www.bytecodelearners.tech/statics/prevEvent2.jpg',
         
     ];
-    const [clicked,setClicked] = useState(false);
-    const handleNextSlide = ()=>{
-        setClicked(!clicked);
-        // document.getElementById('slide1')?document.getElementById('slide1').classList.toggle('move_slides'):document.getElementById('slide2').classList.toggle('move_slides');
-    }
     return ( 
         <div className="gallery" id="Gallery">
             <h1>Event Gallery</h1>
-            <div className="events-galllery-imgs">
-
-                {
-                    clicked?
-                    <div id='slide1'  className="images move_slides">
-                    {fresherImgs.map((img,index)=>{return <img className='gallery-img' key={index} src={img} alt=""/>})}
-                    <p onClick={()=>{setClicked(!clicked)}} className="more_images" >More Images ➡️ </p>
-                </div>
-                : <div id='slide2' className="images move_slides">
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                <SwiperSlide>
+                <div  className="images">
                 {images.map((img,index)=>{return <img className='gallery-img' key={index} src={img} alt=""/>})}
-                <p onClick={handleNextSlide} className="more_images">More Images ➡️ </p>
                 </div>
-                }
-
-            </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div   className="images">
+                    {fresherImgs.map((img,index)=>{return <img className='gallery-img' key={index} src={img} alt=""/>})}
+                </div>
+                </SwiperSlide>
+            </Swiper>
             <div className="light-box">.</div>
         </div>
      );
