@@ -10,7 +10,7 @@ const BatchesApi = [
       twitter: "",
       github: "https://github.com/dipu-kr-sah",
       instagram: "",
-      linkedin: "https://www.linkedin.com/in/dipu-kumar-sah-07b308181/",
+      linkedin: "https://www.linkedin.com/in/dipu-k-07b308181",
     },
   },
 
@@ -38,9 +38,9 @@ const BatchesApi = [
     social_media_links: {
       facebook: "",
       twitter: "",
-      github: "https://www.linkedin.com/in/yash-raj-3719111b2/",
+      github: "https://github.com/rajpatel2619",
       instagram: "",
-      linkedin: "https://www.linkedin.com/in/yash-raj-3719111b2/",
+      linkedin: "https://www.linkedin.com/in/rajpatel2619/",
     },
   },
   {
@@ -52,9 +52,9 @@ const BatchesApi = [
     social_media_links: {
       facebook: "",
       twitter: "",
-      github: "https://www.linkedin.com/in/yash-raj-3719111b2/",
+      github: "https://github.com/180896-cse",
       instagram: "",
-      linkedin: "https://www.linkedin.com/in/yash-raj-3719111b2/",
+      linkedin: "https://www.linkedin.com/in/shantanu-p-291b991b4",
     },
   },
 ];
