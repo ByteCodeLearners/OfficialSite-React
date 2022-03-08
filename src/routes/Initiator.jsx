@@ -37,9 +37,9 @@ const Initiator = () => {
                     <img alt="Initiator" src="http://bytecodelearners.tech/initiators-image/dipu-kumar-sah.jpg" />
                     Dipu Kumar Sah<br/>
                     
-                        <a href="https://github.com/dipu-kr-sah"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
-                        <a href="mailto:dipuxah7@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
-                        <a href="https://www.linkedin.com/in/dipu-kumar-sah-07b308181/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/dipu-kr-sah"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
+                        <a target="_blank" rel="noreferrer" href="mailto:dipuxah7@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dipu-k-07b308181"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
 
                     
                     </div>
@@ -47,23 +47,23 @@ const Initiator = () => {
                     
                     <img alt="Initiator" src="http://bytecodelearners.tech/initiators-image/yash-raj.jpg" />
                     Yash Raj<br/>
-                    <a href="https://github.com/180905"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
-                    <a href="mailto:yash180905@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
-                    <a href="https://www.linkedin.com/in/yash-raj-3719111b2/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/180905"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
+                    <a target="_blank" rel="noreferrer" href="mailto:yash180905@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yash-raj-3719111b2/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
                     </div>
                     <div className="box3">
                     <img alt="Initiator" src="http://bytecodelearners.tech/initiators-image/raj-patel.jpg" />
                     Raj Patel<br/>
-                    <a href="https://github.com/rajpatel2619"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
-                    <a href="mailto:kakhilesh79@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
-                    <a href="https://www.linkedin.com/in/rajpatel2619/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/rajpatel2619"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
+                    <a target="_blank" rel="noreferrer" href="mailto:kakhilesh79@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rajpatel2619/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
                     </div>
                     <div className="box4">
                     <img alt="Initiator" src="http://bytecodelearners.tech/initiators-image/shantanu-pratap.jpg" />
                     Shantanu Pratap<br/>
-                    <a href="https://github.com/180896-cse"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
-                    <a href="mailto:shantanupratap180896@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
-                    <a href="https://www.linkedin.com/in/shantanu-p-291b991b4"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer"  href="https://github.com/180896-cse"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
+                    <a target="_blank" rel="noreferrer" href="mailto:shantanupratap180896@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/shantanu-p-291b991b4"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
                     </div>
                 </div>
                 </div>
