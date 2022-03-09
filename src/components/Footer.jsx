@@ -16,7 +16,7 @@ export default function Footer(){
             <h2>ByteCode Learners</h2>
             <p>About Us</p>
             <p>ByteCodeLearners Community is an initiative to promote Project based learning .</p>
-            <p id="initiator"><NavLink to="/react_bcl/initiator">INITIATOR</NavLink></p>
+            <p id="initiator"><NavLink to="/initiator">INITIATOR</NavLink></p>
           </div>
           <div className="contact">
             <h2>Contact Us</h2>

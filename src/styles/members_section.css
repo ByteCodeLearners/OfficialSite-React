@@ -23,18 +23,13 @@
 }
 .members .mem-list1 {
   display: flex;
-  animation: scroll_left1 25s linear infinite;
 }
 @keyframes scroll_left1 {
   0% {
-    transform: translateX(0%);
+    transform: translateX(40%);
   }
 
   100% {
     transform: translateX(-100%);
   }
-}
-
-.members:hover .mem-list1 {
-  animation-play-state: paused;
 }
