@@ -47,7 +47,7 @@ const Initiator = () => {
                     
                     <img alt="Initiator" src="http://bytecodelearners.tech/initiators-image/yash-raj.jpg" />
                     Yash Raj<br/>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/180905"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/Yash180905"><GoMarkGithub  style={{ fontSize: "100%", color: "black" ,margin:'7px'}}/></a>
                     <a target="_blank" rel="noreferrer" href="mailto:yash180905@gmail.com"><SiGmail style={{fontSize:"100%", color:"#d5462e", margin:"7px"}}/></a>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/yash-raj-3719111b2/"><BsLinkedin style={{fontSize:"100%", color:"#0077b5", margin:"7px"}}/></a>
                     </div>

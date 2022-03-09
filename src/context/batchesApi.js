@@ -23,7 +23,7 @@ const BatchesApi = [
     social_media_links: {
       facebook: "",
       twitter: "",
-      github: "https://github.com/180905",
+      github: "https://github.com/Yash180905",
       instagram: "",
       linkedin: "https://www.linkedin.com/in/yash-raj-3719111b2/",
     },
