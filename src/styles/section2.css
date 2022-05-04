@@ -1,0 +1,8 @@
+.section2 {
+  position: relative;
+  margin: 25px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}

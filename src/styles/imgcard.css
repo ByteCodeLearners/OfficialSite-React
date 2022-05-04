@@ -1,0 +1,107 @@
+:root {
+  --img-height: 320px;
+  --img-width: 250px;
+}
+.imgcard {
+  position: relative;
+  width: var(--img-width);
+  height: var(--img-height);
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0.15rem;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
+  background-image: url(../byte-code-learners.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* border:1px solid black; */
+}
+
+.imgcard .img-container img {
+  object-fit: cover;
+  height: var(--img-height);
+  /* height: inherit; */
+  width: var(--img-width);
+}
+.imgcard .content-container {
+  position: absolute;
+  bottom: -50%;
+  /* bottom:0px; */
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 42%;
+  gap: 0.28rem;
+  font-size: 0.23rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+  overflow: hidden;
+  transition-delay: 0.7s;
+}
+.imgcard:hover .content-container {
+  bottom: 0px;
+  transition-delay: 0s;
+}
+.content-container p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(-0.8rem);
+  opacity: 0;
+  transition: 0.6s;
+  transition-delay: 0.3s;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  font-size: 0.27rem;
+}
+.imgcard:hover .content-container p {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.social-icon {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.social-icon a {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.6s;
+  color: white;
+}
+.social-icon a .fab {
+  transition: 0.4s;
+  font-size: 0.35rem;
+}
+.social-icon a:hover .fab {
+  transform: scale(1.3);
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+.social-icon a:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.social-icon a:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.social-icon a:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.social-icon a:nth-child(4) {
+  transition-delay: 0.65s;
+}
+.social-icon a:nth-child(5) {
+  transition-delay: 0.7s;
+}
+.imgcard:hover .social-icon a {
+  opacity: 1;
+  transform: translateY(0px);
+}

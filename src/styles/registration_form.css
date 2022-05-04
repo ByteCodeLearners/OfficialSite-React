@@ -1,0 +1,200 @@
+.registration {
+  padding: 130px 30px;
+  padding-bottom: 240px;
+  margin-bottom: -150px;
+  /* background-color: #45aaf2; */
+  background: linear-gradient(
+    -45deg,
+    #40cc6f,
+    15%,
+    rgba(113, 114, 114, 0.308),
+    40%,
+    #56b87c,
+    white
+  );
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.regis-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.regis-form h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(61, 59, 59, 0.5);
+}
+.registration form {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 20px 45px 5px rgba(255, 255, 255, 0.295),
+    10px 25px 25px rgba(0, 0, 0, 0.164);
+  border-radius: 7px;
+  padding: 65px 50px;
+}
+.registration .inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  gap: 50px;
+  column-gap: 70px;
+}
+.registration .input {
+  font-size: 20px;
+  position: relative;
+  height: 30px;
+  width: 100%;
+  border-bottom: 2px dashed rgb(18, 18, 19);
+}
+.registration .input::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #2a2a2b;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  opacity: 0;
+  transition: all 500ms ease;
+  bottom: -28px;
+}
+
+.registration .input:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.registration form .inputs input {
+  border: none;
+  outline: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: rgb(20, 19, 19);
+  font-size: 17px;
+}
+.registration .input label {
+  position: absolute;
+  color: white;
+  transition: 0.6s;
+}
+.registration .input label span {
+  color: red;
+}
+.registration .input:focus-within label,
+.registration input:not(:placeholder-shown) + label {
+  transform: translate(-8px, -20px) scale(0.9);
+  color: rgb(83, 80, 80);
+}
+
+#file::-webkit-file-upload-button {
+  font-size: 15px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #54a0ff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 3px 5px;
+  visibility: hidden;
+}
+#file::before {
+  content: "Upload Pic*";
+  position: absolute;
+  font-size: 15px;
+  cursor: pointer;
+  top: 0px;
+  left: -1px;
+  color: whitesmoke;
+  border: 2px solid rgb(255, 252, 252);
+  background-color: grey;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.input .fa-camera {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+#file::-webkit-input-placeholder {
+  display: none;
+}
+.registration .input .fas {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+/* Submit Button */
+.submit {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  position: relative;
+  top: 15px;
+  margin-top: 35px;
+}
+.submit input {
+  width: fit-content;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  background-color: #fd9644;
+  color: white;
+  box-shadow: 0px 0px 0px 3px white;
+  border: none;
+}
+.submit p {
+  align-self: flex-start;
+  font-size: 0.25rem;
+}
+.submit p span {
+  color: red;
+}
+/* Validate */
+.validate {
+  position: absolute;
+  width: fit-content;
+  left: 0px;
+  top: 75px;
+  opacity: 0;
+  z-index: -1;
+  font-size: 15px;
+  background-color: #485460;
+  padding: 10px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 0px 4px #8699ac;
+  transition: 0.6s;
+}
+.registration .input:focus-within .validate {
+  opacity: 1;
+  top: 55px;
+  z-index: 3;
+}
+.validate::after {
+  content: " ";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  border-left: 4px solid #8699ac;
+  border-top: 4px solid #8699ac;
+  background-color: #485460;
+  z-index: -11;
+  transform: rotate(45deg);
+}
+.validate li {
+  list-style: none;
+}

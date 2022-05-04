@@ -1,0 +1,86 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0.6rem;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  align-items: center;
+  z-index: 100;
+  font-weight: 500;
+  font-size: 0.2rem;
+  transition: all 0.4s;
+}
+.navbar ul li a {
+  text-decoration: none;
+  border-radius: 5px;
+  color: #108a23;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+  padding: 0.12rem 0.1rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 5px;
+}
+.navbar ul li:hover a {
+  transition: 0.4s;
+  text-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  background-color: green;
+  color: white;
+}
+.navbar ul li a i {
+  font-size: 0.21rem;
+  /* display: none; */
+}
+.sticky {
+  padding: 0.15rem 0.2rem;
+  background: linear-gradient(90deg, white, 1%, #27ae60);
+  font-size: 0.18rem;
+}
+.sticky ul li a {
+  color: whitesmoke;
+}
+.sticky .logo img {
+  transform: rotate(120deg);
+  transition: 1s;
+}
+.fa-bars {
+  display: none;
+}
+.fa-times {
+  display: none;
+}
+.navbar .logo {
+  position: relative;
+  font-size: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  transition: 0.6s;
+}
+.nav-btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.1rem;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+}
+.navbar .logo img {
+  width: 0.7rem;
+  filter: hue-rotate(-20deg);
+}
+.club {
+  display: none;
+  font-size: 0.22rem;
+  color: white;
+}
+.showClub {
+  display: block;
+}

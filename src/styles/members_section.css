@@ -1,0 +1,35 @@
+.members-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  padding: 0px 25px;
+}
+.members-section h1 {
+  text-align: center;
+  margin: 25px;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  align-self: center;
+  font-size: 35px;
+  text-shadow: -1px 0px 3px rgba(0, 0, 0, 0.4);
+}
+/*    Members      */
+.members {
+  display: flex;
+  /* overflow-x: scroll; */
+  /* gap: 40px; */
+}
+.members .mem-list1 {
+  display: flex;
+}
+@keyframes scroll_left1 {
+  0% {
+    transform: translateX(40%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
