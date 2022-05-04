@@ -1,0 +1,114 @@
+.display {
+  padding: 0.6rem;
+  padding-left: 1rem;
+  padding-top: 1.6rem;
+  min-height: 99vh;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(40deg, #05c46b, #bcf5d3);
+  overflow: hidden;
+}
+.text-icon {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+#text {
+  position: relative;
+  top: 0.1rem;
+  left: 0.1rem;
+  font-weight: 800;
+  font-size: 1.55rem;
+  text-align: center;
+  line-height: 1.25rem;
+  transform: rotate(0deg) skew(0deg);
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: rgb(170, 166, 157) 0px 0px 0px, rgb(170, 166, 157) -1px 1px 0px,
+    rgb(170, 166, 157) -2px 2px 0px, rgb(170, 166, 157) -3px 3px 0px,
+    rgb(170, 166, 157) -4px 4px 0px, rgb(170, 166, 157) -5px 5px 0px,
+    rgb(170, 166, 157) -6px 6px 0px, rgb(170, 166, 157) -7px 7px 0px;
+}
+#text::before {
+  content: "Bytecode Learners";
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.3);
+  left: -80px;
+  text-shadow: none;
+  filter: blur(7px);
+}
+.imglogo {
+  z-index: 20;
+  width: 28%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 0.25rem;
+  text-shadow: -5px 3px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.display img {
+  width: 70%;
+}
+/* Bubbles */
+.bubble {
+  position: absolute;
+  bottom: -15px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0px 0px 70px rgba(255, 255, 225, 0.384);
+  animation: pop 4s linear infinite;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  transform-origin: 30px;
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-103vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/*      Media Queries      */
+/* @media screen and (max-width: 1200px) {
+  :root {
+    font-size: 90px;
+  }
+  #text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    font-size: 85px;
+  }
+  #text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 80px;
+  }
+  #text {
+    font-size: 1rem;
+  }
+} */

@@ -1,0 +1,204 @@
+footer {
+  background-color: #18ac56;
+  font-size: 0.175rem;
+}
+.footer {
+  margin-top: 150px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-size: 0.18rem;
+  gap: 5px;
+}
+.footer-content p {
+  font-size: 0.2rem;
+}
+.footer .details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+#initiator {
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* background-color: black; */
+  width: fit-content;
+  padding: 1px 2px;
+  position: relative;
+  left: 22px;
+  /* top: 15px; */
+  /* margin-bottom: 0.5rem; */
+}
+#initiator a {
+  color: whitesmoke;
+  cursor: pointer;
+}
+#initiator::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: rgb(46, 44, 44);
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  border-radius: 5px;
+}
+#initiator::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -20.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+.copy-right {
+  background-color: #18ac56;
+  color: white;
+  padding: 0px 0.3rem;
+  /* width: 100%; */
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.copy-right .footer-icons {
+  font-size: 0.25rem;
+  justify-self: flex-end;
+  width: fit-content;
+  display: flex;
+  gap: 0.3rem;
+}
+.copy-right a {
+  text-decoration: none;
+}
+.footer-icons .fab {
+  background-color: rgb(135, 180, 44);
+  color: whitesmoke;
+  border-radius: 50%;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.footer-icons .fa-facebook-f:hover {
+  background-color: rgb(39, 137, 250);
+  cursor: pointer;
+}
+.footer-icons .fa-twitter:hover {
+  background-color: rgb(30, 140, 243);
+  cursor: pointer;
+}
+.footer-icons .fa-instagram:hover {
+  background-color: rgb(240, 146, 201);
+  cursor: pointer;
+}
+.footer-icons .fa-github:hover {
+  background-color: black;
+  cursor: pointer;
+}
+/* Waves Animation */
+.footer .waves {
+  position: absolute;
+  top: -80px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background: url(../images/wave.png);
+  filter: hue-rotate(280deg);
+  background-size: 1000px 100px;
+  animation: waveMotion 4s linear infinite;
+}
+.waves #wave1 {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  opacity: 0.6;
+  background: url(../images/wave.png);
+  background-size: 1000px 100px;
+  z-index: 99;
+  animation: waveMotion1 4s linear infinite;
+}
+.waves #wave2 {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  opacity: 0.5;
+  background: url(../images/wave.png);
+  background-size: 1000px 100px;
+  z-index: 98;
+  animation: waveMotion2 3s linear infinite;
+}
+.waves #wave3 {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  opacity: 0.2;
+  background: url(../images/wave.png);
+  background-size: 1000px 100px;
+  z-index: 97;
+  animation: waveMotion3 4s linear infinite;
+}
+.waves #wave4 {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  opacity: 0.7;
+  background: url(../images/wave.png);
+  background-size: 1000px 100px;
+  z-index: 96;
+  animation: waveMotion 5s linear infinite;
+}
+/*    Animation for Waves    */
+@keyframes waveMotion {
+  0% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes waveMotion1 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes waveMotion2 {
+  0% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes waveMotion3 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}

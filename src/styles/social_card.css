@@ -1,0 +1,26 @@
+.social-media-card {
+  width: 290px;
+  height: 450px;
+  display: inline-block;
+  overflow: hidden;
+  overflow-y: scroll;
+  /* border: 2px solid black; */
+  font-size: 0.2rem;
+  box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.685);
+  background-color: white;
+}
+.social-media-card::-webkit-scrollbar {
+  width: 3px;
+}
+.social-media-card::-webkit-scrollbar-track {
+  background-color: rgba(231, 231, 231, 0.527);
+}
+.social-media-card::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 59, 59, 0.685);
+}
+.social-media-card iframe {
+  height: 500px;
+}
+.elfsight-app-374005f4-2ae5-4d39-a083-d8f560628e8c {
+  overflow: scroll;
+}
