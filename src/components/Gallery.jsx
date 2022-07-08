@@ -37,25 +37,26 @@ const Gallery = () => {
     lightBox();
   }, []);
   const images = [
-    "https://www.bytecodelearners.tech/statics/event2022_pic1.jpeg",
-    "https://www.bytecodelearners.tech/statics/event2022_pic2.jpeg",
+    "https://www.bytecodelearners.tech/statics/event2022_pic8.jpeg",
+    "https://www.bytecodelearners.tech/statics/event2022_pic7.jpeg",
     "https://www.bytecodelearners.tech/statics/fresh2.jpeg",
+    "https://www.bytecodelearners.tech/statics/event2022_pic2.jpeg",
+    "https://www.bytecodelearners.tech/statics/event2022_pic1.jpeg",
     "https://www.bytecodelearners.tech/statics/event2022_pic4.jpeg",
     "https://www.bytecodelearners.tech/statics/event2022_pic3.jpeg",
     "https://www.bytecodelearners.tech/statics/event2022_pic6.jpeg",
     "https://www.bytecodelearners.tech/statics/fresh1.jpeg",
     "https://www.bytecodelearners.tech/statics/fresh3.jpeg",
     "https://www.bytecodelearners.tech/statics/event2022_pic5.jpeg",
+    "https://www.bytecodelearners.tech/statics/fresh4.jpeg",
   ];
   const fresherImgs = [
-    "https://www.bytecodelearners.tech/statics/fresh4.jpeg",
     "https://www.bytecodelearners.tech/statics/fresh5.jpeg",
     "https://www.bytecodelearners.tech/statics/g3.jpg",
     "https://www.bytecodelearners.tech/statics/fresh6.jpeg",
     "https://www.bytecodelearners.tech/statics/g1.jpg",
     "https://www.bytecodelearners.tech/statics/g5.jpg",
     "https://www.bytecodelearners.tech/statics/g6.jpg",
-    "https://www.bytecodelearners.tech/statics/g2.jpg",
     "https://www.bytecodelearners.tech/statics/g4.jpg",
     "https://www.bytecodelearners.tech/statics/prevEvent1.jpg",
     "https://www.bytecodelearners.tech/statics/prevEvent2.jpg",

@@ -3,15 +3,7 @@
   padding-bottom: 240px;
   margin-bottom: -150px;
   /* background-color: #45aaf2; */
-  background: linear-gradient(
-    -45deg,
-    #40cc6f,
-    15%,
-    rgba(113, 114, 114, 0.308),
-    40%,
-    #56b87c,
-    white
-  );
+  background-image: linear-gradient(to left bottom, #051937, #004a6f, #00829a, #00bcb0, #85f4b4);
   font-size: 30px;
   display: flex;
   justify-content: center;
