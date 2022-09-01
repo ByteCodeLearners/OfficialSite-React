@@ -46,7 +46,7 @@ export default function UpEvents({ eventDetails }) {
               {eventDetails ? eventDetails.topic : null}
             </p>
             <p>
-              <b>Link: </b>
+              <b>Venue: </b>
               <a href={eventDetails ? eventDetails.link_details : null}>
                 {eventDetails ? eventDetails.link_details : null}
               </a>
