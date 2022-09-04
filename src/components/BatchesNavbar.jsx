@@ -2,8 +2,11 @@ import React from 'react';
 const BatchesNavbar = ({ filterItem, menuList, category }) => {
     return ( 
         <div className="batches-navbar">
-            <h1 className="heading"> Welcome to Bytecode </h1>
-            <h1 className="b-members"> Members </h1>
+            <div className='content'>
+                <h2> Members</h2>
+                <h2> Members</h2>
+            </div>
+           
             <nav className="nav-bar">
                 <div className="btn-group">
                 {menuList?menuList.map((curElem,index) => {
