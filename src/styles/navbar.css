@@ -41,7 +41,7 @@
 .sticky ul li a {
   color: whitesmoke;
 }
-.sticky .logo img {
+.sticky .logo .bytecodelogo {
   transform: rotate(120deg);
   transition: 1s;
 }
@@ -72,8 +72,9 @@
   align-items: center;
   gap: 0.1rem;
 }
-.navbar .logo img {
-  width: 0.7rem;
+.navbar .logo .bytecodelogo {
+  margin-top: 8px;
+  width: 0.8rem;
   filter: hue-rotate(-20deg);
 }
 .club {
