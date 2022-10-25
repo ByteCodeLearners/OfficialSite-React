@@ -28,7 +28,7 @@
   margin-top: 5px;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
 }
-.gallery .images img:hover{
+.gallery .images .gallery-img-container:hover img{
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
   transform: rotate(-10deg) scale(0.8);
 }

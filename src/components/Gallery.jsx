@@ -94,7 +94,9 @@ const Gallery = () => {
           <div className="images">
             {images.map((img, index) => {
               return (
-                <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container">
+                  <img className="gallery-img" key={index} src={img} alt="" />
+                </div>
               );
             })}
           </div>
@@ -103,7 +105,9 @@ const Gallery = () => {
           <div className="images">
             {fresherImgs.map((img, index) => {
               return (
-                <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container">
+                  <img className="gallery-img" key={index} src={img} alt="" />
+                </div>
               );
             })}
           </div>
@@ -112,7 +116,9 @@ const Gallery = () => {
           <div className="images">
             {slide3.map((img, index) => {
               return (
-                <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container">
+                  <img className="gallery-img" key={index} src={img} alt="" />
+                </div>
               );
             })}
           </div>
