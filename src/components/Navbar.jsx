@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../byte-code-learners.svg";
+import cuhlogo from "../images/cuhlogo.png";
+
 export const navBtn = () => {
   var navBtn = document.getElementsByClassName("nav-btns")[0];
   navBtn.classList.toggle("nav-btn");
@@ -50,8 +52,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
+        <img src={cuhlogo} alt="Logo" height={69} />
         <NavLink to="/">
-          <img src={logo} alt="Logo" />
+          <img className="bytecodelogo" src={logo} alt="Logo" />
         </NavLink>
         <div className="club">
           <p>Bytecode</p>
@@ -82,6 +85,7 @@ export default function Navbar() {
             <i className="fab fa-elementor"></i>Event Gallery
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/batches">
             <i className="fas fa-users"></i>Batches
