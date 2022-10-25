@@ -149,7 +149,7 @@ const RegistrationForm = () => {
   };
   return (
     <div className="regis-form">
-      <h1>Fresher's Registration</h1>
+      <h1>Member's Registration</h1>
       <form
         onSubmit={(e) => {
           e.preventDefault();
