@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../byte-code-learners.svg";
 import cuhlogo from "../images/cuhlogo.png";
+
 export const navBtn = () => {
   var navBtn = document.getElementsByClassName("nav-btns")[0];
   navBtn.classList.toggle("nav-btn");
@@ -81,7 +82,12 @@ export default function Navbar() {
             <i className="fas fa-home"></i>Home
           </NavLink>
         </li>
-        {/* <li><NavLink to="/events-gallery"><i className="fab fa-elementor"></i>Event Gallery</NavLink></li> */}
+        <li>
+          <NavLink to="/events-gallery">
+            <i className="fab fa-elementor"></i>Event Gallery
+          </NavLink>
+        </li>
+
         <li>
           <NavLink to="/batches">
             <i className="fas fa-users"></i>Batches

@@ -464,6 +464,9 @@
   .gallery .images {
     column-count: 2 !important;
   }
+  .glimpse-of-gallery .images {
+    column-count: 2 !important;
+  }
   .light-box::before {
     top: 1rem !important;
   }
@@ -487,6 +490,9 @@
     padding: 0.2rem;
   }
   .gallery .images {
+    column-count: 1 !important;
+  }
+  .glimpse-of-gallery .images {
     column-count: 1 !important;
   }
   .active-light-box img {
