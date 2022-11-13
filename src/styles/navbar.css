@@ -77,6 +77,11 @@
   width: 0.8rem;
   filter: hue-rotate(-20deg);
 }
+.navbar .logo .bytecodelogoa {
+  margin-top: 8px;
+  width: 1rem;
+  filter: hue-rotate(-20deg);
+}
 .club {
   display: none;
   font-size: 0.22rem;

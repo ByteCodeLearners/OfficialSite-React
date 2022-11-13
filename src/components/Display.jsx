@@ -11,7 +11,7 @@ const Display = () => {
                 <div className="icons">
                     <ul>
                     <li>
-                        <a href="https://www.facebook.com/groups/bytecodelearners/" target="_blank" rel="noreferrer">
+                        <a href="https://www.facebook.com/people/BytecodeLearners/100064008286770/" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-facebook-f"></i></span>
                         <span></span>
                         <span></span>
@@ -20,7 +20,7 @@ const Display = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/BytecodeL" target="_blank" rel="noreferrer">
+                        <a href="https://twitter.com/ByteCodeLearner" target="_blank" rel="noreferrer">
                         <span><i className="fab fa-twitter"></i></span>
                         <span></span>
                         <span></span>

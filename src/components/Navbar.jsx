@@ -52,7 +52,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
-        <img src={cuhlogo} alt="Logo" height={69} />
+        <NavLink to="/">
+          <img className="bytecodelogoa" src={cuhlogo} alt="Logo" />
+        </NavLink>
         <NavLink to="/">
           <img className="bytecodelogo" src={logo} alt="Logo" />
         </NavLink>
