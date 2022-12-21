@@ -1,6 +1,7 @@
 const BatchesApi = [
   {
-    image: "https://bytecodelearners.tech/initiators-image/dipu-kumar-sah.jpg",
+    image:
+      "http://bytecodelearners.cuh.ac.in/initiators-image/dipu-kumar-sah.jpg",
     first_name: "Dipu Kumar Sah",
     batch: 2018,
     last_name: "",
@@ -15,7 +16,7 @@ const BatchesApi = [
   },
 
   {
-    image: "https://bytecodelearners.tech/initiators-image/yash-raj.jpg",
+    image: "http://bytecodelearners.cuh.ac.in/initiators-image/yash-raj.jpg",
     first_name: "Yash Raj",
     last_name: "",
     batch: 2018,
@@ -30,7 +31,7 @@ const BatchesApi = [
   },
 
   {
-    image: "https://bytecodelearners.tech/initiators-image/raj-patel.jpg",
+    image: "http://bytecodelearners.cuh.ac.in/initiators-image/raj-patel.jpg",
     first_name: "Raj Patel",
     last_name: "",
     batch: 2018,
@@ -44,7 +45,8 @@ const BatchesApi = [
     },
   },
   {
-    image: "https://bytecodelearners.tech/initiators-image/shantanu-pratap.jpg",
+    image:
+      "http://bytecodelearners.cuh.ac.in/initiators-image/shantanu-pratap.jpg",
     first_name: "Shantanu Pratap",
     last_name: "",
     batch: 2018,

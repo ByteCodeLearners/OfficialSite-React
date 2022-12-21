@@ -147,8 +147,8 @@ const BatchesCard = ({ batchData }) => {
                   image={
                     curElem.batch !== 2018
                       ? curElem.batch > 2020
-                        ? `https://www.bytecodelearners.tech/bytecode_server/storage/app/${curElem.image}`
-                        : `https://www.bytecodelearners.tech/bytecode_server/storage/app/public/${curElem.image}`
+                        ? `http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/${curElem.image}`
+                        : `http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/public/${curElem.image}`
                       : curElem.image
                   }
                 />

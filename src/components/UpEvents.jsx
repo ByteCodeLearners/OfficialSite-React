@@ -1,13 +1,13 @@
 import React from "react";
 const preEventImgs = [
-  "https://www.bytecodelearners.tech/statics/prevEvent3.jpg",
-  "https://www.bytecodelearners.tech/statics/prevEvent5.jpg",
-  "https://www.bytecodelearners.tech/statics/prevEvent1.jpg",
-  "https://www.bytecodelearners.tech/statics/event2022_pic1.jpeg",
+  "http://bytecodelearners.cuh.ac.in/statics/prevEvent3.jpg",
+  "http://bytecodelearners.cuh.ac.in/statics/prevEvent5.jpg",
+  "http://bytecodelearners.cuh.ac.in/statics/prevEvent1.jpg",
+  "http://bytecodelearners.cuh.ac.in/statics/event2022_pic1.jpeg",
 ];
 const preEventImgs1 = [
-  "https://www.bytecodelearners.tech/statics/prevEvent4.jpg",
-  "https://www.bytecodelearners.tech/statics/event2022_pic3.jpeg",
+  "http://bytecodelearners.cuh.ac.in/statics/prevEvent4.jpg",
+  "http://bytecodelearners.cuh.ac.in/statics/event2022_pic3.jpeg",
 ];
 export default function UpEvents({ eventDetails }) {
   // let [event_topic,setTopic] = useState("");
@@ -34,7 +34,7 @@ export default function UpEvents({ eventDetails }) {
             <img
               src={
                 eventDetails
-                  ? `https://www.bytecodelearners.tech/bytecode_server/storage/app/${eventDetails.image}`
+                  ? `http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/${eventDetails.image}`
                   : null
               }
               alt="Event Poster"

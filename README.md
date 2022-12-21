@@ -2,7 +2,7 @@
 
 This is the React Version of Official-Site
 
-# [Bytecode Learners Website](https://bytecodelearners.tech/)
+# [Bytecode Learners Website](http://bytecodelearners.cuh.ac.in/)
 
 This is a website created by a group of students who are part of Byte Code Learners Club studying at CUH
 
