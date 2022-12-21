@@ -7,9 +7,9 @@ export default function Imgcard({ member }) {
         <img
           src={
             member.batch < 2021
-              ? "https://www.bytecodelearners.tech/bytecode_server/storage/app/public/" +
+              ? "http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/public/" +
                 member.image
-              : "https://www.bytecodelearners.tech/bytecode_server/storage/app/" +
+              : "http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/" +
                 member.image
           }
           alt={member.first_name}
