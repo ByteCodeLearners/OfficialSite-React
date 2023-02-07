@@ -1,16 +1,17 @@
 import React from "react";
+import { useInfoContextProvider } from "../context/InfoContextProvider";
 
 export default function Imgcard({ member }) {
+  const info = useInfoContextProvider();
   return (
     <div className="imgcard">
       <div className="img-container">
         <img
           src={
             member.batch < 2021
-              ? "http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/public/" +
+              ? `${info.server}/bytecode-server/storage/app/public/` +
                 member.image
-              : "http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/" +
-                member.image
+              : `${info.server}/bytecode-server/storage/app/` + member.image
           }
           alt={member.first_name}
         />

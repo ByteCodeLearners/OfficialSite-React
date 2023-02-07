@@ -1,14 +1,6 @@
 import React from "react";
-const preEventImgs = [
-  "http://bytecodelearners.cuh.ac.in/statics/prevEvent3.jpg",
-  "http://bytecodelearners.cuh.ac.in/statics/prevEvent5.jpg",
-  "http://bytecodelearners.cuh.ac.in/statics/prevEvent1.jpg",
-  "http://bytecodelearners.cuh.ac.in/statics/event2022_pic1.jpeg",
-];
-const preEventImgs1 = [
-  "http://bytecodelearners.cuh.ac.in/statics/prevEvent4.jpg",
-  "http://bytecodelearners.cuh.ac.in/statics/event2022_pic3.jpeg",
-];
+import { useInfoContextProvider } from "../context/InfoContextProvider";
+
 export default function UpEvents({ eventDetails }) {
   // let [event_topic,setTopic] = useState("");
   // let [event_link,setLink] = useState("");
@@ -24,6 +16,20 @@ export default function UpEvents({ eventDetails }) {
   //   setLink(event.link);
   //   setTime(event.time);
   // }
+
+  // const info = useContext(InfoContext);
+  const info = useInfoContextProvider();
+  const preEventImgs = [
+    `${info.server}/statics/prevEvent3.jpg`,
+    `${info.server}/statics/prevEvent5.jpg`,
+    `${info.server}/statics/prevEvent1.jpg`,
+    `${info.server}/statics/event2022_pic1.jpeg`,
+  ];
+  const preEventImgs1 = [
+    `${info.server}/statics/prevEvent4.jpg`,
+    `${info.server}/statics/event2022_pic3.jpeg`,
+  ];
+
   return (
     <div className="up-events">
       <h1>Events</h1>
@@ -34,7 +40,7 @@ export default function UpEvents({ eventDetails }) {
             <img
               src={
                 eventDetails
-                  ? `http://bytecodelearners.cuh.ac.in/bytecode-server/storage/app/${eventDetails.image}`
+                  ? `${info.server}/bytecode-server/storage/app/${eventDetails.image}`
                   : null
               }
               alt="Event Poster"
