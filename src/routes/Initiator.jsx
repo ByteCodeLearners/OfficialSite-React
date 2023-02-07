@@ -2,6 +2,8 @@ import "../styles/initiator.css";
 import { GoMarkGithub } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
+import { useInfoContextProvider } from "../context/InfoContextProvider";
+
 // import api from '../backend.js';
 // import { useEffect } from "react";
 
@@ -13,6 +15,8 @@ const Initiator = () => {
   // useEffect(()=>{
   //     getMem2018();
   // },[]);
+  const info = useInfoContextProvider();
+
   return (
     <div className="initiator">
       <div className="main">
@@ -41,7 +45,7 @@ const Initiator = () => {
           <div className="box1">
             <img
               alt="Initiator"
-              src="http://bytecodelearners.cuh.ac.in/initiators-image/dipu-kumar-sah.jpg"
+              src={`${info.server}/initiators-image/dipu-kumar-sah.jpg`}
             />
             Dipu Kumar Sah
             <br />
@@ -76,7 +80,7 @@ const Initiator = () => {
           <div className="box2">
             <img
               alt="Initiator"
-              src="http://bytecodelearners.cuh.ac.in/initiators-image/yash-raj.jpg"
+              src={`${info.server}/initiators-image/yash-raj.jpg`}
             />
             Yash Raj
             <br />
@@ -111,7 +115,7 @@ const Initiator = () => {
           <div className="box3">
             <img
               alt="Initiator"
-              src="http://bytecodelearners.cuh.ac.in/initiators-image/raj-patel.jpg"
+              src={`${info.server}/initiators-image/raj-patel.jpg`}
             />
             Raj Patel
             <br />
@@ -146,7 +150,7 @@ const Initiator = () => {
           <div className="box4">
             <img
               alt="Initiator"
-              src="http://bytecodelearners.cuh.ac.in/initiators-image/shantanu-pratap.jpg"
+              src={`${info.server}/initiators-image/shantanu-pratap.jpg`}
             />
             Shantanu Pratap
             <br />

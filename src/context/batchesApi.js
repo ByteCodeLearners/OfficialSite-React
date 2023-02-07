@@ -1,3 +1,4 @@
+const baseUrl = "http://bytecodelearners.cuh.ac.in";
 const BatchesApi = [
   {
     image:

@@ -1,15 +1,18 @@
 import React from "react";
 import "../styles/glimpse-of-gallery.css";
 import { Link } from "react-router-dom";
+import { useInfoContextProvider } from "../context/InfoContextProvider";
 
 const GlimpseOfGallery = () => {
+  const info = useInfoContextProvider();
+
   const images = [
-    "http://bytecodelearners.cuh.ac.in/statics/event2022_pic10.jpg",
-    "http://bytecodelearners.cuh.ac.in/statics/event2022_pic2.jpeg",
-    "http://bytecodelearners.cuh.ac.in/statics/event2022_pic1.jpeg",
-    "http://bytecodelearners.cuh.ac.in/statics/event2022_pic4.jpeg",
-    "http://bytecodelearners.cuh.ac.in/statics/event2022_pic6.jpeg",
-    "http://bytecodelearners.cuh.ac.in/statics/prevEvent5.jpg",
+    `${info.server}/statics/event2022_pic10.jpg`,
+    `${info.server}/statics/event2022_pic2.jpeg`,
+    `${info.server}/statics/event2022_pic1.jpeg`,
+    `${info.server}/statics/event2022_pic4.jpeg`,
+    `${info.server}/statics/event2022_pic6.jpeg`,
+    `${info.server}/statics/prevEvent5.jpg`,
   ];
   return (
     <div className="glimpse-of-gallery">
