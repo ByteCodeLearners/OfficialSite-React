@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem 0.6rem;
+  padding: 0.1rem 0.6rem;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -17,24 +17,25 @@
   border-radius: 5px;
   color: #108a23;
   text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
-  padding: 0.12rem 0.1rem;
+  padding: 7px 0.1rem;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   gap: 5px;
 }
-.navbar ul li:hover a {
+.navbar ul li:hover a, .navbar ul li a.active {
   transition: 0.4s;
   text-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
   background-color: green;
   color: white;
 }
+
 .navbar ul li a i {
   font-size: 0.21rem;
   /* display: none; */
 }
 .sticky {
-  padding: 0.15rem 0.2rem;
+  padding: 0rem 0.2rem;
   background: linear-gradient(90deg, white, 1%, #27ae60);
   font-size: 0.18rem;
 }
@@ -74,12 +75,12 @@
 }
 .navbar .logo .bytecodelogo {
   margin-top: 8px;
-  width: 0.8rem;
+  width: 0.7rem;
   filter: hue-rotate(-20deg);
 }
 .navbar .logo .bytecodelogoa {
   margin-top: 8px;
-  width: 1rem;
+  width: 0.6rem;
   filter: hue-rotate(-20deg);
 }
 .club {
