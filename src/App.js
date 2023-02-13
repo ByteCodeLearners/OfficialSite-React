@@ -24,21 +24,24 @@ import GalleryDashboard from "./components/dashboard/GalleryDashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<Home />} />
-      <Route path="events-gallery" element={<EventsGallery />} />
-      <Route path="batches" element={<Batches />} />
-      <Route path="registration" element={<Registration />} />
-      <Route path="initiator" element={<Initiator />} />
-      <Route path="contact-us" element={<ContactUs />} />
-      <Route path="add/upcoming/events" element={<UpdateEventDetails />} />
+    <>
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="events-gallery" element={<EventsGallery />} />
+        <Route path="batches" element={<Batches />} />
+        <Route path="registration" element={<Registration />} />
+        <Route path="initiator" element={<Initiator />} />
+        <Route path="contact-us" element={<ContactUs />} />
+        <Route path="add/upcoming/events" element={<UpdateEventDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
       <Route path="dashboard" element={<Dashboard />}>
         <Route path="members" element={<MembersDashboard />} />
         <Route path="events" element={<EventsDashboard />} />
         <Route path="gallery" element={<GalleryDashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
-      <Route path="*" element={<NotFound />} />
-    </Route>
+    </>
   )
 );
 
