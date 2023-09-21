@@ -1,23 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useInfoContextProvider } from "../context/InfoContextProvider";
+import axios from "../api/axios";
+import serverUrl from "../api/serverurl";
 
-export default function UpEvents({ eventDetails }) {
-  // let [event_topic,setTopic] = useState("");
-  // let [event_link,setLink] = useState("");
-  // let [event_time,setTime] = useState("");
-  // let toggle =()=>{
-  //   let detail = document.querySelector('.event-details');
-  //   detail.classList.toggle("details-active");
-  //   let events = document.querySelector('.up-events-content');
-  //   events.classList.toggle("blur");
-  // }
-  // let asignDetails=(event)=>{
-  //   setTopic(event.title);
-  //   setLink(event.link);
-  //   setTime(event.time);
-  // }
+export default function UpEvents() {
+  const [eventDetails, setEventDetails] = useState();
 
-  // const info = useContext(InfoContext);
   const info = useInfoContextProvider();
   const preEventImgs = [
     `${info.server}/statics/prevEvent3.jpg`,
@@ -30,6 +18,19 @@ export default function UpEvents({ eventDetails }) {
     `${info.server}/statics/event2022_pic3.jpeg`,
   ];
 
+  const getLatestEvent = (id) => {
+    axios
+      .get(`event/getlatest`)
+      .then((res) => {
+        console.log(res?.data?.data);
+        setEventDetails(res?.data?.data);
+      })
+      .catch((error) => {});
+  };
+  useEffect(() => {
+    getLatestEvent();
+  }, []);
+
   return (
     <div className="up-events">
       <h1>Events</h1>
@@ -40,7 +41,7 @@ export default function UpEvents({ eventDetails }) {
             <img
               src={
                 eventDetails
-                  ? `${info.server}/bytecode-server/storage/app/${eventDetails.image}`
+                  ? `${serverUrl}/eventposters/${eventDetails.posterpath}`
                   : null
               }
               alt="Event Poster"
@@ -49,17 +50,15 @@ export default function UpEvents({ eventDetails }) {
           <div className="up-details">
             <p>
               <b>Topic: </b>
-              {eventDetails ? eventDetails.topic : null}
+              {eventDetails ? eventDetails.title : null}
             </p>
             <p>
               <b>Venue: </b>
-              <a href={eventDetails ? eventDetails.link_details : null}>
-                {eventDetails ? eventDetails.link_details : null}
-              </a>
+              {eventDetails ? eventDetails.venue : null}
             </p>
             <p>
               <b>Details: </b>
-              {eventDetails ? eventDetails.note : null}
+              {eventDetails ? eventDetails.description : null}
             </p>
           </div>
         </div>

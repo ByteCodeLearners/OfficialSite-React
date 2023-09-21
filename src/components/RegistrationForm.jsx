@@ -1,171 +1,68 @@
 import { useState } from "react";
 import swal from "sweetalert";
-import api from "../backend.js";
+import axios from "../api/axios.js";
 
 const RegistrationForm = () => {
-  const [f_name, setFname] = useState("");
-  const [m_name, setMname] = useState("");
-  const [l_name, setLname] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [linked, setLinked] = useState("");
-  const [yt, setYt] = useState("");
-  const [fb, setFb] = useState("");
-  const [twit, setTwit] = useState("");
-  const [insta, setInsta] = useState("");
-  const [gh, setGh] = useState("");
-  const [pass1, setPass1] = useState("");
-  const [pass2, setPass2] = useState("");
-  const handleShowPass = () => {
-    const pass2 = document.querySelector("#pass2");
-    const eye = document.querySelector(".pass2");
-    if (pass2.type === "password") {
-      eye.classList.replace("fa-eye", "fa-eye-slash");
-      pass2.type = "text";
-    } else {
-      eye.classList.replace("fa-eye-slash", "fa-eye");
-      pass2.type = "password";
-    }
+  const [profile, setProfile] = useState();
+  const forminitialvalues = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    mobile: "",
+    batch: "",
+    isactive: false,
+    github: "",
+    linkedin: "",
+    facebook: "",
+    instagram: "",
+    youtube: "",
+    twitter: "",
   };
-  const checkPassword = (e) => {
-    const reType = document.querySelector("#retype");
-    if (pass1 === e.target.value && pass1 !== "") {
-      reType.style.color = "green";
-    } else {
-      reType.style.color = "#fc5c65";
-    }
+  const [memberdata, setMemberdata] = useState({ ...forminitialvalues });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setMemberdata({ ...memberdata, [name]: value });
   };
-  const handleSubmit = async () => {
-    const file = document.querySelector("#file");
-    // console.log(file.value);
-    if (
-      f_name === "" ||
-      l_name === "" ||
-      email === "" ||
-      mobile === "" ||
-      pass1 === "" ||
-      pass2 === "" ||
-      file.value === ""
-    ) {
-      swal("Empty Fields", "Please enter all required input fields.", "info");
-    } else if (pass1 !== pass2) {
-      swal("Error", "Passwords didn't match.", "error");
-      document.querySelector("#pass2").focus();
-      return;
-    } else if (!/[A-Za-z0-9_.]+@[A-z]+\.[a-z]+/.test(email)) {
-      swal("E-Mail", "Enter a valid mail id.", "error");
-      return;
-    } else if (
-      mobile.length > 10 ||
-      !/[0-9]{10}/.test(mobile) ||
-      /\D+/.test(mobile)
-    ) {
-      swal("Mobile Number", "Enter a valid mobile number.", "error");
-      return;
-    } else if (
-      pass1.length < 6 ||
-      !(pass1.search(/[A-Z]/) > -1) ||
-      !(pass1.search(/[0-9]/) > -1) ||
-      !(pass1.search(/[$&+,!:;=?@#]/) > -1)
-    ) {
-      swal("Password", "Enter a strong password...", "info");
-      document.querySelector("#pass1").focus();
-      return;
-    } else if (
-      !/.png$/.test(file.value.toLowerCase()) &&
-      !/.jpg$/.test(file.value.toLowerCase()) &&
-      !/.jpeg$/.test(file.value.toLowerCase())
-    ) {
-      swal(
-        "Profile Picture",
-        "file must be of type *.jpg,*.jpeg,*.png",
-        "error"
-      );
-    } else if (
-      /\d+/.test(f_name) ||
-      /\d+/.test(l_name) ||
-      /\d+/.test(m_name) ||
-      f_name.search(/[$&+,!:;=?@#]/) > -1 ||
-      l_name.search(/[$&+,!:;=?@#]/) > -1 ||
-      m_name.search(/[$&+,!:;=?@#]/) > -1
-    ) {
-      swal(
-        "Error",
-        "Use only letters to describe these fields\ni.e First Name, Middle Name and Last name",
-        "info"
-      );
-    } else if (f_name.length < 3 || l_name.length < 3) {
-      swal(
-        "Error",
-        "There should be minimum of 3 letters for below fields\ni.e First Name and Last name",
-        "info"
-      );
-    } else {
-      let form = new FormData();
-      swal("Sending", "", "info");
-      form.append("first_name", f_name);
-      form.append("middle_name", m_name);
-      form.append("last_name", l_name);
-      form.append("image", document.querySelector("#file").files[0]);
-      form.append("email", email);
-      form.append("mobile_number", mobile);
-      form.append("batch", 2021);
-      form.append("password", pass1);
-      form.append("facebook", fb);
-      form.append("linkedin", linked);
-      form.append("instagram", insta);
-      form.append("twitter", twit);
-      form.append("github", gh);
-      form.append("youtube", yt);
-      const res = await api.post("/api/members/new", form);
-      if (res.data.user_name) {
+  const profileHandler = (e) => {
+    const file = e.target.files[0];
+    setProfile(file);
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let form = new FormData();
+    for (let values in memberdata) {
+      form.append(values, memberdata[values]);
+    }
+    form.append("image", profile);
+
+    console.log(memberdata, profile);
+    try {
+      const res = await axios.post("member/add", form);
+      if (res?.data.message === "Your data has been added") {
         swal(
           "Success",
           "Your response is submitted successfully...",
           "success"
         );
       } else {
-        swal("Error", res.data, "error");
+        swal("Error", res.data.message, "error");
       }
-      console.log(res.data);
-      setEmail("");
-      setFb("");
-      setFname("");
-      setGh("");
-      setInsta("");
-      setLinked("");
-      setLname("");
-      setMname("");
-      setMobile("");
-      setPass1("");
-      setPass2("");
-      setTwit("");
-      setYt("");
-      document.querySelector("#file").value = null;
-      document.querySelector("#retype").style.color = "black";
-
-      return;
+    } catch (err) {
+      console.log(err);
     }
   };
   return (
     <div className="regis-form">
       <h1>Member's Registration</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-        autoComplete="off"
-      >
+      <form>
         <div className="inputs">
           <div className="input">
             <input
-              value={f_name}
+              value={memberdata.firstname}
               placeholder=" "
-              onChange={(e) => {
-                setFname(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
-              name="f_name"
+              name="firstname"
               id="f_name"
               required
             />
@@ -173,30 +70,14 @@ const RegistrationForm = () => {
               First Name<span>*</span>
             </label>
           </div>
+
           <div className="input">
             <input
-              value={m_name}
+              value={memberdata.lastname}
               placeholder=" "
-              onChange={(e) => {
-                setMname(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
-              name="m_name"
-              id="m_name"
-            />
-            <label className="label" htmlFor="m_name">
-              Middle Name
-            </label>
-          </div>
-          <div className="input">
-            <input
-              value={l_name}
-              placeholder=" "
-              onChange={(e) => {
-                setLname(e.target.value);
-              }}
-              type="text"
-              name="l_name"
+              name="lastname"
               id="l_name"
               required
             />
@@ -211,17 +92,16 @@ const RegistrationForm = () => {
               type="file"
               name="file"
               id="file"
+              onChange={profileHandler}
               required
             />
             <i className="fas fa-camera"></i>
           </div>
           <div className="input">
             <input
-              value={email}
+              value={memberdata.email}
               placeholder=" "
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              onChange={handleChange}
               type="email"
               name="email"
               id="email"
@@ -233,11 +113,9 @@ const RegistrationForm = () => {
           </div>
           <div className="input">
             <input
-              value={mobile}
+              value={memberdata.mobile}
               placeholder=" "
-              onChange={(e) => {
-                setMobile(e.target.value);
-              }}
+              onChange={handleChange}
               type="phone"
               name="mobile"
               id="mobile"
@@ -249,24 +127,44 @@ const RegistrationForm = () => {
           </div>
           <div className="input">
             <input
-              value={linked}
+              value={memberdata.batch}
               placeholder=" "
-              onChange={(e) => {
-                setLinked(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
-              name="linked"
+              name="batch"
+              id="batch"
+            />
+            <label className="label" htmlFor="batch">
+              Batch
+            </label>
+          </div>
+          <div className="input">
+            <input
+              value={memberdata.linkedin}
+              placeholder=" "
+              onChange={handleChange}
+              type="text"
+              name="linkedin"
               id="linked"
             />
             <label htmlFor="linked">LinkedIn Profile</label>
           </div>
           <div className="input">
             <input
-              value={yt}
+              value={memberdata.github}
               placeholder=" "
-              onChange={(e) => {
-                setYt(e.target.value);
-              }}
+              onChange={handleChange}
+              type="text"
+              name="github"
+              id="gh"
+            />
+            <label htmlFor="gh">GitHub Profile</label>
+          </div>
+          <div className="input">
+            <input
+              value={memberdata.youtube}
+              placeholder=" "
+              onChange={handleChange}
               type="text"
               name="yt"
               id="yt"
@@ -275,11 +173,9 @@ const RegistrationForm = () => {
           </div>
           <div className="input">
             <input
-              value={fb}
+              value={memberdata.facebook}
               placeholder=" "
-              onChange={(e) => {
-                setFb(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
               name="fb"
               id="fb"
@@ -288,104 +184,25 @@ const RegistrationForm = () => {
           </div>
           <div className="input">
             <input
-              value={twit}
+              value={memberdata.twitter}
               placeholder=" "
-              onChange={(e) => {
-                setTwit(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
-              name="twit"
+              name="twitter"
               id="twit"
             />
             <label htmlFor="twit">Twitter Profile</label>
           </div>
           <div className="input">
             <input
-              value={insta}
+              value={memberdata.instagram}
               placeholder=" "
-              onChange={(e) => {
-                setInsta(e.target.value);
-              }}
+              onChange={handleChange}
               type="text"
-              name="insta"
+              name="instagram"
               id="insta"
             />
             <label htmlFor="insta">Instagram Profile</label>
-          </div>
-          <div className="input">
-            <input
-              value={gh}
-              placeholder=" "
-              onChange={(e) => {
-                setGh(e.target.value);
-              }}
-              type="text"
-              name="gh"
-              id="gh"
-            />
-            <label htmlFor="gh">GitHub Profile</label>
-          </div>
-          <div className="input">
-            <div className="validate">
-              <ul>
-                <li>
-                  {pass1.length > 5 ? "✔️ " : "❌ "}must be at least 6
-                  characters
-                </li>
-                <li>
-                  {pass1.search(/[A-Z]/) > -1 ? "✔️ " : "❌ "}must contain a
-                  capital letter
-                </li>
-                <li>
-                  {pass1.search(/[0-9]/) > -1 ? "✔️ " : "❌ "}must contain a
-                  number
-                </li>
-                <li>
-                  {pass1.search(/[$&+,!:;=?@#]/) > -1 ? "✔️" : "❌"}must contain
-                  one of $&+,:;=?@#
-                </li>
-              </ul>
-            </div>
-            <input
-              value={pass1}
-              placeholder=" "
-              onChange={(e) => {
-                setPass1(e.target.value);
-              }}
-              type="password"
-              name="pass1"
-              id="pass1"
-              required
-            />
-            <label htmlFor="pass1">
-              Password<span>*</span>
-            </label>
-          </div>
-          <div className="input">
-            <div className="validate">
-              <span>
-                Password
-                {pass1 === pass2 && pass1 !== ""
-                  ? " matched ✔️"
-                  : " didn't match ❌"}
-              </span>
-            </div>
-            <input
-              value={pass2}
-              placeholder=" "
-              onChange={(e) => {
-                setPass2(e.target.value);
-                checkPassword(e);
-              }}
-              type="password"
-              name="pass2"
-              id="pass2"
-              required
-            />
-            <label htmlFor="pass2" id="retype">
-              Re-type Password<span>*</span>
-            </label>
-            <i onClick={handleShowPass} className="fas pass2 fa-eye"></i>
           </div>
         </div>
         <div className="submit">
