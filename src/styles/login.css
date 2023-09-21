@@ -1,0 +1,121 @@
+.Login_page_Ak{
+    margin-top: 1.5em;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Login_page_Ak .cover_Ak{
+    background-color: white;
+    color: #0d150e;
+    height: 6em;
+    width: 5em;
+    /* width: 30em;
+    height: 35em; */
+   
+    position: relative;
+    border-radius: 0.4em;
+    box-shadow: 0 0.1em 0.5em rgb(100,150,156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+} 
+.cover_Ak h1{
+    font-size: 0.7rem;
+}
+
+/* .alt-login{
+    display: flex;
+    flex-direction: row;
+
+}
+.alt-login div {
+    width: 100%;
+    height: 90%;
+    border-radius: 0.25em;
+    color: white;
+    margin: 0.2em;
+    background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+   
+ 
+    
+} */
+/* .google {background-image: url("../");} */
+.input_Ak {
+    border:none;
+    background-color: rgb(229,226,226);
+    height: 4em;
+    width: 80%;
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 2em; 
+    /* font-size: 1rem; */
+}
+.cover_Ak .input_Ak:focus {
+    outline-color: #28a745;
+}
+ .login-btn_Ak{
+    width: 8em;
+    height: 3em;
+    background-color:#28a745;
+    color: white;
+    font-size: 0.2rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* transition: background-color 0.3s ease;  */
+}
+.login-btn_Ak:hover{
+    transform: scale(1.12);
+    background-color: #218838;
+    color: rgb(223, 251, 167);
+
+}
+.text {
+    position:relative;
+
+}
+
+.login_img_Ak{
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 2em;
+    padding-right:190px ;
+    height: 50%;
+    width: 50%;
+}
+.login_img_page{
+    height: 100%;
+    width: 100%;
+}
+.login_part_Ak{
+    height: 70%;
+    width: 40%;
+}
+@media screen and (max-width: 480px) {
+    .login_part_Ak.cover_Ak{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #28a745;
+         
+    }
+    .cover_Ak{
+        margin: 2em;
+    }
+    .login_img_Ak{
+        display: none;
+    }
+  }
