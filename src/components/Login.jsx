@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import loginImage from "../assets/login-img.svg";
+import logInImage from "../images/login-img.svg";
 import "../styles/login.css";
 
 const Login = () => {
@@ -63,15 +63,16 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="login_img">
-        {/* <img src={loginImage} alt="login_image" className="login_img_page" /> */}
+    <div className="Login_page_Ak">
+      <div className="login_img_Ak">
+        <img src={logInImage} alt="login_image" className="login_img_page" />
       </div>
-      <div className="login_part">
+      <div className="login_part_Ak">
         <form onSubmit={handleSubmit}>
-          <div className="cover">
+          <div className="cover_Ak">
             <h1>LogIn</h1>
             <input
+              className="input_Ak"
               type="text"
               placeholder="Email"
               value={email}
@@ -79,6 +80,7 @@ const Login = () => {
             />
             {emailError && <div style={{ color: "red" }}>{emailError}</div>}
             <input
+              className="input_Ak"
               type="password"
               placeholder="Password"
               onChange={handlePasswordChange}
@@ -86,14 +88,15 @@ const Login = () => {
             {passwordError && (
               <div style={{ color: "red" }}>{passwordError}</div>
             )}
-            <button type="submit" className="login-btn">
+            <button type="submit" className="login-btn_Ak">
               LOGIN
             </button>
-            \
+            
           </div>
         </form>
       </div>
-    </>
+    </div>
+    
   );
 };
 
