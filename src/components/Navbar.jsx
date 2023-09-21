@@ -113,27 +113,3 @@ export default function Navbar() {
   );
 }
 
-// import React from 'react';
-// const Navbar = () => {
-//     return (
-//         <div className="navbar">
-//             <div className="logo">
-//                 <p>Bytecode</p>
-//                 <p>Learners</p>
-//             </div>
-//             <div className="nav">
-//                 <p>Home</p>
-//                 <p>Event Gallery</p>
-//                 <p>Batches</p>
-//             </div>
-//             {/* <div className="waves navwaves">
-//                 <div className="wave" id="wave1"></div>
-//                 <div className="wave" id="wave2"></div>
-//                 <div className="wave" id="wave3"></div>
-//                 <div className="wave" id="wave4"></div>
-//             </div> */}
-//         </div>
-//      );
-// }
-
-// export default Navbar;

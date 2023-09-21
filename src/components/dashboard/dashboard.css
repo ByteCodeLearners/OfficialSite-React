@@ -1,0 +1,56 @@
+.add_container {
+  height: 100px;
+  border: 1px solid #817d7d;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_event_image_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+.main_gallery_container {
+  margin-top: 10px;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.main_card_event {
+  border: 1px solid rgb(166, 166, 166);
+  height: 250px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.image_name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.event_add_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(166, 166, 166);
+  background-color: #dfdfdf;
+  border-radius: 10px;
+
+  font-size: 24px;
+}

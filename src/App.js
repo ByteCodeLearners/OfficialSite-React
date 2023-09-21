@@ -21,6 +21,7 @@ import NotFound from "./components/NotFound";
 import MembersDashboard from "./components/dashboard/MembersDashboard";
 import EventsDashboard from "./components/dashboard/EventsDashboard";
 import GalleryDashboard from "./components/dashboard/GalleryDashboard";
+import Login from "./components/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
         <Route path="events" element={<EventsDashboard />} />
         <Route path="gallery" element={<GalleryDashboard />} />
         <Route path="*" element={<NotFound />} />
+         <Route path="/login" element={<Login />} />
       </Route>
     </>
   )
