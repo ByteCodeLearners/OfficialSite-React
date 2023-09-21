@@ -38,7 +38,6 @@ const router = createBrowserRouter(
         <Route path="events" element={<EventsDashboard />} />
         <Route path="gallery" element={<GalleryDashboard />} />
       </Route>
-
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
     </Route>
