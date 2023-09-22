@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
 import axios from "../api/axios";
 import serverUrl from "../api/serverurl";
 
 export default function UpEvents() {
   const [eventDetails, setEventDetails] = useState();
-  const info = useInfoContextProvider();
-  const preEventImgs = [
-    `${info.server}/statics/prevEvent3.jpg`,
-    `${info.server}/statics/prevEvent5.jpg`,
-    `${info.server}/statics/prevEvent1.jpg`,
-    `${info.server}/statics/event2022_pic1.jpeg`,
-  ];
-  const preEventImgs1 = [
-    `${info.server}/statics/prevEvent4.jpg`,
-    `${info.server}/statics/event2022_pic3.jpeg`,
-  ];
+  const [imageset1, setImageset1] = useState(null);
+  const [imageset2, setImageset2] = useState(null);
+  const getPreviousEventImage = () => {
+    axios
+      .get(`prevevent/get`)
+      .then((res) => {
+        console.log(res?.data?.data);
+        const preveventimage = res?.data?.data;
+        setImageset1(preveventimage.slice(0, 2));
+        setImageset2(preveventimage.slice(2, 6));
+      })
+      .catch((error) => {});
+  };
 
   const getLatestEvent = (id) => {
     axios
@@ -27,6 +28,7 @@ export default function UpEvents() {
   };
   useEffect(() => {
     getLatestEvent();
+    getPreviousEventImage();
   }, []);
 
   return (
@@ -63,13 +65,33 @@ export default function UpEvents() {
         <div className="pre-events">
           <h2>Previous Events</h2>
           <div className="pre-event-imgs">
-            {preEventImgs1.map((img, idx) => {
-              return <img key={idx} src={img} alt={img} />;
-            })}
+            {imageset1 != null ? (
+              imageset1.map((img, idx) => {
+                return (
+                  <img
+                    key={idx}
+                    src={`${serverUrl}/prevevent/${img.image_path}`}
+                    alt={img}
+                  />
+                );
+              })
+            ) : (
+              <p>loding...</p>
+            )}
             <div className="pre-img1">
-              {preEventImgs.map((img, idx) => {
-                return <img key={idx} src={img} alt={img} />;
-              })}
+              {imageset2 != null ? (
+                imageset2.map((img, idx) => {
+                  return (
+                    <img
+                      key={idx}
+                      src={`${serverUrl}/prevevent/${img.image_path}`}
+                      alt={img}
+                    />
+                  );
+                })
+              ) : (
+                <p>loding...</p>
+              )}
             </div>
           </div>
         </div>

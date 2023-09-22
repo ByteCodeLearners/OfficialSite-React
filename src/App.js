@@ -23,6 +23,7 @@ import EventsDashboard from "./components/dashboard/EventsDashboard";
 import GalleryDashboard from "./components/dashboard/GalleryDashboard";
 import Login from "./components/Login";
 import PrevEvent from "./components/dashboard/PrevEvent";
+import Mainsetting from "./components/dashboard/Mainsetting";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         <Route path="events" element={<EventsDashboard />} />
         <Route path="gallery" element={<GalleryDashboard />} />
         <Route path="prveve" element={<PrevEvent />} />
+        <Route path="regsetting" element={<Mainsetting />} />
       </Route>
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />

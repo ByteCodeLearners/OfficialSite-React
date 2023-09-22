@@ -95,6 +95,7 @@ const EventsDashboard = () => {
       console.log(data);
       if (data.message != null) {
         setEvtdata({ ...initialvalues });
+        getData();
       }
     } catch (error) {
       console.log(error);

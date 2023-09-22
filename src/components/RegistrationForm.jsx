@@ -44,6 +44,7 @@ const RegistrationForm = () => {
           "Your response is submitted successfully...",
           "success"
         );
+        setMemberdata(forminitialvalues);
       } else {
         swal("Error", res.data.message, "error");
       }

@@ -19,24 +19,6 @@ import { Outlet, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { useEffect } from "react";
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -189,7 +171,6 @@ function DashboardContent(props) {
             <Toolbar />
             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
               <Outlet />
-              <Copyright sx={{ pt: 4 }} />
             </Container>
           </Box>
         </Box>

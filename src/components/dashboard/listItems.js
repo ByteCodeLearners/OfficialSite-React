@@ -5,9 +5,20 @@ import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
 import EventIcon from "@mui/icons-material/Event";
+import LogoutIcon from "@mui/icons-material/Logout";
+import SettingsIcon from "@mui/icons-material/Settings";
 import { NavLink } from "react-router-dom";
+
 export const mainListItems = (
   <React.Fragment>
+    <NavLink to="regsetting">
+      <ListItemButton>
+        <ListItemIcon>
+          <SettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Setting" />
+      </ListItemButton>
+    </NavLink>
     <NavLink to="members">
       <ListItemButton>
         <ListItemIcon>
@@ -38,6 +49,19 @@ export const mainListItems = (
           <EventIcon />
         </ListItemIcon>
         <ListItemText primary="Prev Events" />
+      </ListItemButton>
+    </NavLink>
+
+    <NavLink to="/login">
+      <ListItemButton
+        onClick={() => {
+          localStorage.removeItem("token");
+        }}
+      >
+        <ListItemIcon>
+          <LogoutIcon />
+        </ListItemIcon>
+        <ListItemText primary="Logout" />
       </ListItemButton>
     </NavLink>
   </React.Fragment>

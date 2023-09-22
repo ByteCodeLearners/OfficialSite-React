@@ -3,18 +3,7 @@ import { GoMarkGithub } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { useInfoContextProvider } from "../context/InfoContextProvider";
-
-// import api from '../backend.js';
-// import { useEffect } from "react";
-
 const Initiator = () => {
-  // const getMem2018 = async()=>{
-  //     const res = await api.get('/api/batch/2018');
-  //     console.log(res.data);
-  // }
-  // useEffect(()=>{
-  //     getMem2018();
-  // },[]);
   const info = useInfoContextProvider();
 
   return (

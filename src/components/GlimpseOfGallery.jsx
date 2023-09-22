@@ -1,26 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/glimpse-of-gallery.css";
 import { Link } from "react-router-dom";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
+import axios from "../api/axios";
+import serverUrl from "../api/serverurl";
 
 const GlimpseOfGallery = () => {
-  const info = useInfoContextProvider();
+  const [glimpsgallery, setGlimpsgallery] = useState(null);
 
-  const images = [
-    `${info.server}/statics/event2022_pic10.jpg`,
-    `${info.server}/statics/event2022_pic2.jpeg`,
-    `${info.server}/statics/event2022_pic1.jpeg`,
-    `${info.server}/statics/event2022_pic4.jpeg`,
-    `${info.server}/statics/event2022_pic6.jpeg`,
-    `${info.server}/statics/prevEvent5.jpg`,
-  ];
+  const getGlimpseOfGalleryImages = async () => {
+    try {
+      const response = await axios.get("gallery/get");
+      const data = response?.data?.data;
+      const glimpsdata = data.slice(0, 6);
+      console.log(glimpsdata);
+      setGlimpsgallery(glimpsdata);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getGlimpseOfGalleryImages();
+  }, []);
+
   return (
     <div className="glimpse-of-gallery">
       <h1>Glimpse Of Gallery</h1>
       <div className="images">
-        {images.map((img, index) => {
-          return <img className="gallery-img" key={index} src={img} alt="" />;
-        })}
+        {glimpsgallery != null ? (
+          glimpsgallery.map((img, index) => {
+            return (
+              <img
+                className="gallery-img"
+                key={index}
+                src={`${serverUrl}/eventgallery/${img.image_path}`}
+                alt=""
+              />
+            );
+          })
+        ) : (
+          <></>
+        )}
       </div>
       <Link
         to={"/events-gallery"}
