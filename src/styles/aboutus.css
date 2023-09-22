@@ -14,6 +14,7 @@
 }
 .about .abt-section {
   display: flex;
+  height: 350px;
   gap: 10px;
 }
 .about .bg-logo {
@@ -30,6 +31,7 @@
 }
 .about .content {
   width: 50%;
+  height: 100%;
   padding: 0.3rem 0.5rem;
   display: flex;
   /* justify-content: center; */

@@ -286,6 +286,7 @@
   }
   .about .abt-section {
     flex-direction: column;
+    height: auto;
   }
   .about .bg-logo,
   .about .content {

@@ -2,64 +2,47 @@ import React, { useState } from "react";
 
 import logInImage from "../images/login-img.svg";
 import "../styles/login.css";
+import axios from "../api/axios";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState("");
-  const validateEmail = () => {
-    //condition for valid email
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email) {
-      setEmailError("Please enter an email address");
-    } else if (!email.match(emailPattern)) {
-      setEmailError("Please enter a valid email address.");
-    } else {
-      setEmailError("");
-    }
-  };
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-    setEmailError(""); // Reset error when user edits email
-  };
-
-  const validatePassword = () => {
-    const minLength = 6;
-    const uppercaseRegex = /[A-Z]/;
-    const lowercaseRegex = /[a-z]/;
-    const numberRegex = /[0-9]/;
-    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
-
-    let error = "";
-    //condition for valid password
-    if (!password) {
-      error = "Please enter a password.";
-    } else if (password.length < minLength) {
-      error = "Password must be at least 6 characters long.";
-    } else if (!uppercaseRegex.test(password)) {
-      error = "Password must contain at least one uppercase letter.";
-    } else if (!lowercaseRegex.test(password)) {
-      error = "Password must contain at least one lowercase letter.";
-    } else if (!numberRegex.test(password)) {
-      error = "Password must contain at least one number.";
-    } else if (!specialCharRegex.test(password)) {
-      error = "Password must contain at least one special character.";
-    }
-
-    setPasswordError(error);
   };
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-    setPasswordError(""); // Reset error when user edits password
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    validateEmail();
-    validatePassword();
-    //Onsubmit console email and password
     console.log(email);
     console.log(password);
+    const formdata = new FormData();
+    formdata.append("email", email);
+    formdata.append("password", password);
+
+    try {
+      const response = await axios.post("user/login", formdata);
+      const data = response?.data;
+      console.log(data);
+      if (data.message === "authorized") {
+        swal("Success", "Logined successfully...", "success");
+        localStorage.setItem("token", data.access_token);
+        setEmail("");
+        setPassword("");
+        navigate("/dashboard/members");
+      } else {
+        swal("error", "Logined Failed...", "error");
+        localStorage.removeItem("token");
+      }
+    } catch (error) {
+      localStorage.removeItem("token");
+      console.log(error);
+    }
   };
 
   return (
@@ -78,25 +61,22 @@ const Login = () => {
               value={email}
               onChange={handleEmailChange}
             />
-            {emailError && <div style={{ color: "red" }}>{emailError}</div>}
+
             <input
               className="input_Ak"
               type="password"
               placeholder="Password"
+              value={password}
               onChange={handlePasswordChange}
             />
-            {passwordError && (
-              <div style={{ color: "red" }}>{passwordError}</div>
-            )}
+
             <button type="submit" className="login-btn_Ak">
               LOGIN
             </button>
-            
           </div>
         </form>
       </div>
     </div>
-    
   );
 };
 

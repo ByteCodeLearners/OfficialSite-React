@@ -15,7 +15,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems } from "./listItems";
 import "../../styles/dashboard.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import { useEffect } from "react";
 
 function Copyright(props) {
   return (
@@ -80,8 +82,6 @@ const Drawer = styled(MuiDrawer, {
     }),
   },
 }));
-
-// const mdTheme = createTheme();
 
 function DashboardContent(props) {
   const [open, setOpen] = React.useState(true);
@@ -199,5 +199,16 @@ function DashboardContent(props) {
 }
 
 export default function Dashboard(props) {
+  const navigate = useNavigate();
+  const checkLogin = () => {
+    const token = localStorage.getItem("token");
+    if (token === null || token === undefined) {
+      navigate("/login");
+      swal("error", "Login First", "error");
+    }
+  };
+  useEffect(() => {
+    checkLogin();
+  }, []);
   return <DashboardContent>{props.children}</DashboardContent>;
 }

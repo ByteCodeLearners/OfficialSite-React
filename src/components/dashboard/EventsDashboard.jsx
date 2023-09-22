@@ -4,7 +4,7 @@ import axios from "../../api/axios";
 import serverUrl from "../../api/serverurl";
 
 const Eventdisplay = (props) => {
-  const token = props.token;
+  const token = localStorage.getItem("token");
   const deletePoster = (id) => {
     axios
       .delete(`event/delete/${id}`, {
@@ -57,8 +57,7 @@ const EventsDashboard = () => {
     const file = e.target.files[0];
     setPoster(file);
   };
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE2OTUxOTE5MjYsImV4cCI6MTY5NTE5NTUyNiwibmJmIjoxNjk1MTkxOTI2LCJqdGkiOiJ3bVI2N3A4VEdNbHhxMVg4Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TfbfXS4aU5Qje3cVWW2GCL3s1mdHdAAU_KZcAbN2kaU";
+  const token = localStorage.getItem("token");
   const getData = () => {
     axios
       .get(`event/getall`, {
@@ -166,7 +165,6 @@ const EventsDashboard = () => {
               <Eventdisplay
                 value={value}
                 key={key}
-                token={token}
                 getData={getData}
               ></Eventdisplay>
             );

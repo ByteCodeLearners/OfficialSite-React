@@ -2,11 +2,10 @@ import React from "react";
 import "./dashboard.css";
 import serverUrl from "../../api/serverurl";
 import axios from "../../api/axios";
+import swal from "sweetalert";
 
 const Imagecard = (props) => {
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE2OTUxODU0NTcsImV4cCI6MTY5NTE4OTA1NywibmJmIjoxNjk1MTg1NDU3LCJqdGkiOiJoNFk2VVdhWW51VjMxeXBUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QCaYkn89dDsf8b9kSGlEwIXaJguT35gFOF6q_EL9TO0";
-
+  const token = localStorage.getItem("token");
   const deleteImage = (id) => {
     axios
       .delete(`gallery/delete/${id}`, {
@@ -17,6 +16,7 @@ const Imagecard = (props) => {
       })
       .then((res) => {
         console.log(res);
+        swal("success", "Deleted", "success");
         props.getData();
       })
       .catch((error) => {});

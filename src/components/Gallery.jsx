@@ -1,12 +1,7 @@
 import { useEffect } from "react";
 import "../styles/gallery.css";
-// import plus_sign from '../images/plus.jpg'
-
-// Core modules imports are same as usual
 import { Navigation } from "swiper";
-// Direct React component imports
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
-// Import Swiper styles
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "swiper/modules/navigation/navigation.min.css";
@@ -97,8 +92,8 @@ const Gallery = () => {
           <div className="images">
             {images.map((img, index) => {
               return (
-                <div className="gallery-img-container">
-                  <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container" key={index}>
+                  <img className="gallery-img" src={img} alt="" />
                 </div>
               );
             })}
@@ -108,8 +103,8 @@ const Gallery = () => {
           <div className="images">
             {fresherImgs.map((img, index) => {
               return (
-                <div className="gallery-img-container">
-                  <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container" key={index}>
+                  <img className="gallery-img" src={img} alt="" />
                 </div>
               );
             })}
@@ -119,8 +114,8 @@ const Gallery = () => {
           <div className="images">
             {slide3.map((img, index) => {
               return (
-                <div className="gallery-img-container">
-                  <img className="gallery-img" key={index} src={img} alt="" />
+                <div className="gallery-img-container" key={index}>
+                  <img className="gallery-img" src={img} alt="" />
                 </div>
               );
             })}

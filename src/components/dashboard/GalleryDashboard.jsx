@@ -21,7 +21,6 @@ const GalleryDashboard = () => {
       .get(`gallery/get`)
       .then((res) => {
         setImgdata(res.data?.data);
-        console.log(res.data?.data);
       })
       .catch((error) => {});
   };
@@ -34,9 +33,7 @@ const GalleryDashboard = () => {
     const formdata = new FormData();
     formdata.append("date", evtimagedata.date);
     formdata.append("image", image);
-
-    const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE2OTUxOTE5MjYsImV4cCI6MTY5NTE5NTUyNiwibmJmIjoxNjk1MTkxOTI2LCJqdGkiOiJ3bVI2N3A4VEdNbHhxMVg4Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TfbfXS4aU5Qje3cVWW2GCL3s1mdHdAAU_KZcAbN2kaU";
+    const token = localStorage.getItem("token");
     try {
       const response = await axios.post("gallery/add", formdata, {
         headers: {

@@ -5,7 +5,6 @@ import serverUrl from "../api/serverurl";
 
 export default function UpEvents() {
   const [eventDetails, setEventDetails] = useState();
-
   const info = useInfoContextProvider();
   const preEventImgs = [
     `${info.server}/statics/prevEvent3.jpg`,
@@ -22,7 +21,6 @@ export default function UpEvents() {
     axios
       .get(`event/getlatest`)
       .then((res) => {
-        console.log(res?.data?.data);
         setEventDetails(res?.data?.data);
       })
       .catch((error) => {});
