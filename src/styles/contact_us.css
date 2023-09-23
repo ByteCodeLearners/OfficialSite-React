@@ -18,7 +18,7 @@
 .contact-us .container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -27,6 +27,7 @@
   height: 400px;
   border: none;
   overflow: hidden;
+  height: 100%;
 }
 .boxes {
   width: 100%;
@@ -40,6 +41,7 @@
 }
 
 .scroller {
+  height: 100%;
   flex: 1;
   background: #aaa;
   overflow-y: scroll;
@@ -58,7 +60,7 @@
 }
 .rectangle {
   width: 320px;
-  height: 540px;
+  height: fit-content;
   display: flexbox;
   justify-content: space-between;
   align-items: center;
@@ -69,21 +71,10 @@
   background: linear-gradient(90deg, white, 2%, #27ae60);
   box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.4);
 }
-.rectangle1 {
-  height: 540px;
-  width: 320px;
-  display: flexbox;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 50;
-  font-weight: 500;
-  font-size: 15px;
-  overflow: hidden;
-  background: linear-gradient(90deg, white, 2%, #27ae60);
-  box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.4);
-}
+
 .rectangle2 {
-  height: 540px;
+  /* height: 540px; */
+  height: max-content;
   width: 320px;
   display: flexbox;
   justify-content: space-between;

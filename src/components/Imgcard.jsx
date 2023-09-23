@@ -1,28 +1,23 @@
 import React from "react";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
+import serverUrl from "../api/serverurl";
 
 export default function Imgcard({ member }) {
-  const info = useInfoContextProvider();
+  
   return (
     <div className="imgcard">
       <div className="img-container">
         <img
-          src={
-            member.batch < 2021
-              ? `${info.server}/bytecode-server/storage/app/public/` +
-                member.image
-              : `${info.server}/bytecode-server/storage/app/` + member.image
-          }
-          alt={member.first_name}
+          src={`${serverUrl}/members/${member.photopath}`}
+          alt={member.firstname}
         />
       </div>
       <div className="content-container">
-        <p>{member.first_name + " " + member.last_name}</p>
+        <p>{member.firstname + " " + member.lastname}</p>
         <div className="social-icon">
-          {member.social_media_links ? (
-            member.social_media_links.facebook ? (
+          {member.socialmedialinks ? (
+            member.socialmedialinks.facebook ? (
               <a
-                href={member.social_media_links.facebook}
+                href={member.socialmedialinks.facebook}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -32,10 +27,10 @@ export default function Imgcard({ member }) {
               </a>
             ) : null
           ) : null}
-          {member.social_media_links ? (
-            member.social_media_links.twitter ? (
+          {member.socialmedialinks ? (
+            member.socialmedialinks.twitter ? (
               <a
-                href={member.social_media_links.twitter}
+                href={member.socialmedialinks.twitter}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -45,10 +40,10 @@ export default function Imgcard({ member }) {
               </a>
             ) : null
           ) : null}
-          {member.social_media_links ? (
-            member.social_media_links.instagram ? (
+          {member.socialmedialinks ? (
+            member.socialmedialinks.instagram ? (
               <a
-                href={member.social_media_links.instagram}
+                href={member.socialmedialinks.instagram}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -58,10 +53,10 @@ export default function Imgcard({ member }) {
               </a>
             ) : null
           ) : null}
-          {member.social_media_links ? (
-            member.social_media_links.github ? (
+          {member.socialmedialinks ? (
+            member.socialmedialinks.github ? (
               <a
-                href={member.social_media_links.github}
+                href={member.socialmedialinks.github}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -71,10 +66,10 @@ export default function Imgcard({ member }) {
               </a>
             ) : null
           ) : null}
-          {member.social_media_links ? (
-            member.social_media_links.youtube ? (
+          {member.socialmedialinks ? (
+            member.socialmedialinks.youtube ? (
               <a
-                href={member.social_media_links.youtube}
+                href={member.socialmedialinks.youtube}
                 rel="noreferrer"
                 target="_blank"
               >

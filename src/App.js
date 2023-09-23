@@ -13,8 +13,7 @@ import Registration from "./routes/Registration";
 import Batches from "./routes/Batches";
 import EventsGallery from "./routes/EventsGallery";
 import Initiator from "./routes/Initiator";
-import UpdateEventDetails from "./routes/UpdateEventDetails";
-import InfoContextProvider from "./context/InfoContextProvider";
+
 import Dashboard from "./components/dashboard/Dashboard";
 import RootLayout from "./layouts/RootLayout";
 import NotFound from "./components/NotFound";
@@ -34,7 +33,7 @@ const router = createBrowserRouter(
       <Route path="registration" element={<Registration />} />
       <Route path="initiator" element={<Initiator />} />
       <Route path="contact-us" element={<ContactUs />} />
-      <Route path="add/upcoming/events" element={<UpdateEventDetails />} />
+
       <Route path="dashboard" element={<Dashboard />}>
         <Route path="members" element={<MembersDashboard />} />
         <Route path="events" element={<EventsDashboard />} />
@@ -49,9 +48,5 @@ const router = createBrowserRouter(
 );
 
 export default function App() {
-  return (
-    <InfoContextProvider>
-      <RouterProvider router={router} />
-    </InfoContextProvider>
-  );
+  return <RouterProvider router={router} />;
 }

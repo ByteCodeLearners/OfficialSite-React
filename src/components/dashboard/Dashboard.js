@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
@@ -10,14 +12,11 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems } from "./listItems";
 import "../../styles/dashboard.css";
-import { Outlet, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
-import { useEffect } from "react";
 
 const drawerWidth = 240;
 

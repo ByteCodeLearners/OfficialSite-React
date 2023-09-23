@@ -8,7 +8,8 @@ import {
   FaFacebookSquare,
 } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
+
+import serverUrl from "../api/serverurl";
 
 const MemberCard = ({ id, email, name, image, social }) => {
   const [isMore, setIsMore] = useState(true);
@@ -134,8 +135,6 @@ const MemberCard = ({ id, email, name, image, social }) => {
 };
 
 const BatchesCard = ({ batchData }) => {
-  const info = useInfoContextProvider();
-
   return (
     <div className="batches-card">
       <section className="main-card--cointainer">
@@ -145,16 +144,10 @@ const BatchesCard = ({ batchData }) => {
                 <MemberCard
                   key={index}
                   email={curElem.email}
-                  social={curElem.social_media_links}
-                  name={curElem.first_name + " " + curElem.last_name}
+                  social={curElem.socialmedialinks}
+                  name={curElem.firstname + " " + curElem.lastname}
                   index={index}
-                  image={
-                    curElem.batch !== 2018
-                      ? curElem.batch > 2020
-                        ? `${info.server}/bytecode-server/storage/app/${curElem.image}`
-                        : `${info.server}/bytecode-server/storage/app/public/${curElem.image}`
-                      : curElem.image
-                  }
+                  image={`${serverUrl}/members/${curElem.photopath}`}
                 />
               );
             })

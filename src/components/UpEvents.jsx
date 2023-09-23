@@ -10,7 +10,7 @@ export default function UpEvents() {
     axios
       .get(`prevevent/get`)
       .then((res) => {
-        console.log(res?.data?.data);
+        // console.log(res?.data?.data);
         const preveventimage = res?.data?.data;
         setImageset1(preveventimage.slice(0, 2));
         setImageset2(preveventimage.slice(2, 6));

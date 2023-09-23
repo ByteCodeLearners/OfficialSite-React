@@ -25,16 +25,13 @@ const ContactUs = () => {
           </div>
 
           <div className=" fb">
-            <h2>FACEBOOK FEEDS</h2>
-
             <div className="event-container">
-              ==
               <div className="container">
                 <iframe
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=320&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
                   scrolling="no"
-                  frameborder="0"
-                  allowfullscreen="true"
+                  frameBorder="0"
+                  allowFullScreen={true}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   title="contact-us"
                 ></iframe>
@@ -43,27 +40,24 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="rectangle1">
+        <div className="rectangle">
           <div className=" inst">
             <div className="ions1">
               <a href="https://www.instagram.com" className="instagram social">
-                {/* <FontAwesomeIcon icon={faInstagram} size="3x" /> */}
                 <i className="fab fa-instagram box-icons"></i>
               </a>
             </div>
-
-            <h2>INSTAGRAM FEEDS</h2>
-            <scrollbar>
+            <div>
               <div className="event-container">
                 <div className="container">
                   <div className="scroller">
                     <ul>
-                      <div class="elfsight-app-41f24f40-af42-4831-abdf-d8732bba57e8"></div>
+                      <div className="elfsight-app-41f24f40-af42-4831-abdf-d8732bba57e8"></div>
                     </ul>
                   </div>
                 </div>
               </div>
-            </scrollbar>
+            </div>
           </div>
         </div>
 
@@ -80,13 +74,11 @@ const ContactUs = () => {
                 <i className="fab fa-twitter box-icons"></i>
               </a>
             </div>
-
-            <h2>TWITTER FEEDS</h2>
             <div className="container">
               <div className="scroller">
                 <ul>
                   <a
-                    class="twitter-timeline twitter-embed"
+                    className="twitter-timeline twitter-embed"
                     href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
                     data-show-count="false"
                   >

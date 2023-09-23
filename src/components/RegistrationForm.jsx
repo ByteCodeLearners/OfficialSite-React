@@ -45,6 +45,7 @@ const RegistrationForm = () => {
           "success"
         );
         setMemberdata(forminitialvalues);
+        document.querySelector('#registration-form-d').reset()
       } else {
         swal("Error", res.data.message, "error");
       }
@@ -55,7 +56,7 @@ const RegistrationForm = () => {
   return (
     <div className="regis-form">
       <h1>Member's Registration</h1>
-      <form>
+      <form id="registration-form-d">
         <div className="inputs">
           <div className="input">
             <input
@@ -136,7 +137,7 @@ const RegistrationForm = () => {
               id="batch"
             />
             <label className="label" htmlFor="batch">
-              Batch
+              Batch<span>*</span>
             </label>
           </div>
           <div className="input">
@@ -148,7 +149,9 @@ const RegistrationForm = () => {
               name="linkedin"
               id="linked"
             />
-            <label htmlFor="linked">LinkedIn Profile</label>
+            <label htmlFor="linked">
+              LinkedIn Profile <span>*</span>
+            </label>
           </div>
           <div className="input">
             <input
@@ -159,7 +162,9 @@ const RegistrationForm = () => {
               name="github"
               id="gh"
             />
-            <label htmlFor="gh">GitHub Profile</label>
+            <label htmlFor="gh">
+              GitHub Profile<span>*</span>
+            </label>
           </div>
           <div className="input">
             <input

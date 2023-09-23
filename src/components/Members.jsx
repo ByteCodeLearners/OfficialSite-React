@@ -1,31 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Imgcard from "./Imgcard";
-import api from "../backend.js";
-// Core modules imports are same as usual
 import { Autoplay, Navigation, Pagination } from "swiper";
-// Direct React component imports
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
-
-// swiper bundle styles
 import "swiper/swiper-bundle.min.css";
-
-// swiper core styles
 import "swiper/swiper.min.css";
-
-// modules styles
 import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
+import axios from "../api/axios";
+import baseUrl from "../api/baseurl";
+
+const currentbatch = 2021;
 
 const Members = () => {
   const [mem, setMem] = useState(null);
+  const getBatchData = async () => {
+    const res = await axios.get(
+      `${baseUrl}/api/member/getactive/batch/${currentbatch}`
+    );
 
-  const getBatch2020 = async () => {
-    const res = await api.get("/api/batch/2020");
-    setMem(res.data);
+    setMem(res?.data?.data);
   };
 
   useEffect(() => {
-    getBatch2020();
+    getBatchData();
   }, []);
 
   return (

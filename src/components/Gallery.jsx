@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/gallery.css";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "swiper/modules/navigation/navigation.min.css";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
+import axios from "../api/axios";
+import serverUrl from "../api/serverurl";
 
 const Gallery = () => {
+  const [image, setImage] = useState();
   const lightBox = () => {
     var lb = document.querySelector(".light-box");
     var imgs = document.querySelectorAll(".gallery-img");
@@ -28,99 +30,107 @@ const Gallery = () => {
       lb.classList.remove("active-light-box");
     });
   };
+  const getImagesBySlides = (images, columns = 9) => {
+    let result = [];
+    for (let i = 0; i < images.length; i += columns) {
+      result.push(images.slice(i, i + columns));
+    }
+    return result;
+  };
+  const getAllGalleryImages = async () => {
+    const res = await axios.get("/gallery/get");
+
+    const images = res?.data?.data;
+    setImage(getImagesBySlides(images));
+  };
   useEffect(() => {
     lightBox();
+    getAllGalleryImages();
   }, []);
-  const info = useInfoContextProvider();
-
-  const images = [
-    `${info.server}/statics/event2022_pic1.jpeg`,
-    `${info.server}/statics/event2022_pic2.jpeg`,
-    `${info.server}/statics/event2022_pic3.jpeg`,
-    `${info.server}/statics/event2022_pic4.jpeg`,
-    `${info.server}/statics/event2022_pic5.jpeg`,
-    `${info.server}/statics/event2022_pic6.jpeg`,
-    `${info.server}/statics/event2022_pic7.jpeg`,
-    `${info.server}/statics/event2022_pic8.jpeg`,
-    `${info.server}/statics/event2022_pic9.jpeg`,
-    `${info.server}/statics/event2022_pic10.jpg`,
-    `${info.server}/statics/event2022_pic11.png`,
-    `${info.server}/statics/fresh1.jpeg`,
-    `${info.server}/statics/fresh2.jpeg`,
-    `${info.server}/statics/fresh3.jpeg`,
-    `${info.server}/statics/fresh4.jpeg`,
-  ];
-  const fresherImgs = [
-    `${info.server}/statics/fresh5.jpeg`,
-    `${info.server}/statics/fresh6.jpeg`,
-    `${info.server}/statics/g1.jpg`,
-    `${info.server}/statics/g2.jpg`,
-    `${info.server}/statics/g3.jpg`,
-    `${info.server}/statics/g4.jpg`,
-    `${info.server}/statics/g5.jpg`,
-    `${info.server}/statics/g6.jpg`,
-    `${info.server}/statics/g7.jpg`,
-    `${info.server}/statics/g8.jpg`,
-    `${info.server}/statics/g10.jpg`,
-    `${info.server}/statics/g11.jpg`,
-    `${info.server}/statics/g12.jpg`,
-    `${info.server}/statics/prevEvent1.jpg`,
-    `${info.server}/statics/prevEvent2.jpg`,
-  ];
-  const slide3 = [
-    `${info.server}/statics/event2022_pic12.jpeg`,
-    `${info.server}/statics/event2022_pic13.jpeg`,
-    `${info.server}/statics/event2022_pic14.jpeg`,
-    `${info.server}/statics/event2022_pic15.jpeg`,
-    `${info.server}/statics/event2022_pic16.jpeg`,
-    `${info.server}/statics/event2022_pic17.jpeg`,
-    `${info.server}/statics/event2022_pic18.jpeg`,
-    `${info.server}/statics/event2022_pic19.jpeg`,
-    `${info.server}/statics/event2022_pic20.jpeg`,
-    `${info.server}/statics/event2022_pic21.jpeg`,
-    `${info.server}/statics/event2022_pic22.jpeg`,
-    `${info.server}/statics/event2022_pic23.jpeg`,
-    `${info.server}/statics/event2022_pic24.jpeg`,
-    `${info.server}/statics/event2022_pic25.jpeg`,
-    `${info.server}/statics/event2022_pic26.jpeg`,
-  ];
   return (
     <div className="gallery" id="Gallery">
       <h1>Events Gallery</h1>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <div className="images">
-            {images.map((img, index) => {
-              return (
-                <div className="gallery-img-container" key={index}>
-                  <img className="gallery-img" src={img} alt="" />
+        {image != null ? (
+          image.map((evtimg, key) => {
+            return (
+              <SwiperSlide key={key}>
+                <div className="images">
+                  {evtimg.map((img, index) => {
+                    return (
+                      <div className="gallery-img-container" key={index}>
+                        <img
+                          className="gallery-img"
+                          src={`${serverUrl}/eventgallery/${img.image_path}`}
+                          alt=""
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="images">
-            {fresherImgs.map((img, index) => {
-              return (
-                <div className="gallery-img-container" key={index}>
-                  <img className="gallery-img" src={img} alt="" />
-                </div>
-              );
-            })}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="images">
-            {slide3.map((img, index) => {
-              return (
-                <div className="gallery-img-container" key={index}>
-                  <img className="gallery-img" src={img} alt="" />
-                </div>
-              );
-            })}
-          </div>
-        </SwiperSlide>
+              </SwiperSlide>
+            );
+          })
+        ) : (
+          <></>
+        )}
+        {/* {slide1 != null ? (
+          <SwiperSlide>
+            <div className="images">
+              {slide1.map((img, index) => {
+                return (
+                  <div className="gallery-img-container" key={index}>
+                    <img
+                      className="gallery-img"
+                      src={`${serverUrl}/eventgallery/${img.image_path}`}
+                      alt=""
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </SwiperSlide>
+        ) : (
+          <SwiperSlide className="abc">hello</SwiperSlide>
+        )}
+        {slide2 != null ? (
+          <SwiperSlide>
+            <div className="images">
+              {slide2.map((img, index) => {
+                return (
+                  <div className="gallery-img-container" key={index}>
+                    <img
+                      className="gallery-img"
+                      src={`${serverUrl}/eventgallery/${img.image_path}`}
+                      alt=""
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </SwiperSlide>
+        ) : (
+          <></>
+        )}
+        {slide3 != null ? (
+          <SwiperSlide>
+            <div className="images">
+              {slide3.map((img, index) => {
+                return (
+                  <div className="gallery-img-container" key={index}>
+                    <img
+                      className="gallery-img"
+                      src={`${serverUrl}/eventgallery/${img.image_path}`}
+                      alt=""
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </SwiperSlide>
+        ) : (
+          <div className="abc">hello</div>
+        )} */}
       </Swiper>
       <div className="light-box">.</div>
     </div>

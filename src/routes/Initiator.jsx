@@ -2,10 +2,11 @@ import "../styles/initiator.css";
 import { GoMarkGithub } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
-import { useInfoContextProvider } from "../context/InfoContextProvider";
+import dipukumar from "../assets/dipu-kumar-sah.jpeg";
+import ysahraj from "../assets/yash-raj.jpg";
+import rajpatel from "../assets/raj-patel.jpg";
+import shantnu from "../assets/shantanu-pratap.jpg";
 const Initiator = () => {
-  const info = useInfoContextProvider();
-
   return (
     <div className="initiator">
       <div className="main">
@@ -32,10 +33,7 @@ const Initiator = () => {
         </div>
         <div className="box">
           <div className="box1">
-            <img
-              alt="Initiator"
-              src={`${info.server}/initiators-image/dipu-kumar-sah.jpg`}
-            />
+            <img alt="Initiator" src={dipukumar} />
             Dipu Kumar Sah
             <br />
             <a
@@ -67,10 +65,7 @@ const Initiator = () => {
             </a>
           </div>
           <div className="box2">
-            <img
-              alt="Initiator"
-              src={`${info.server}/initiators-image/yash-raj.jpg`}
-            />
+            <img alt="Initiator" src={ysahraj} />
             Yash Raj
             <br />
             <a
@@ -102,10 +97,7 @@ const Initiator = () => {
             </a>
           </div>
           <div className="box3">
-            <img
-              alt="Initiator"
-              src={`${info.server}/initiators-image/raj-patel.jpg`}
-            />
+            <img alt="Initiator" src={rajpatel} />
             Raj Patel
             <br />
             <a
@@ -137,10 +129,7 @@ const Initiator = () => {
             </a>
           </div>
           <div className="box4">
-            <img
-              alt="Initiator"
-              src={`${info.server}/initiators-image/shantanu-pratap.jpg`}
-            />
+            <img alt="Initiator" src={shantnu} />
             Shantanu Pratap
             <br />
             <a

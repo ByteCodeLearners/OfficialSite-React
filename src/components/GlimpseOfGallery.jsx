@@ -12,7 +12,6 @@ const GlimpseOfGallery = () => {
       const response = await axios.get("gallery/get");
       const data = response?.data?.data;
       const glimpsdata = data.slice(0, 6);
-      console.log(glimpsdata);
       setGlimpsgallery(glimpsdata);
     } catch (error) {
       console.log(error);

@@ -44,6 +44,7 @@ const GalleryDashboard = () => {
       const data = response?.data;
       if (data.message != null) {
         setEvtimagedata({ date: "" });
+        document.querySelector("#gallery_form_d").reset();
       }
       getData();
 
@@ -56,7 +57,7 @@ const GalleryDashboard = () => {
   return (
     <div className="members-dashboard">
       <div className="add_container">
-        <form className="add_event_image_form">
+        <form className="add_event_image_form" id="gallery_form_d">
           <div className="input_part">
             <label htmlFor="date">Event date: </label>
             <input

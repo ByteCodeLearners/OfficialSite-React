@@ -95,6 +95,8 @@ const EventsDashboard = () => {
       console.log(data);
       if (data.message != null) {
         setEvtdata({ ...initialvalues });
+        document.querySelector("#event_form_d").reset();
+
         getData();
       }
     } catch (error) {
@@ -104,7 +106,7 @@ const EventsDashboard = () => {
   return (
     <div className="members-dashboard">
       <div className="event_add_container">
-        <form className="add_event_info_form">
+        <form className="add_event_info_form" id="event_form_d">
           <div className="input_part">
             <label htmlFor="title">Title:</label>
             <input
