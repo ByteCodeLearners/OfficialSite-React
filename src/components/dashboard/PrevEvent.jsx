@@ -110,6 +110,7 @@ const PrevEvent = () => {
       const data = response?.data;
       if (data.message != null) {
         setEvtname({ name: "" });
+        document.getElementById("prev_evt_d").reset();
         getPrevEvtData();
       }
       console.log(data);
@@ -122,7 +123,7 @@ const PrevEvent = () => {
     <>
       <div className="members-dashboard">
         <div className="add_container">
-          <form className="add_event_image_form">
+          <form className="add_event_image_form" id="prev_evt_d">
             <div className="input_part">
               <label htmlFor="name">Event Name:</label>
               <input
