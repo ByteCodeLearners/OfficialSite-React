@@ -4,15 +4,18 @@
   gap: 10px;
 }
 .member_dash {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 8% 25% 5% 25% 10% 5%;
+  justify-content: space-evenly;
+  align-content: center;
   height: 60px;
   border-radius: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   padding: 0 20px;
+}
+.image_member_dash {
+  height: 40px;
 }
 
 .green-button {

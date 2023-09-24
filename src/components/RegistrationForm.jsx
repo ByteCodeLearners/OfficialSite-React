@@ -1,6 +1,7 @@
 import { useState } from "react";
 import swal from "sweetalert";
 import axios from "../api/axios.js";
+import { Validation } from "../validation/validate.js";
 
 const RegistrationForm = () => {
   const [profile, setProfile] = useState();
@@ -18,6 +19,12 @@ const RegistrationForm = () => {
     youtube: "",
     twitter: "",
   };
+  const validateImageFile = (file) => {
+    if (!file) {
+      return "Please select an image.";
+    }
+    return null;
+  };
   const [memberdata, setMemberdata] = useState({ ...forminitialvalues });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,28 +36,35 @@ const RegistrationForm = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let form = new FormData();
-    for (let values in memberdata) {
-      form.append(values, memberdata[values]);
-    }
-    form.append("image", profile);
-
-    console.log(memberdata, profile);
-    try {
-      const res = await axios.post("member/add", form);
-      if (res?.data.message === "Your data has been added") {
-        swal(
-          "Success",
-          "Your response is submitted successfully...",
-          "success"
-        );
-        setMemberdata(forminitialvalues);
-        document.querySelector('#registration-form-d').reset()
-      } else {
-        swal("Error", res.data.message, "error");
+    const result = Validation(memberdata);
+    const validimage = validateImageFile(profile);
+    if (result.length !== 0) {
+      swal("error", result[0], "error");
+    } else if (validimage !== null) {
+      swal("error", validimage, "error");
+    } else {
+      console.log(result);
+      let form = new FormData();
+      for (let values in memberdata) {
+        form.append(values, memberdata[values]);
       }
-    } catch (err) {
-      console.log(err);
+      form.append("image", profile);
+      try {
+        const res = await axios.post("member/add", form);
+        if (res?.data.message === "Your data has been added") {
+          swal(
+            "Success",
+            "Your response is submitted successfully...",
+            "success"
+          );
+          setMemberdata(forminitialvalues);
+          document.querySelector("#registration-form-d").reset();
+        } else {
+          swal("Error", res.data.message, "error");
+        }
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
   return (
@@ -66,7 +80,6 @@ const RegistrationForm = () => {
               type="text"
               name="firstname"
               id="f_name"
-              required
             />
             <label className="label" htmlFor="f_name">
               First Name<span>*</span>
@@ -81,7 +94,6 @@ const RegistrationForm = () => {
               type="text"
               name="lastname"
               id="l_name"
-              required
             />
             <label htmlFor="l_name">
               Last Name<span>*</span>
@@ -95,7 +107,6 @@ const RegistrationForm = () => {
               name="file"
               id="file"
               onChange={profileHandler}
-              required
             />
             <i className="fas fa-camera"></i>
           </div>
@@ -107,7 +118,6 @@ const RegistrationForm = () => {
               type="email"
               name="email"
               id="email"
-              required
             />
             <label htmlFor="email">
               Email<span>*</span>
@@ -121,7 +131,6 @@ const RegistrationForm = () => {
               type="phone"
               name="mobile"
               id="mobile"
-              required
             />
             <label htmlFor="mobile">
               Mobile Number<span>*</span>
@@ -137,7 +146,7 @@ const RegistrationForm = () => {
               id="batch"
             />
             <label className="label" htmlFor="batch">
-              Batch<span>*</span>
+              Batch addmisiion <span>*</span>
             </label>
           </div>
           <div className="input">
