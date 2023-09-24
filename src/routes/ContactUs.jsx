@@ -1,93 +1,162 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { sticky } from "../components/Navbar";
+import Typewriter from "typewriter-effect";
+import contactus from "../assets/contactus.png";
+import { FaTwitterSquare, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
 const ContactUs = () => {
+  const [iconstate, setIconstate] = useState(0);
   useEffect(() => {
     sticky();
   }, []);
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    document.getElementsByClassName("twitter-embed")[0].appendChild(script);
-  }, []);
 
   return (
-    <div className="contact-us">
-      <div className="heading">
-        <h3>Social Media Feeds</h3>
+    <div className="contactus_whole">
+      <div className="contactus_terminal">
+        <div className="typing_container">
+          <div className="typing_header">
+            <div className="icon_sec_terminal">
+              <div className="terminal_ic terminal_icon1"></div>
+              <div className="terminal_ic terminal_icon2"></div>
+              <div className="terminal_ic terminal_icon3"></div>
+            </div>
+            <div className="zsh_sec">
+              <p>zsh-100x24</p>
+            </div>
+          </div>
+          <div className="the_typing_effect">
+            <Typewriter
+              options={{ cursor: "|", delay: 1 }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(
+                    "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ %</b>&nbsp;ls</br>"
+                  )
+                  .typeString("home events gallery social_media contact<br/>")
+                  .typeString(
+                    "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ %</b>&nbsp; cd contact</br>"
+                  )
+                  .typeString(
+                    "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp;ls</br>"
+                  )
+                  .typeString("phone.txt email.sh github.md<br/>")
+                  .typeString(
+                    "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; click icon"
+                  )
+                  .start();
+              }}
+            />
+            {iconstate === 1 && (
+              <Typewriter
+                options={{ cursor: "|", delay: 1 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                    )
+                    .typeString(
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                    )
+                    .start();
+                }}
+              />
+            )}
+            {iconstate === 2 && (
+              <Typewriter
+                options={{ cursor: "_", delay: 1 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                    )
+                    .typeString(
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                    )
+                    .start();
+                }}
+              />
+            )}
+            {iconstate === 3 && (
+              <Typewriter
+                options={{ cursor: "_", delay: 1 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                    )
+                    .typeString(
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                    )
+                    .start();
+                }}
+              />
+            )}
+            {iconstate === 4 && (
+              <Typewriter
+                options={{ cursor: "_", delay: 1 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                    )
+                    .typeString(
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                    )
+                    .start();
+                }}
+              />
+            )}
+            {iconstate === 5 && (
+              <Typewriter
+                options={{ cursor: "_", delay: 1 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                    )
+                    .typeString(
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                    )
+                    .start();
+                }}
+              />
+            )}
+          </div>
+        </div>
       </div>
-      <div className="boxes">
-        <div className="rectangle">
-          <div className="ions">
-            <a href="https://www.facebooke.com" className="facebook social">
-              {/* <FontAwesomeIcon icon={faFacebook} size="3x" /> */}
-              <i className="fab fa-facebook box-icons"></i>
-            </a>
-          </div>
+      <div className="contactus_image_side">
+        <img src={contactus} alt="contact" />
+        <div className="contact_image_icon_side">
+          <SiGmail
+            className="icon"
+            color="#e74c3c"
+            onClick={() => {
+              setIconstate(1);
+            }}
+          />
 
-          <div className=" fb">
-            <div className="event-container">
-              <div className="container">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBytecodeLearners-103644071079006%2F&tabs=timeline&width=320&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
-                  scrolling="no"
-                  frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="contact-us"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="rectangle">
-          <div className=" inst">
-            <div className="ions1">
-              <a href="https://www.instagram.com" className="instagram social">
-                <i className="fab fa-instagram box-icons"></i>
-              </a>
-            </div>
-            <div>
-              <div className="event-container">
-                <div className="container">
-                  <div className="scroller">
-                    <ul>
-                      <div className="elfsight-app-41f24f40-af42-4831-abdf-d8732bba57e8"></div>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="rectangle2">
-          <div className=" twit">
-            <div className="ions2">
-              <a
-                href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
-                className="twitter social"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* <FontAwesomeIcon icon={faTwitter} size="3x" /> */}
-                <i className="fab fa-twitter box-icons"></i>
-              </a>
-            </div>
-            <div className="container">
-              <div className="scroller">
-                <ul>
-                  <a
-                    className="twitter-timeline twitter-embed"
-                    href="https://twitter.com/ByteCodeLearner?ref_src=twsrc%5Etfw"
-                    data-show-count="false"
-                  >
-                    Tweets by ByteCodeLearner
-                  </a>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <FaFacebookSquare
+            className="icon"
+            color="#395591"
+            onClick={() => {
+              setIconstate(2);
+            }}
+          />
+          <FaInstagram
+            className="icon"
+            color="#8a3ab9"
+            onClick={() => {
+              setIconstate(3);
+            }}
+          />
+          <FaTwitterSquare
+            className="icon"
+            color="#55adee"
+            onClick={() => {
+              setIconstate(4);
+            }}
+          />
         </div>
       </div>
     </div>
