@@ -113,7 +113,6 @@ const PrevEvent = () => {
         document.getElementById("prev_evt_d").reset();
         getPrevEvtData();
       }
-      console.log(data);
     } catch (error) {
       console.log(error);
     }

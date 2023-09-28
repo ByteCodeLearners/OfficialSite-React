@@ -14,7 +14,6 @@ const Eventdisplay = (props) => {
         },
       })
       .then((res) => {
-        console.log(res);
         props.getData();
       })
       .catch((error) => {});
@@ -92,7 +91,6 @@ const EventsDashboard = () => {
         },
       });
       const data = response?.data;
-      console.log(data);
       if (data.message != null) {
         setEvtdata({ ...initialvalues });
         document.querySelector("#event_form_d").reset();

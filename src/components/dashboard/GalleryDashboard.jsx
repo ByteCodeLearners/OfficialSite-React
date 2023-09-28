@@ -47,8 +47,6 @@ const GalleryDashboard = () => {
         document.querySelector("#gallery_form_d").reset();
       }
       getData();
-
-      console.log(data);
     } catch (error) {
       console.log(error);
     }

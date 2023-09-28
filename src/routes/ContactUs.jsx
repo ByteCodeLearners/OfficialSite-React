@@ -40,7 +40,9 @@ const ContactUs = () => {
                   .typeString(
                     "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp;ls</br>"
                   )
-                  .typeString("phone.txt email.sh github.md<br/>")
+                  .typeString(
+                    "email.sh facebook.sh instagram.sh twitter.sh<br/>"
+                  )
                   .typeString(
                     "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; click icon"
                   )
@@ -49,7 +51,7 @@ const ContactUs = () => {
             />
             {iconstate === 1 && (
               <Typewriter
-                options={{ cursor: "|", delay: 1 }}
+                options={{ cursor: "_", delay: 60 }}
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
@@ -64,14 +66,14 @@ const ContactUs = () => {
             )}
             {iconstate === 2 && (
               <Typewriter
-                options={{ cursor: "_", delay: 1 }}
+                options={{ cursor: "|", delay: 1 }}
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./facebook.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://www.facebook.com/profile.php?id=100064008286770' target='_blank'>https://www.facebook.com/profile.php?id=100064008286770</a>"
                     )
                     .start();
                 }}
@@ -83,10 +85,10 @@ const ContactUs = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./instagram.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://instagram.com/bytecode_learners?igshid=NzZhOTFlYzFmZQ==' target='_blank'>https://instagram.com/bytecode_learners?igshid=NzZhOTFlYzFmZQ==</a>"
                     )
                     .start();
                 }}
@@ -98,15 +100,16 @@ const ContactUs = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
+                      "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./twitter.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://x.com/ByteCodeLearner?t=XS8sb3W463IW6U9UDXFaHA&s=08' target='_blank'>https://x.com/ByteCodeLearner?t=XS8sb3W463IW6U9UDXFaHA&s=08</a>"
                     )
                     .start();
                 }}
               />
             )}
+
             {iconstate === 5 && (
               <Typewriter
                 options={{ cursor: "_", delay: 1 }}

@@ -20,7 +20,6 @@ export const Membercard = (props) => {
         },
       })
       .then((res) => {
-        console.log(res);
         props.getMemberData();
       })
       .catch((error) => {});
@@ -112,7 +111,6 @@ const MembersDashboard = () => {
       })
       .then((res) => {
         setMember(res.data?.data);
-        console.log(res.data.data);
       })
       .catch((error) => {
         console.log(error);

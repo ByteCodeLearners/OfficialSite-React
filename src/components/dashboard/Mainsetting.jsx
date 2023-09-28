@@ -14,7 +14,6 @@ const Mainsetting = () => {
         },
       })
       .then((res) => {
-        console.log(res?.data);
         setUserdata(res.data);
       })
       .catch((error) => {});
@@ -33,7 +32,6 @@ const Mainsetting = () => {
         },
       })
       .then((res) => {
-        console.log(res?.data);
         getRegStatus();
       })
       .catch((error) => {});

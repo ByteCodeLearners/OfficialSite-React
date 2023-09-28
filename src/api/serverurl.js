@@ -1,3 +1,3 @@
-export const serverUrl = "https://bytecode.mrverma.tech/public/storage";
+export const serverUrl = "https://bytecode.mrverma.tech/public/static";
 
 export default serverUrl;

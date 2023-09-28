@@ -19,8 +19,6 @@ const Login = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(email);
-    console.log(password);
     const formdata = new FormData();
     formdata.append("email", email);
     formdata.append("password", password);
@@ -28,7 +26,6 @@ const Login = () => {
     try {
       const response = await axios.post("user/login", formdata);
       const data = response?.data;
-      console.log(data);
       if (data.message === "authorized") {
         swal("Success", "Logined successfully...", "success");
         localStorage.setItem("token", data.access_token);

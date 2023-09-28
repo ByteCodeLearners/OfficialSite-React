@@ -15,7 +15,6 @@ const Imagecard = (props) => {
         },
       })
       .then((res) => {
-        console.log(res);
         swal("success", "Deleted", "success");
         props.getData();
       })

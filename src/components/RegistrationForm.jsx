@@ -43,7 +43,6 @@ const RegistrationForm = () => {
     } else if (validimage !== null) {
       swal("error", validimage, "error");
     } else {
-      console.log(result);
       let form = new FormData();
       for (let values in memberdata) {
         form.append(values, memberdata[values]);
@@ -146,7 +145,7 @@ const RegistrationForm = () => {
               id="batch"
             />
             <label className="label" htmlFor="batch">
-              Batch addmisiion <span>*</span>
+              Batch <span>*</span>
             </label>
           </div>
           <div className="input">
@@ -181,7 +180,7 @@ const RegistrationForm = () => {
               placeholder=" "
               onChange={handleChange}
               type="text"
-              name="yt"
+              name="youtube"
               id="yt"
             />
             <label htmlFor="yt">YouTube Channel</label>
@@ -192,7 +191,7 @@ const RegistrationForm = () => {
               placeholder=" "
               onChange={handleChange}
               type="text"
-              name="fb"
+              name="facebook"
               id="fb"
             />
             <label htmlFor="fb">FaceBook Profile</label>
