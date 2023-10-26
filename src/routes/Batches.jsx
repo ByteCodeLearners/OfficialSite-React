@@ -30,7 +30,7 @@ const Batches = () => {
       yearsList.add(mem.batch);
     });
     yearsList.add("ALL");
-    return Array.from(yearsList);
+    return Array.from(yearsList).sort();
   };
 
   const getAllActiveMember = async () => {

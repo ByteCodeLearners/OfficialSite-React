@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/footer.css";
+import socialmedia from "../setting/socialmedialinks.json";
 export default function Footer() {
   return (
     <footer>
@@ -26,7 +27,7 @@ export default function Footer() {
           </div>
           <div className="contact">
             <h2>Contact Us</h2>
-            <p>Email- bytecodelearners@gmail.com</p>
+            <p>Email:{socialmedia[0].email}</p>
           </div>
         </div>
       </div>

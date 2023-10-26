@@ -3,6 +3,8 @@ import { sticky } from "../components/Navbar";
 import Typewriter from "typewriter-effect";
 import contactus from "../assets/contactus.png";
 import { FaTwitterSquare, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import socialmedia from "../setting/socialmedialinks.json";
+
 import { SiGmail } from "react-icons/si";
 
 const ContactUs = () => {
@@ -51,14 +53,14 @@ const ContactUs = () => {
             />
             {iconstate === 1 && (
               <Typewriter
-                options={{ cursor: "_", delay: 60 }}
+                options={{ cursor: "_", delay: 1 }}
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
                       "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./email.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:divyanshuvermaji@gmail.com'>bytecodelearners@gmail.com</a>"
+                      `<a style='color:rgb(97,107,84); text-decoration: none;' href='mailto:${socialmedia[0].email}'>${socialmedia[0].email}</a>`
                     )
                     .start();
                 }}
@@ -73,7 +75,7 @@ const ContactUs = () => {
                       "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./facebook.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://www.facebook.com/profile.php?id=100064008286770' target='_blank'>https://www.facebook.com/profile.php?id=100064008286770</a>"
+                      `<a style='color:rgb(97,107,84); text-decoration: none;' href=${socialmedia[0].facebook} target='_blank'>${socialmedia[0].facebook}</a>`
                     )
                     .start();
                 }}
@@ -88,7 +90,7 @@ const ContactUs = () => {
                       "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./instagram.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://instagram.com/bytecode_learners?igshid=NzZhOTFlYzFmZQ==' target='_blank'>https://instagram.com/bytecode_learners?igshid=NzZhOTFlYzFmZQ==</a>"
+                      `<a style='color:rgb(97,107,84); text-decoration: none;' href=${socialmedia[0].instagram} target='_blank'>${socialmedia[0].instagram}</a>`
                     )
                     .start();
                 }}
@@ -103,7 +105,7 @@ const ContactUs = () => {
                       "<b style='color:rgb(101,68,237);'> BytecodeLearners ~ /contact %</b>&nbsp; ./twitter.sh</br>"
                     )
                     .typeString(
-                      "<a style='color:rgb(97,107,84); text-decoration: none;' href='https://x.com/ByteCodeLearner?t=XS8sb3W463IW6U9UDXFaHA&s=08' target='_blank'>https://x.com/ByteCodeLearner?t=XS8sb3W463IW6U9UDXFaHA&s=08</a>"
+                      `<a style='color:rgb(97,107,84); text-decoration: none;' href=${socialmedia[0].twitter} target='_blank'>${socialmedia[0].twitter}</a>`
                     )
                     .start();
                 }}

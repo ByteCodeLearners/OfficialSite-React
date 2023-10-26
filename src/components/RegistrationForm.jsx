@@ -145,7 +145,7 @@ const RegistrationForm = () => {
               id="batch"
             />
             <label className="label" htmlFor="batch">
-              Batch <span>*</span>
+              Admission Year <span>*</span>
             </label>
           </div>
           <div className="input">
