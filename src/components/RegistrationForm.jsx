@@ -36,6 +36,7 @@ const RegistrationForm = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const result = Validation(memberdata);
     const validimage = validateImageFile(profile);
     if (result.length !== 0) {
@@ -48,6 +49,11 @@ const RegistrationForm = () => {
         form.append(values, memberdata[values]);
       }
       form.append("image", profile);
+
+      swal("Sit Back !", "Your Response is Being Submitted", {
+        button: false,
+        closeOnClickOutside: false,
+      });
       try {
         const res = await axios.post("member/add", form);
         if (res?.data.message === "Your data has been added") {

@@ -1,3 +1,3 @@
-export const baseUrl = "http://bytecodelearners.cuh.ac.in/bytecode-server";
+export const baseUrl = "https://bytecode.mrverma.tech";
 
 export default baseUrl;
