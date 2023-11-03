@@ -13,16 +13,21 @@ const currentbatch = 2021;
 
 const Members = () => {
   const [mem, setMem] = useState(null);
+  const getBatchDetail = async () => {
+    const res = await axios.get(`${baseUrl}/api/current-batch`);
+    const currentbatch = res.data.current_batch;
+    getBatchData();
+  };
   const getBatchData = async () => {
     const res = await axios.get(
       `${baseUrl}/api/member/getactive/batch/${currentbatch}`
     );
-
+    console.log(res);
     setMem(res?.data?.data);
   };
 
   useEffect(() => {
-    getBatchData();
+    getBatchDetail();
   }, []);
 
   return (
